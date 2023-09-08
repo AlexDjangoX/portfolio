@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.1.10",
     "@sanity/vision": "^3.16.4",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
@@ -19,6 +20,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "framer-motion": "^10.16.4",
     "next": "13.4.19",
     "next-sanity": "^5.4.6",
     "postcss": "8.4.29",

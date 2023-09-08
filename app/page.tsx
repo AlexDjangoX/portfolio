@@ -5,6 +5,7 @@ import type { ProfileType } from '@/types';
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
+  console.log(profile);
 
   return (
     <main className="mx-auto max-w-7xl px-6 lg:px-16">
