@@ -2,12 +2,13 @@
 
 import React from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
-import { Providers } from './providers';
 import './globals.css';
+import { Providers } from './providers';
+import NavigationBar from '@/components/NavigationBar';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Portfolio - Alexander',
@@ -20,9 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+    <html lang="en" className="bg-white-800 dark:bg-black-200">
+      <body className={poppins.className}>
+        <Providers>
+          <NavigationBar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

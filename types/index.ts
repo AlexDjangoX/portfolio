@@ -16,3 +16,7 @@ export type ProfileType = {
   socialLinks: string[];
   skills: string[];
 };
+
+export type ResumeType = {
+  resumeURL: string;
+};

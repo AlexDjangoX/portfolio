@@ -1,15 +1,15 @@
-import { getProfile } from '@/sanity/sanity.query';
+'use client';
+
 import Image from 'next/image';
 
-import type { ProfileType } from '@/types';
+import { useData } from '@/context/dataContext';
 
-export default async function Home() {
-  const profile: ProfileType[] = await getProfile();
-  console.log(profile);
-
+export default function Home() {
+  const { profile } = useData();
   return (
     <main className="mx-auto max-w-7xl px-6 lg:px-16">
-      <section className="mb-16 mt-20 flex flex-col items-start justify-between gap-x-12 lg:mt-32 xl:flex-row xl:items-center xl:justify-center">
+      <h1 className="font-thin">This is font weight 200</h1>
+      <section className="mb-16 mt-20 flex flex-col items-start justify-between gap-x-12 dark:bg-slate-600 lg:mt-32 xl:flex-row xl:items-center xl:justify-center">
         {profile && profile[0] && (
           <Image
             src={profile[0].profileImage.image}
@@ -18,6 +18,7 @@ export default async function Home() {
             height={200}
           />
         )}
+        <h1 className="font-extralight">This is font weight 200</h1>
         {profile &&
           profile.map((data) => (
             <div key={data._id} className="max-w-2xl lg:max-w-2xl">
