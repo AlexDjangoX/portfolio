@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -25,6 +25,10 @@ const Navbar: React.FC = () => {
   const closeImgSrc = theme === 'dark' ? closeWhite : close;
   const pathname = usePathname();
 
+  const toggleMobile = () => {
+    setShowMobileNavbar(!showMobileNavbar);
+  };
+
   return (
     <div className="fixed z-50 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">
       <Link
@@ -44,18 +48,18 @@ const Navbar: React.FC = () => {
         </div>
       </Link>
       <DesktopNavbar
-        setShowMobileNavbar={setShowMobileNavbar}
         showMobileNavbar={showMobileNavbar}
         openImgSrc={openImgSrc}
         pathname={pathname}
+        toggleMobile={toggleMobile}
       />
 
       {showMobileNavbar && (
         <MobileNavigation
-          setShowMobileNavbar={setShowMobileNavbar}
           showMobileNavbar={showMobileNavbar}
           closeImgSrc={closeImgSrc}
           pathname={pathname}
+          toggleMobile={toggleMobile}
         />
       )}
     </div>
@@ -65,7 +69,7 @@ const Navbar: React.FC = () => {
 export default Navbar;
 
 type MobileNavigationProps = {
-  setShowMobileNavbar: Dispatch<SetStateAction<boolean>>;
+  toggleMobile: () => void;
   showMobileNavbar: boolean;
   closeImgSrc: string;
   pathname: string;
@@ -86,8 +90,8 @@ const NavigationRoutes: React.FC<NavigationRoutesProps> = ({
 }) => {
   return (
     <>
-      {routes.map((route, index) => (
-        <Link href={route.path} key={index}>
+      {routes.map((route) => (
+        <Link href={route.path} key={route.label}>
           <p
             className={`mx-3.5 ${
               showMobileNavbar ? 'mt-6' : ''
@@ -105,7 +109,7 @@ const NavigationRoutes: React.FC<NavigationRoutesProps> = ({
 };
 
 const DesktopNavbar: React.FC<DeskTopNavbarProps> = ({
-  setShowMobileNavbar,
+  toggleMobile,
   showMobileNavbar,
   openImgSrc,
   pathname,
@@ -131,7 +135,7 @@ const DesktopNavbar: React.FC<DeskTopNavbarProps> = ({
           height={30}
           alt="logo"
           className="mr-24 flex md:hidden"
-          onClick={() => setShowMobileNavbar(!showMobileNavbar)}
+          onClick={toggleMobile}
         />
       )}
     </div>
@@ -139,7 +143,7 @@ const DesktopNavbar: React.FC<DeskTopNavbarProps> = ({
 };
 
 const MobileNavigation: React.FC<MobileNavigationProps> = ({
-  setShowMobileNavbar,
+  toggleMobile,
   showMobileNavbar,
   closeImgSrc,
   pathname,
@@ -152,7 +156,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
         height={30}
         alt="logo"
         className="absolute right-9 top-9 cursor-pointer md:hidden"
-        onClick={() => setShowMobileNavbar(!showMobileNavbar)}
+        onClick={toggleMobile}
       />
       <div className="mb-20 flex w-full flex-col p-8">
         <NavigationRoutes
