@@ -20,11 +20,12 @@ const ThemeSwitcher = () => {
       className="mr-[85px]  flex cursor-pointer justify-center"
       onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
     >
-      {currentTheme === 'light' ? (
-        <Image src={sun} alt={'icon-sun'} height={20} width={20} />
-      ) : (
-        <Image src={moon} alt={'icon-moon'} height={20} width={20} />
-      )}
+      <Image
+        src={currentTheme === 'light' ? sun : moon}
+        alt={currentTheme === 'light' ? 'alt-sun' : 'alt-moon'}
+        height={20}
+        width={20}
+      />
     </div>
   );
 };

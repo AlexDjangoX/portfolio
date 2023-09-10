@@ -1,27 +1,40 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
 import { download, downloadLight } from '../public/assets/index';
-import { useData } from '@/context/dataContext';
+import { getProfile } from '@/sanity/sanity.query';
 
 const DownloadResume: React.FC = () => {
+  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const { theme } = useTheme();
   const imgSrc = theme === 'dark' ? downloadLight : download;
 
-  const { profile } = useData();
-  const resumeURL = profile?.[0]?.resumeURL;
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getProfile();
+        setResumeUrl(data?.[0]?.resumeURL);
+      } catch (err) {
+        console.error('Error fetching profile:', err);
+        setError('Failed to fetch profile.');
+      }
+    }
 
-  if (!resumeURL) {
+    fetchData();
+  }, []);
+
+  if (!resumeUrl || error) {
     return null;
   }
 
   return (
     <a
       className="flex items-center"
-      href={resumeURL}
+      href={resumeUrl}
       download
       target="_blank"
       rel="noopener noreferrer"
