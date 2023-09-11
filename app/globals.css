@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 .custom-underline {
-  display: inline;
-  background: linear-gradient(
-      var(--secondary-dark, #ffbe62),
-      var(--secondary-dark, #ffbe62)
-    )
-    no-repeat center bottom;
-  background-size: 100% 23px;
-  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20px;
+  background: var(--secondary-dark, #ffbe62);
+  border-radius: 1px;
+  z-index: -1;
 }
