@@ -8,9 +8,24 @@ import NavigationBar from '@/components/NavigationBar';
 
 const poppins = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'Portfolio - Alexander',
-  description: 'Portfolio - Alexander Mc Lachlan',
+export const metadata = {
+  metadataBase: new URL('https://portfolio-alexander.vercel.app/'),
+  title: 'Full Stack NextJs Developer',
+  description: 'Portfolio - Alexander McLachlan',
+  openGraph: {
+    title: 'Alexander McLachlan',
+    description: 'Full Stack ReactJS, NextJS Developer',
+    url: 'https://portfolio-alexander.vercel.app/',
+    site_name: 'Full Stack NextJS Dev',
+    images: [
+      {
+        url: 'https://portfolio-alexander.vercel.app/opengraph-image.ico',
+        width: 800,
+        height: 600,
+        alt: 'Logo representing Alexander McLachlan, a Full Stack NextJS Developer',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
