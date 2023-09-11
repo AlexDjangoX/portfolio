@@ -1,8 +1,14 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+'use client';
 
-const inter = Inter({ subsets: ['latin'] });
+import React from 'react';
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
+
+import './globals.css';
+import { Providers } from './providers';
+import NavigationBar from '@/components/NavigationBar';
+
+const poppins = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Portfolio - Alexander',
@@ -15,8 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="bg-white-800 dark:bg-black-200">
+      <body className={poppins.className}>
+        <Providers>
+          <NavigationBar />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

@@ -16,3 +16,23 @@ export type ProfileType = {
   socialLinks: string[];
   skills: string[];
 };
+
+export type ResumeType = {
+  resumeURL: string;
+};
+
+export type MobileNavbarProps = {
+  toggleMobile: () => void;
+  showMobileNavbar: boolean;
+  closeImgSrc: string;
+  pathname: string;
+};
+
+export type NavbarRoutesProps = {
+  pathname: string;
+  showMobileNavbar: boolean;
+};
+
+export type DeskTopNavbarProps = Omit<MobileNavbarProps, 'closeImgSrc'> & {
+  openImgSrc: string;
+};
