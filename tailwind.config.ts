@@ -21,6 +21,20 @@ const config: Config = {
         'black-300': '#192333',
         'black-200': '#151E2C',
       },
+      fontSize: {
+        '4xlplus': '3.25rem',
+        baseplus: '1.125rem',
+      },
+      lineHeight: {
+        tightplus: '4.0rem',
+        intermediate: '1.3rem',
+        looseplus: '1.8rem',
+        extraLoose: '1.625rem',
+      },
+      letterSpacing: {
+        tightplus: '-0.64px',
+        widestplus: '6px',
+      },
     },
   },
   darkMode: ['class'],
