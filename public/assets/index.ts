@@ -6,3 +6,4 @@ export { default as close } from './menu-close.svg';
 export { default as closeWhite } from './menu-close-white.svg';
 export { default as download } from './download.svg';
 export { default as downloadLight } from './download-light.svg';
+export { default as frame } from './frame.svg';
