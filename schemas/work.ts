@@ -14,6 +14,12 @@ const work = {
       validation: (rule: Rule) => rule.required(),
     },
     {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+      description: 'A short summary or subtitle for the work item.',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
