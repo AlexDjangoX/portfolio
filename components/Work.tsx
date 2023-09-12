@@ -12,16 +12,16 @@ const Work = async () => {
   const work = await getWork();
 
   return (
-    <div className=" flex h-[737px] flex-col bg-white-800 px-[85px] py-[72px] dark:bg-black-200 md:flex-row">
-      <div className="flex max-w-[607px] shrink-0 grow flex-col justify-center rounded-lg bg-black-200 dark:bg-white-800">
+    <div className=" bg-white-800 dark:bg-black-200 flex h-[737px] flex-col px-[85px] py-[72px] md:flex-row">
+      <div className="bg-black-200 dark:bg-white-800 flex max-w-[607px] shrink-0 grow flex-col justify-center rounded-lg">
         <div className="mb-[105px] ml-[105px] mr-[143px] mt-[152px]">
-          <h2 className="mb-[40px] flex flex-col justify-center text-[48px] font-bold leading-tightplus tracking-tightplus text-white-900 dark:bg-white-800 dark:text-black-200">
+          <h2 className="leading-tightplus tracking-tightplus text-white-900 dark:bg-white-800 dark:text-black-200 mb-[40px] flex flex-col justify-center text-[48px] font-bold">
             <span>Developer</span>
             <div>
               <span className="custom-underline z-10">Experi</span>ence
             </div>
           </h2>
-          <p className="mt-[35px] h-[87px] w-[320px] break-words text-[18px] font-normal leading-[29px] text-white-800 dark:text-white-500">
+          <p className="text-white-800 dark:text-white-500 mt-[35px] h-[87px] w-[320px] break-words text-[18px] font-normal leading-[29px]">
             Progress and milestones: A simple walkthrough of roles, projects,
             and achievements in my career.
           </p>
@@ -34,14 +34,14 @@ const Work = async () => {
               }}
             />
             <div className="mr-[8px]">
-              <div className="flex h-[70px] w-[70px] items-center justify-center rounded-full border-1 text-white-900 dark:border-black">
-                <div className="h-[44px] w-[44px] rounded-full bg-white-900 dark:bg-black" />
+              <div className="border-1 text-white-900 flex h-[70px] w-[70px] items-center justify-center rounded-full dark:border-black">
+                <div className="bg-white-900 h-[44px] w-[44px] rounded-full dark:bg-black" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[607px] shrink-0 grow bg-white-800 dark:bg-black-200">
+      <div className="bg-white-800 dark:bg-black-200 max-w-[607px] shrink-0 grow">
         <div className="mb-[105px] ml-[105px] mr-[143px] mt-[20px]">
           {work.map((workItem: CardProps) => (
             <WorkCard

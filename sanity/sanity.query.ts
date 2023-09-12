@@ -19,6 +19,28 @@ export async function getProfile() {
   );
 }
 
+export async function getServices() {
+  return client.fetch(
+    groq`*[_type == "services"]{
+      _id,
+      heading,
+      content,
+      "whiteImage": imgSrcWhite.asset->url,
+      "blueImage": imgSrcBlue.asset->url
+    }`
+  );
+}
+
+export async function getSkills() {
+  return client.fetch(
+    groq`*[_type == "skills"]{
+      _id,
+      "image": skillImage.asset->url,
+      "altText": skillImage.alt
+    }`
+  );
+}
+
 export async function getWork() {
   return client.fetch(
     groq`*[_type == "work"]{

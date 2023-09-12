@@ -27,7 +27,6 @@ const config: Config = {
       },
       lineHeight: {
         tightplus: '4.0rem',
-        intermediate: '1.3rem',
         looseplus: '1.8rem',
         extraLoose: '1.625rem',
       },
