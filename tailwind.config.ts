@@ -22,7 +22,9 @@ const config: Config = {
         'black-200': '#151E2C',
       },
       screens: {
+        l: '1400px',
         vs: '350px',
+        s: '450px',
       },
       fontSize: {
         '4xlplus': '3.25rem',

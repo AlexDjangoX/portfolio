@@ -6,8 +6,8 @@ import ClipboardText from './ClipBoardText';
 
 const Hero = () => {
   return (
-    <section className=" flex w-full flex-col items-center justify-center bg-white-800 dark:bg-black-300 md:flex-row">
-      <div className="mt-[9.9375rem] flex w-1/2 flex-col space-y-6 p-6">
+    <section className="flex flex-col items-center justify-center bg-white-800 px-[5.3125rem] dark:bg-black-300 lg:flex-row">
+      <div className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6">
         <p className="text-[0.874rem] font-semibold uppercase leading-leadingRelaxed tracking-tracking6 text-primary-light dark:text-primary-dark md:text-baseplus">
           HI, I AM ALEXANDER
         </p>
@@ -35,7 +35,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative mt-6 w-1/2 md:mt-[9.9375rem] md:w-1/2">
+      <div className="relative mt-6 flex-1 lg:mt-[9.9375rem] ">
         <Image
           src="/illustrations-png/3Dcomputer.png"
           alt="3D Computer"
