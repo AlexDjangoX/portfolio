@@ -40,3 +40,14 @@ export async function getSkills() {
     }`
   );
 }
+
+export async function getWork() {
+  return client.fetch(
+    groq`*[_type == "work"]{
+      _id,
+      title,
+      description,
+      "imgSrc": imgSrc.asset->url
+    }`
+  );
+}
