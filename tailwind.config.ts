@@ -22,20 +22,20 @@ const config: Config = {
         'black-200': '#151E2C',
       },
       screens: {
-        vs: '430px',
+        vs: '350px',
       },
       fontSize: {
         '4xlplus': '3.25rem',
         baseplus: '1.125rem',
       },
       lineHeight: {
-        lineHeight_64: '64px',
-        lineHeight_29: '29px',
-        extraLoose: '1.625rem',
+        leading4rem: '4rem',
+        leading1_8rem: '1.813rem',
+        leadingRelaxed: '1.625rem',
       },
       letterSpacing: {
-        letterSpacing_64: '-0.64px',
-        letterSpacing_6: '6px',
+        tracking_64: '-0.64px',
+        tracking6: '6px',
       },
     },
   },

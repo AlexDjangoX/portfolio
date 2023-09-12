@@ -28,7 +28,7 @@ const ClipboardText: React.FC<ClipboardTextProps> = ({ text }) => {
   return (
     <div
       onClick={handleCopyClick}
-      className="flex w-full cursor-pointer items-center justify-center rounded-full bg-white-900 px-4 py-2 text-center text-baseplus font-semibold leading-extraLoose text-white-500 dark:bg-black-200 dark:text-white-900"
+      className="flex w-full cursor-pointer items-center justify-center rounded-full bg-white-900 px-4 py-2 text-center text-baseplus font-semibold leading-leadingRelaxed text-white-500 dark:bg-black-200 dark:text-white-900"
     >
       <span className="md:[1.125rem] flex-1 font-semibold text-[0.875] ">
         {text}

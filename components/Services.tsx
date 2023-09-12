@@ -15,8 +15,8 @@ const Services: React.FC = async () => {
   const services = await getServices();
 
   return (
-    <section className="bg-white-800 dark:bg-black-300 flex flex-col items-center justify-center px-[5.3125rem] py-[4.5rem]">
-      <h2 className="leading-lineHeight_64 tracking-letterSpacing_64 text-black-200 dark:bg-black-300 dark:text-white-900 mb-[2.5rem] mr-6 flex flex-wrap justify-center text-[2.25rem] font-bold md:text-[3rem]">
+    <section className="flex w-full flex-col items-center justify-center bg-white-800 px-[5.3125rem] py-[4.5rem] dark:bg-black-300">
+      <h2 className="mb-[2.5rem] mr-6 flex flex-wrap justify-center text-[2.25rem] font-bold leading-leading4rem tracking-tracking_64 text-black-200 dark:bg-black-300 dark:text-white-900 md:text-[3rem]">
         What
         <div className="mx-2">
           <span className="custom-underline z-10">service</span>

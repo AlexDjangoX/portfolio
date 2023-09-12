@@ -12,10 +12,10 @@ type CardProps = {
 const Work = async () => {
   const work = await getWork();
   return (
-    <section className=" flex h-auto flex-col  justify-center bg-white-800 px-[5.3rem] py-[4.5rem] dark:bg-black-200 md:flex-row">
-      <div className="flex flex-1  grow flex-col items-center justify-center rounded-lg bg-black-200 dark:bg-white-800">
-        <div className="flex max-w-[22rem] flex-col">
-          <h2 className="mb-[1.486rem] flex flex-col justify-center text-[2.25rem] font-bold leading-lineHeight_64 tracking-letterSpacing_64 text-white-900 dark:bg-white-800 dark:text-black-200 md:mb-[2.4rem] md:text-[3rem]">
+    <section className="flex h-auto flex-col items-center justify-center bg-white-800  px-[5.3rem] py-[4.5rem] dark:bg-black-200 lg:flex-row lg:py-[5.3rem]">
+      <div className="flex  flex-col items-center justify-center rounded-lg bg-black-200  p-[2rem] dark:bg-white-800 md:p-[3rem] ">
+        <div className="flex  flex-col">
+          <h2 className="mb-[1.486rem] flex flex-col justify-center text-[2.25rem] font-bold leading-leading4rem tracking-tracking_64 text-white-900 dark:bg-white-800 dark:text-black-200 md:mb-[2.4rem] md:text-[3rem]">
             <span>Developer</span>
             <div>
               <span className="custom-underline z-10">Experi</span>ence
@@ -41,7 +41,7 @@ const Work = async () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 flex-col justify-between  bg-white-800 dark:bg-black-200">
+      <div className="flex  flex-col justify-between bg-white-800 dark:bg-black-200  ">
         {work.map((workItem: CardProps) => (
           <WorkCard
             key={workItem._id}

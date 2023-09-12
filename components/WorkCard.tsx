@@ -15,8 +15,8 @@ const WorkCard: React.FC<Props> = ({
   imageSrc,
 }) => {
   return (
-    <div className="mb-[1.5rem] flex h-full w-full flex-col items-center bg-white-800 dark:bg-black-200">
-      <div className="flex w-full items-center justify-start">
+    <div className="mb-[1.5rem] flex h-full  flex-col items-center rounded-md bg-white-800 transition-transform duration-300 hover:translate-x-[2rem] hover:bg-white-900 dark:bg-black-200  dark:hover:bg-black-300">
+      <div className="flex  items-center justify-start">
         <Image
           className="m-[1.5rem]"
           src={imageSrc}
