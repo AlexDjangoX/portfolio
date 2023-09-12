@@ -10,8 +10,8 @@ const Home = (props: Props) => {
     <>
       <Hero />
       <Skills />
-      {/* <Services />
-      <Work /> */}
+      <Services />
+      <Work />
     </>
   );
 };

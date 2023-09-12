@@ -13,7 +13,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
   pathname,
 }) => {
   return (
-    <div className="fixed right-0 z-30  flex h-full w-2/4 items-center dark:bg-black-200 md:hidden">
+    <div className="fixed right-0 z-30  flex h-full w-2/4 items-center bg-white-800 dark:bg-black-200 md:hidden">
       <Image
         src={closeImgSrc}
         width={30}
