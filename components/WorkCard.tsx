@@ -16,7 +16,7 @@ const WorkCard: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex flex-col items-start  rounded-md bg-white-800 transition-transform duration-300 hover:translate-x-[2rem] hover:bg-white-900 dark:bg-black-200 dark:hover:bg-black-300 ">
-      <div className="flex  items-center justify-start">
+      <div className="flex items-center justify-start">
         <Image
           className="m-[1.5rem]"
           src={imageSrc}
