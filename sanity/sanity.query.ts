@@ -52,3 +52,16 @@ export async function getWork() {
     }`
   );
 }
+
+export async function getProjects() {
+  return client.fetch(
+    groq`*[_type == "projects"]{
+      _id,
+      heading,
+      projectName,
+      "image": projectImage.asset->url,
+      "altText": projectImage.alt,
+      technologies
+    }`
+  );
+}
