@@ -46,6 +46,7 @@ export async function getWork() {
     groq`*[_type == "work"]{
       _id,
       title,
+      subtitle,
       description,
       "imgSrc": imgSrc.asset->url
     }`

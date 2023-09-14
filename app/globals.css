@@ -12,8 +12,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 20px;
+  bottom: 4.6px;
+  height: 19.8px;
   background: var(--secondary-dark, #ffbe62);
   border-radius: 1px;
   z-index: -1;
