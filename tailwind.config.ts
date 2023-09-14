@@ -40,6 +40,8 @@ const config: Config = {
         leading4rem: '4rem',
         leading1_8rem: '1.813rem',
         leadingRelaxed: '1.625rem',
+        leading2_3rem: '2.3rem',
+        leading3_4rem: '3.4rem',
       },
       letterSpacing: {
         tracking_64: '-0.64px',
