@@ -58,7 +58,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <Image src={arrow} alt="arrow" width={35} height={0} />
         </div>
       </div>
-
       <div className="  lg:w-1/2">
         <Image src={image} alt={heading} width={560} height={590} />
       </div>

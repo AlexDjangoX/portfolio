@@ -1,4 +1,3 @@
-import React from 'react';
 import { getProjects } from '@/sanity/sanity.query';
 import ProjectCard from './ProjectCard';
 
