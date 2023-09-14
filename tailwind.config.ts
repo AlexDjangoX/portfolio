@@ -27,18 +27,23 @@ const config: Config = {
         'black-300': '#192333',
         'black-200': '#151E2C',
       },
+      screens: {
+        l: '1400px',
+        vs: '350px',
+        s: '450px',
+      },
       fontSize: {
         '4xlplus': '3.25rem',
         baseplus: '1.125rem',
       },
       lineHeight: {
-        tightplus: '4.0rem',
-        looseplus: '1.8rem',
-        extraLoose: '1.625rem',
+        leading4rem: '4rem',
+        leading1_8rem: '1.813rem',
+        leadingRelaxed: '1.625rem',
       },
       letterSpacing: {
-        tightplus: '-0.64px',
-        widestplus: '6px',
+        tracking_64: '-0.64px',
+        tracking6: '6px',
       },
     },
   },
