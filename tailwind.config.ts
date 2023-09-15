@@ -26,6 +26,8 @@ const config: Config = {
         'black-400': '#778295',
         'black-300': '#192333',
         'black-200': '#151E2C',
+        'line-gray': 'rgba(255,255,255,0.5)',
+        'line-black': 'rgba(21,30,44,0.4)',
       },
       screens: {
         l: '1400px',
