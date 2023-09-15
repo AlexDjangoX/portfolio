@@ -18,15 +18,18 @@ const ProjectCardContent: React.FC<ProjectCardContentProps> = ({
       <div className=" mb-[1.5rem] flex w-fit gap-x-4 gap-y-2">
         {technologies.map((tech) => (
           <p
-            className={` ${buttonBackground} rounded-md p-2  font-normal`}
+            className={` ${buttonBackground} rounded-md p-2  font-normal text-white-900`}
             key={tech}
           >
             {tech}
           </p>
         ))}
       </div>
-      <div className="mb-[1.5rem] flex gap-x-4">
-        <Link className="  font-semibold" href={`/projects/${projectName} `}>
+      <div className="mb-[1.5rem] flex gap-x-4 ">
+        <Link
+          className="font-semibold text-white-900"
+          href={`/projects/${projectName} `}
+        >
           See Detail Project
         </Link>
         <Image src={arrow} alt="arrow" width={35} height={0} />
