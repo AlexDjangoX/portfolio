@@ -14,8 +14,11 @@ const Skills: React.FC = async () => {
 
   return (
     <section className="w-full bg-white-900 px-[1.5rem] py-[3rem] dark:bg-black-200 sm:px-[5.3rem]">
-      <h2 className="mb-[2.5rem] flex justify-center text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] text-black-200 dark:bg-black-200 dark:text-white-900 md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]">
-        <span className="custom-underline z-10">My Skills</span> <br />
+      <h2 className="mb-[2.5rem] text-center text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] text-black-200 dark:bg-black-200 dark:text-white-900 md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]">
+        <div className="relative inline-flex items-center whitespace-nowrap">
+          <p className="z-20 ">My Skills</p>
+          <div className="absolute z-10 mt-7 h-[1.1rem] w-full rounded-sm bg-secondary-dark md:mt-9 md:h-[1.3rem]" />
+        </div>
       </h2>
       <div className="flex flex-wrap justify-center gap-[2.5rem] last:gap-y-0 sm:gap-y-[2.5rem] md:gap-[3.4rem]">
         {skills?.map((skill: SkillsProps) => (
