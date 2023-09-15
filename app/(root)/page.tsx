@@ -3,10 +3,9 @@ import Skills from '@/components/Skills';
 import Services from '@/components/Services';
 import Work from '@/components/Work';
 import Project from '@/components/projects/Project';
+import Testimonials from '@/components/testimonials/Testimonials';
 
-type Props = {};
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <>
       <Hero />
@@ -14,6 +13,7 @@ const Home = (props: Props) => {
       <Services />
       <Work />
       <Project />
+      <Testimonials />
     </>
   );
 };
