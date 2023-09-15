@@ -16,7 +16,7 @@ const Work = async () => {
       <div className="flex w-full max-w-7xl flex-col items-center xl:flex-row">
         <div className="flex  w-full max-w-3xl flex-col items-center justify-center rounded-lg bg-black-200 px-[2.375rem] pb-[2.375rem] pt-[3.5rem] dark:bg-white-800  md:pb-[6.6rem] md:pl-[6.6rem] md:pr-[8.9rem] md:pt-[9.5rem] xl:w-1/2">
           <div className="flex w-full flex-col">
-            <h2 className="mb-[1.486rem] flex flex-col justify-center text-[2.25rem] font-bold leading-leading4rem tracking-tracking_64 text-white-900 dark:bg-white-800 dark:text-black-200 md:mb-[2.4rem] md:text-[3rem]">
+            <h2 className="leading-leading4_0rem mb-[1.486rem] flex flex-col justify-center text-[2.25rem] font-bold tracking-tracking_64 text-white-900 dark:bg-white-800 dark:text-black-200 md:mb-[2.4rem] md:text-[3rem]">
               <span>Developer</span>
               <div>
                 <span className="custom-underline z-10">Experi</span>ence

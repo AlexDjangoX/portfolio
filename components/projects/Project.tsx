@@ -16,7 +16,7 @@ const Projects = async () => {
   return (
     <section className="flex justify-center bg-white-900 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem] lg:flex-row">
       <div className="flex max-w-7xl flex-col ">
-        <h2 className="mb-[2.5rem] flex flex-wrap justify-center text-[2.25rem] font-bold leading-leading4rem tracking-tracking_64 text-black-200 dark:bg-black-300 dark:text-white-900 lg:text-[3rem]">
+        <h2 className="mb-[2.5rem] flex flex-wrap justify-center text-[2.25rem] font-bold leading-leading4_0rem tracking-tracking_64 text-black-200 dark:bg-black-300 dark:text-white-900 lg:text-[3rem]">
           Featured
           <div>
             <span className="custom-underline z-10 mx-4">Projects</span>

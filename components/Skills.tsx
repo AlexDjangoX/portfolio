@@ -14,7 +14,7 @@ const Skills: React.FC = async () => {
 
   return (
     <section className="w-full bg-white-900 px-[5.3125rem] py-[4.5rem] dark:bg-black-200">
-      <h2 className="mb-[2.5rem] flex justify-center text-[2.25rem] font-bold leading-leading4rem tracking-tracking_64 text-black-200 dark:bg-black-200 dark:text-white-900 md:text-4xlplus">
+      <h2 className="mb-[2.5rem] flex justify-center text-[2.25rem] font-bold leading-leading4_0rem tracking-tracking_64 text-black-200 dark:bg-black-200 dark:text-white-900 md:text-4xlplus">
         <span className="custom-underline z-10">My Skills</span> <br />
       </h2>
       <div className="flex flex-wrap justify-center gap-x-4 sm:gap-y-[2.5rem]">

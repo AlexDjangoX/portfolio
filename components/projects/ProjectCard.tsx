@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       className={`w-full max-w-7xl lg:flex lg:items-center lg:justify-center ${cardBackground} rounded-lg p-[2.5rem] px-[1.3rem]`}
     >
       <div className=" lg:ml-[5.4rem] lg:w-1/2">
-        <h2 className="mb-[1.5rem] text-[2rem] font-bold leading-leading2_3rem text-white-900  lg:text-[2.8rem] lg:leading-leading3_4rem">
+        <h2 className="mb-[1.5rem] text-[2rem] font-bold leading-[2.3rem] text-white-900  lg:text-[2.8rem] lg:leading-leading3_4rem">
           {heading}
         </h2>
         <div className=" mb-[1.5rem] flex w-fit gap-x-4 gap-y-2">

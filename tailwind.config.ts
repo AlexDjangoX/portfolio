@@ -32,21 +32,6 @@ const config: Config = {
         vs: '350px',
         s: '450px',
       },
-      fontSize: {
-        '4xlplus': '3.25rem',
-        baseplus: '1.125rem',
-      },
-      lineHeight: {
-        leading4rem: '4rem',
-        leading1_8rem: '1.813rem',
-        leadingRelaxed: '1.625rem',
-        leading2_3rem: '2.3rem',
-        leading3_4rem: '3.4rem',
-      },
-      letterSpacing: {
-        tracking_64: '-0.64px',
-        tracking6: '6px',
-      },
     },
   },
   darkMode: ['class'],
