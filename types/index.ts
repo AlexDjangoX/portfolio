@@ -36,3 +36,32 @@ export type NavbarRoutesProps = {
 export type DeskTopNavbarProps = Omit<MobileNavbarProps, 'closeImgSrc'> & {
   openImgSrc: string;
 };
+
+export type Project = {
+  _id: string;
+  heading: string;
+  projectName: string;
+  image: string;
+  technologies: string[];
+  index: number;
+};
+
+export type ProjectCardProps = {
+  heading: string;
+  projectName: string;
+  image: string;
+  technologies: string[];
+  index: number;
+};
+
+export type ProjectCardContentProps = {
+  heading: string;
+  projectName: string;
+  technologies: string[];
+  buttonBackground: string;
+};
+
+export type ProjectCardImageProps = {
+  image: string;
+  heading: string;
+};
