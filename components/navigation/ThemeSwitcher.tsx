@@ -1,19 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
 
-import { sun, moon } from '../public/assets/index';
+import { sun, moon } from '../../public/assets/index';
+import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 
 const ThemeSwitcher = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { currentTheme, setTheme } = useThemeSwitcher();
 
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  if (!currentTheme) return null;
 
   return (
     <div
