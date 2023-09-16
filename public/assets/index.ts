@@ -14,3 +14,6 @@ export { default as arrowRight } from './arrow-right.svg';
 export { default as arrowLeftWhite } from './arrow-left-white.svg';
 export { default as arrowRightWhite } from './arrow-right-white.svg';
 export { default as star } from './star.svg';
+
+export { default as github } from './github.svg';
+export { default as linkedin } from './linkedin.svg';
