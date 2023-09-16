@@ -4,6 +4,7 @@ import Services from '@/components/service/Services';
 import Work from '@/components/work/Work';
 import Project from '@/components/projects/Project';
 import Testimonials from '@/components/testimonials/Testimonials';
+import Footer from '@/components/footer/Footer';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Work />
       <Project />
       <Testimonials />
+      <Footer />
     </>
   );
 };
