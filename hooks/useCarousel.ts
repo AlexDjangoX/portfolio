@@ -1,6 +1,5 @@
 'use client';
 
-// hooks/useCarousel.ts
 import { useState, useEffect } from 'react';
 
 const useCarousel = (itemsLength: number) => {
