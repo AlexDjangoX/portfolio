@@ -6,6 +6,8 @@ import {
   Rectangle4401,
 } from '@/public/assets/index';
 
+import { linkedin, github } from '@/public/assets-png/index';
+
 import { GeometricItem } from '@/types';
 
 export const itemsSmall: GeometricItem[] = [
@@ -95,5 +97,16 @@ export const itemsLarge: GeometricItem[] = [
     width: 190,
     height: 182,
     position: 'left-[285px] bottom-[30px]',
+  },
+];
+
+export const icons = [
+  {
+    src: linkedin,
+    href: 'https://www.linkedin.com/in/alexander-mclachlan-/',
+  },
+  {
+    src: github,
+    href: 'https://github.com/AlexDjangoX',
   },
 ];
