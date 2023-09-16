@@ -1,31 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-import { download, downloadLight } from '../public/assets/index';
-import { getProfile } from '@/sanity/sanity.query';
+import { download, downloadLight } from '@/public/assets/index';
+import useDownloadResume from '@/hooks/useDownloadResume';
 
 const DownloadResume: React.FC = () => {
-  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const { theme } = useTheme();
   const imgSrc = theme === 'dark' ? downloadLight : download;
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await getProfile();
-        setResumeUrl(data?.[0]?.resumeURL);
-      } catch (err) {
-        console.error('Error fetching profile:', err);
-        setError('Failed to fetch profile.');
-      }
-    }
-
-    fetchData();
-  }, []);
+  const { resumeUrl, error } = useDownloadResume();
 
   if (!resumeUrl || error) {
     return null;

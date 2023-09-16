@@ -1,29 +1,14 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { frame } from '@/public/assets';
-import { ToastContext } from '@/components/toast/ToastContext';
 
-interface ClipboardTextProps {
-  text: string;
-}
+import { frame } from '@/public/assets';
+import { ClipboardTextProps } from '@/types';
+import useClipboardText from '@/hooks/useClipboardText';
 
 const ClipboardText: React.FC<ClipboardTextProps> = ({ text }) => {
-  const showToast = useContext(ToastContext);
-
-  const handleCopyClick = () => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        if (showToast) {
-          showToast('Success, email copied to clipboard!', 'success');
-        }
-      })
-      .catch((err) => {
-        console.error('Failed to copy text: ', err);
-      });
-  };
+  const { handleCopyClick } = useClipboardText(text);
 
   return (
     <div

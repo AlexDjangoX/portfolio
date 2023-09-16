@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-import DownloadResume from '../Download';
-import ThemeSwitcher from '../ThemeSwitcher';
+import DownloadResume from './Download';
+import ThemeSwitcher from './ThemeSwitcher';
 import NavbarRoutes from './NavbarRoutes';
 import { DeskTopNavbarProps } from '@/types';
 
