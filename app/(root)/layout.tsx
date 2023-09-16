@@ -2,9 +2,9 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
-import './globals.css';
+import '../globals.css';
 import { Providers } from './providers';
-import NavigationBar from '@/components/NavigationBar';
+import NavigationBar from '@/components/navigation/NavigationBar';
 
 const poppins = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 

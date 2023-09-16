@@ -1,42 +1,20 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useTheme } from 'next-themes';
 
-import { close, open, openWhite, closeWhite } from '@/public/assets/index';
 import { logo } from '@/public/assets-png';
-import DesktopNavbar from './navigation/DesktopNavbar';
-import MobileNavbar from './navigation/MobileNavbar';
+import DesktopNavbar from './DesktopNavbar';
+import MobileNavbar from './MobileNavbar';
+import useNavigationBar from '@/hooks/useNavigationBar';
 
 const Navbar: React.FC = () => {
-  const { theme } = useTheme();
   const pathname = usePathname();
 
-  const [state, setState] = useState({
-    showMobileNavbar: false,
-    currentTheme: theme,
-    hydrated: false,
-  });
-
-  const { showMobileNavbar, currentTheme, hydrated } = state;
-
-  const openImgSrc = hydrated && currentTheme === 'dark' ? openWhite : open;
-  const closeImgSrc = hydrated && currentTheme === 'dark' ? closeWhite : close;
-
-  useEffect(() => {
-    setState((prev) => ({ ...prev, currentTheme: theme }));
-  }, [theme]);
-
-  useEffect(() => {
-    setState((prev) => ({ ...prev, hydrated: true }));
-  }, []);
-
-  const toggleMobile = () => {
-    setState((prev) => ({ ...prev, showMobileNavbar: !prev.showMobileNavbar }));
-  };
+  const { showMobileNavbar, openImgSrc, closeImgSrc, toggleMobile } =
+    useNavigationBar();
 
   return (
     <div className="fixed z-50 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">

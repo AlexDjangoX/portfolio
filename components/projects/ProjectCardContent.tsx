@@ -2,13 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { arrow } from '@/public/assets';
-
-type ProjectCardContentProps = {
-  heading: string;
-  projectName: string;
-  technologies: string[];
-  buttonBackground: string;
-};
+import { ProjectCardContentProps } from '@/types';
 
 const ProjectCardContent: React.FC<ProjectCardContentProps> = ({
   heading,
@@ -17,22 +11,25 @@ const ProjectCardContent: React.FC<ProjectCardContentProps> = ({
   buttonBackground,
 }) => {
   return (
-    <div className="ml-[6.75rem] h-full max-w-[496px]">
-      <h2 className="pb-[1.4rem] text-[3rem] font-bold text-white-900">
+    <div className=" lg:ml-[5.4rem] lg:w-1/2">
+      <h2 className="mb-[1.5rem] text-[2rem] font-bold leading-[2.3rem] text-white-900  lg:text-[2.8rem] lg:leading-[3.45rem]">
         {heading}
       </h2>
-      <div className="mb-16 flex w-fit gap-x-4 gap-y-2">
+      <div className=" mb-[1.5rem] flex w-fit gap-x-4 gap-y-2">
         {technologies.map((tech) => (
           <p
-            className={`flex items-center justify-center ${buttonBackground} rounded-md p-2`}
+            className={` ${buttonBackground} rounded-md p-2  font-normal text-white-900`}
             key={tech}
           >
             {tech}
           </p>
         ))}
       </div>
-      <div className="flex items-center gap-x-4">
-        <Link className="flex items-center" href={`/projects/${projectName}`}>
+      <div className="mb-[1.5rem] flex gap-x-4 ">
+        <Link
+          className="font-semibold text-white-900"
+          href={`/projects/${projectName} `}
+        >
           See Detail Project
         </Link>
         <Image src={arrow} alt="arrow" width={35} height={0} />

@@ -65,3 +65,16 @@ export async function getProjects() {
     }`
   );
 }
+
+export async function getTestimonials() {
+  return client.fetch(
+    groq`*[_type == "testimonials"]{
+      _id,
+      content,
+      headingName,
+      subheadingName,
+      "testimonialImage": testimonialImage.asset->url,
+      "altText": testimonialImage.alt
+    }`
+  );
+}

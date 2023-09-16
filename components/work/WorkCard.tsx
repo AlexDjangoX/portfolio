@@ -1,14 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-type Props = {
-  title: string;
-  subtitle: string;
-  description: string;
-  imageSrc: string;
-};
+import { WorkCardProps } from '@/types';
 
-const WorkCard: React.FC<Props> = ({
+const WorkCard: React.FC<WorkCardProps> = ({
   title,
   subtitle,
   description,

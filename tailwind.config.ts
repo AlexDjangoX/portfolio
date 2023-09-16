@@ -26,26 +26,13 @@ const config: Config = {
         'black-400': '#778295',
         'black-300': '#192333',
         'black-200': '#151E2C',
+        'line-gray': 'rgba(255,255,255,0.5)',
+        'line-black': 'rgba(21,30,44,0.4)',
       },
       screens: {
         l: '1400px',
         vs: '350px',
         s: '450px',
-      },
-      fontSize: {
-        '4xlplus': '3.25rem',
-        baseplus: '1.125rem',
-      },
-      lineHeight: {
-        leading4rem: '4rem',
-        leading1_8rem: '1.813rem',
-        leadingRelaxed: '1.625rem',
-        leading2_3rem: '2.3rem',
-        leading3_4rem: '3.4rem',
-      },
-      letterSpacing: {
-        tracking_64: '-0.64px',
-        tracking6: '6px',
       },
     },
   },
