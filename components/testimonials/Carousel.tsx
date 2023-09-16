@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import ArrowLeft from './ArrowLeft';
-import ArrowRight from './ArrowRight';
+
 import StarComponent from './Star';
+import ArrowLeftIcon from './ArrowLeftIcon';
+import ArrowRightIcon from './ArrowRightIcon';
 
 type Testimonial = {
   _id: string;
@@ -57,7 +58,7 @@ const Carousel = ({ testimonials }: CarouselProps) => {
         onClick={prevSlide}
         className="hidden h-[3rem] w-[3rem] cursor-pointer items-center justify-center rounded-full bg-white-900 dark:bg-black-200 md:flex"
       >
-        <ArrowLeft />
+        <ArrowLeftIcon />
       </div>
 
       <div
@@ -81,13 +82,13 @@ const Carousel = ({ testimonials }: CarouselProps) => {
             onClick={prevSlide}
             className="flex h-[3rem] w-[3rem] cursor-pointer items-center justify-center rounded-full bg-white-900 dark:bg-black-200"
           >
-            <ArrowLeft />
+            <ArrowLeftIcon />
           </div>
           <div
             onClick={nextSlide}
             className="flex h-[3rem] w-[3rem] cursor-pointer items-center justify-center rounded-full bg-white-900 dark:bg-black-200"
           >
-            <ArrowRight />
+            <ArrowRightIcon />
           </div>
         </div>
       </div>
@@ -113,7 +114,7 @@ const Carousel = ({ testimonials }: CarouselProps) => {
         onClick={nextSlide}
         className="hidden h-[3rem] w-[3rem] cursor-pointer items-center justify-center rounded-full bg-white-900 dark:bg-black-200 md:flex"
       >
-        <ArrowRight />
+        <ArrowRightIcon />
       </div>
     </div>
   );
