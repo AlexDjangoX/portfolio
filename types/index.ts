@@ -131,13 +131,15 @@ export type WorkCardProps = {
   imageSrc: string;
 };
 
-export type GeometricItem = {
-  src: StaticImageData;
+type ImageSrc = StaticImageData | string;
+
+export interface GeometricItem {
+  src: ImageSrc;
   alt: string;
   width: number;
   height: number;
   position: string;
-};
+}
 
 export type GeometricBackgroundProps = {
   items: GeometricItem[];

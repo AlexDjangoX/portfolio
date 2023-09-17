@@ -10,16 +10,12 @@ export { default as frame } from './frame.svg';
 export { default as redux } from './redux.svg';
 export { default as arrow } from './arrow.svg';
 
-export { default as elipse117 } from './elipse117.svg';
-export { default as elipse118 } from './elipse118.svg';
-export { default as rectangle4439 } from './rectangle4439.svg';
-export { default as elipse119 } from './elipse119.svg';
-export { default as Rectangle4401 } from './Rectangle4401.svg';
 export { default as arrowLeft } from './arrow-left.svg';
 export { default as arrowRight } from './arrow-right.svg';
-export { default as arrowLeftWhite } from './arrow-left-white.svg';
-export { default as arrowRightWhite } from './arrow-right-white.svg';
 export { default as star } from './star.svg';
 
 export { default as github } from './github.svg';
 export { default as linkedin } from './linkedin.svg';
+
+export { default as callToActionLarge } from './callToActionLarge.svg';
+export { default as callToActionSmall } from './callToActionSmall.svg';
