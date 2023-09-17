@@ -29,8 +29,8 @@ const Carousel: React.FC<CarouselProps> = ({ testimonials }) => {
           style={{
             objectFit: 'fill',
           }}
-          src={data.testimonialImage}
-          alt={data.altText}
+          src={data?.testimonialImage}
+          alt={data?.altText}
           height={200}
           width={200}
         />
@@ -42,9 +42,9 @@ const Carousel: React.FC<CarouselProps> = ({ testimonials }) => {
       </div>
 
       <TestimonialDetails
-        content={data.content}
-        headingName={data.headingName}
-        subheadingName={data.subheadingName}
+        content={data?.content}
+        headingName={data?.headingName}
+        subheadingName={data?.subheadingName}
         show={show}
       />
 
