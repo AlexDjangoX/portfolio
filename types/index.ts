@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import React from 'react';
 import { PortableTextBlock } from 'sanity';
 
@@ -128,4 +129,16 @@ export type WorkCardProps = {
   subtitle: string;
   description: string;
   imageSrc: string;
+};
+
+export type GeometricItem = {
+  src: StaticImageData;
+  alt: string;
+  width: number;
+  height: number;
+  position: string;
+};
+
+export type GeometricBackgroundProps = {
+  items: GeometricItem[];
 };
