@@ -34,6 +34,10 @@ const config: Config = {
         vs: '350px',
         s: '450px',
       },
+      backgroundImage: {
+        BGLarge: "url('/assets-png/BGPatternLarge.png')",
+        BGSmall: "url('/assets-png/BGPatternSmall.png')",
+      },
     },
   },
   darkMode: ['class'],
