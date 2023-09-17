@@ -3,7 +3,9 @@ import Image from 'next/image';
 
 import { GeometricBackgroundProps } from '@/types';
 
-const Background: React.FC<GeometricBackgroundProps> = ({ items }) => {
+const GeometricBackgrounds: React.FC<GeometricBackgroundProps> = ({
+  items,
+}) => {
   return (
     <>
       {items.map((item, index) => (
@@ -20,4 +22,4 @@ const Background: React.FC<GeometricBackgroundProps> = ({ items }) => {
   );
 };
 
-export default Background;
+export default GeometricBackgrounds;

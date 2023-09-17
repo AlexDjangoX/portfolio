@@ -1,14 +1,19 @@
-import { itemsLarge, itemsSmall } from '@/utils/constants';
-import Background from './Background';
+import GeometricBackgroundSmall from './GeometricBackgroundSmall';
+import GeometricBackgroundLarge from './GeometricBackgroundLarge';
+
+import { itemsSmall, itemsLarge } from '@/utils/constants';
+import GeometricBackgrounds from './Background';
 
 const GeometricBackground = () => {
   return (
     <>
       <div className="flex lg:hidden">
-        <Background items={itemsSmall} />
+        <GeometricBackgrounds items={itemsSmall} />
+        {/* <GeometricBackgroundSmall /> */}
       </div>
       <div className="hidden lg:flex">
-        <Background items={itemsLarge} />
+        <GeometricBackgrounds items={itemsLarge} />
+        {/* <GeometricBackgroundLarge /> */}
       </div>
     </>
   );
