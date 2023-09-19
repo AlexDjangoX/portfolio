@@ -83,12 +83,27 @@ export async function getTestimonials() {
   );
 }
 
+export async function getCaseStudies() {
+  return client.fetch(
+    groq`*[_type == "caseStudies"]{
+      _id,
+      heading,
+      projectName,
+      subHeading,
+      "image": image.asset->url,
+      "altText": image.alt
+    }`,
+    { next: { revalidate } }
+  );
+}
+
 export async function getCaseStudyDetails() {
   return client.fetch(
     groq`
       *[_type == "caseStudy"] {
         headingUnderline,
-        heading,
+        heading, 
+        projectName,
         "imageUrl": image.asset->url,
         "imageAlt": image.alt,
         demoSite,
@@ -112,5 +127,38 @@ export async function getCaseStudyDetails() {
       }
     `,
     { next: { revalidate } }
+  );
+}
+
+export async function getCaseStudyByProjectName(projectName: string) {
+  return client.fetch(
+    groq`
+      *[_type == "caseStudy" && projectName == $projectName] {
+        headingUnderline,
+        heading,
+        projectName,
+        "imageUrl": image.asset->url,
+        "imageAlt": image.alt,
+        demoSite,
+        sourceCode,
+        techStack[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        description,
+        problemStatement,
+        "problemStatementImageUrl": problemStatementImage.asset->url,
+        "problemStatementImageAlt": problemStatementImage.alt,
+        "figmaDesignUrl": figmaDesign.asset->url,
+        "figmaDesignAlt": figmaDesign.alt,
+        myProcess[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        challenges,
+        learnings
+      }[0]
+    `,
+    { projectName }
   );
 }

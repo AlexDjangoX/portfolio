@@ -1,5 +1,5 @@
 import { BiUser } from 'react-icons/bi';
-import { defineField } from 'sanity';
+import { Rule, defineField } from 'sanity';
 
 const caseStudy = {
   name: 'caseStudy',
@@ -19,6 +19,12 @@ const caseStudy = {
       type: 'string',
       validation: (rule) => rule.required(),
     }),
+    {
+      name: 'projectName',
+      title: 'Project Name',
+      type: 'string',
+      validation: (rule: Rule) => rule.required(),
+    },
     {
       name: 'image',
       title: 'Image',
