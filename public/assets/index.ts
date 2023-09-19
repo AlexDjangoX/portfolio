@@ -19,3 +19,7 @@ export { default as linkedin } from './linkedin.svg';
 
 export { default as callToActionLarge } from './callToActionLarge.svg';
 export { default as callToActionSmall } from './callToActionSmall.svg';
+
+export { default as git } from './git.svg';
+export { default as site } from './site.svg';
+export { default as blueArrow } from './blueArrow.svg';

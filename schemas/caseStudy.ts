@@ -26,6 +26,24 @@ const caseStudy = {
       validation: (rule: Rule) => rule.required(),
     },
     {
+      name: 'startDate',
+      title: 'Start Date',
+      type: 'string',
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: 'endDate',
+      title: 'End Date',
+      type: 'string',
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: 'myRole',
+      title: 'My Role',
+      type: 'string',
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
