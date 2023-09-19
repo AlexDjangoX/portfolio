@@ -5,10 +5,18 @@ import Link from 'next/link';
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
 import { git, site, blueArrow } from '@/public/assets/index';
 
+import { SkillsProps } from '@/types';
+
 interface StudyDetailProps {
   params: {
     id: string;
   };
+}
+
+interface StudyDetailParams {
+  _id: string;
+  imageUrl: string;
+  imageAlt: string;
 }
 
 const Page: React.FC<StudyDetailProps> = async ({ params }) => {
@@ -18,7 +26,7 @@ const Page: React.FC<StudyDetailProps> = async ({ params }) => {
 
   const project = await getCaseStudyByProjectName(id);
 
-  console.log(project);
+  console.log(project.techStack);
 
   return (
     <section className="flex w-full flex-col items-center justify-center ">
@@ -33,7 +41,7 @@ const Page: React.FC<StudyDetailProps> = async ({ params }) => {
           </div>
           {' - '} {project.heading}
         </h2>
-        <div className="mx-auto flex items-center justify-center py-[1.5rem]  md:mt-[3.5rem] md:h-[350px] md:w-[742px]">
+        <div className="mx-auto flex  items-center justify-center py-[1.5rem]  md:mt-[3.5rem] md:h-[350px] md:w-[742px]">
           <Image
             className=" md:h-[350px] md:w-[742px]"
             src={project.imageUrl}
@@ -86,6 +94,7 @@ const Page: React.FC<StudyDetailProps> = async ({ params }) => {
             />
           </Link>
         </div>
+
         <div className="flex flex-col justify-center px-[1.5rem] py-[2.5rem] md:flex-row md:justify-around ">
           <div className="flex-col">
             <h4 className="mb-[0.625rem] text-[0.874rem] font-semibold leading-[145%] text-black-400  md:font-[1.125rem] md:leading-[160%]">
@@ -112,6 +121,27 @@ const Page: React.FC<StudyDetailProps> = async ({ params }) => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex max-w-[45rem] flex-wrap justify-center ">
+        {project.techStack?.map((skill: StudyDetailParams) => (
+          <div
+            key={skill?._id}
+            className="relative flex h-[3.3rem] w-[3.3rem] items-center justify-center overflow-hidden rounded-full bg-white-800 sm:h-[6.25rem] sm:w-[6.25rem] "
+          >
+            <Image
+              className="h-[1.563rem] w-[1.563rem] sm:h-[2.875rem] sm:w-[2.875rem]"
+              src={skill?.imageUrl}
+              alt={skill?.imageAlt}
+              width={46}
+              height={46}
+            />
+          </div>
+        ))}
+      </div>
+      <div className="max-w-[45rem] bg-white-800 px-[1.5rem] py-[2.25rem]">
+        <p className="text-[0.875rem] leading-[155%] text-white-500">
+          {project.description}
+        </p>
       </div>
     </section>
   );
