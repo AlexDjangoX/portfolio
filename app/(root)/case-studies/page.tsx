@@ -1,9 +1,7 @@
-import React from 'react';
+import CaseStudies from '@/components/case sudies/CaseStudies';
 
-type Props = {};
-
-const Page = (props: Props) => {
-  return <div>Page</div>;
+const Page = () => {
+  return <CaseStudies />;
 };
 
 export default Page;

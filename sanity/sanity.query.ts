@@ -82,3 +82,16 @@ export async function getTestimonials() {
     { next: { revalidate } }
   );
 }
+
+export async function getCaseStudies() {
+  return client.fetch(
+    groq`*[_type == "caseStudies"]{
+      _id,
+      heading,
+      subHeading,
+      "image": image.asset->url,
+      "altText": image.alt
+    }`,
+    { next: { revalidate } }
+  );
+}
