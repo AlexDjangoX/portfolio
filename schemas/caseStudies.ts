@@ -14,6 +14,12 @@ const caseStudies = {
       validation: (rule: Rule) => rule.required(),
     },
     {
+      name: 'projectName',
+      title: 'Project Name',
+      type: 'string',
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
       name: 'subHeading',
       title: 'Subheading',
       type: 'string',

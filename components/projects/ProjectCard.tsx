@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
 }) => {
   const projectBackgrounds: Record<string, string> = {
-    morent: 'bg-morent-background',
+    morrent: 'bg-morent-background',
     jobit: 'bg-jobit-background',
     filmpire: 'bg-filmpire-background',
   };

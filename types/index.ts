@@ -144,3 +144,12 @@ export interface GeometricItem {
 export type GeometricBackgroundProps = {
   items: GeometricItem[];
 };
+
+export type CaseStudiesCardProps = {
+  altText: string;
+  _id: string;
+  heading: string;
+  projectName: string;
+  subHeading: string;
+  image: string;
+};
