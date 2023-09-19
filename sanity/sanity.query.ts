@@ -82,3 +82,35 @@ export async function getTestimonials() {
     { next: { revalidate } }
   );
 }
+
+export async function getCaseStudyDetails() {
+  return client.fetch(
+    groq`
+      *[_type == "caseStudy"] {
+        headingUnderline,
+        heading,
+        "imageUrl": image.asset->url,
+        "imageAlt": image.alt,
+        demoSite,
+        sourceCode,
+        techStack[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        description,
+        problemStatement,
+        "problemStatementImageUrl": problemStatementImage.asset->url,
+        "problemStatementImageAlt": problemStatementImage.alt,
+        "figmaDesignUrl": figmaDesign.asset->url,
+        "figmaDesignAlt": figmaDesign.alt,
+        myProcess[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        challenges,
+        learnings
+      }
+    `,
+    { next: { revalidate } }
+  );
+}
