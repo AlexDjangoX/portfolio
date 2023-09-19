@@ -3,6 +3,7 @@ import CaseStudiesHeading from './CaseStudiesHeadingContent';
 import CaseStudiesCard from './CaseStudiesCard';
 import { CaseStudiesCardProps } from '@/types';
 import CallToAction from '../action/CallToAction';
+import Link from 'next/link';
 
 const CaseStudies = async () => {
   const caseStudies = await getCaseStudies();
@@ -12,15 +13,16 @@ const CaseStudies = async () => {
       <div className="flex  flex-col bg-white-900 dark:bg-black-200">
         <div className="mt-[3rem] flex flex-wrap justify-center gap-[3rem]">
           {caseStudies?.map((study: CaseStudiesCardProps) => (
-            <CaseStudiesCard
-              _id={study._id}
-              key={study._id}
-              heading={study.heading}
-              projectName={study.projectName}
-              subHeading={study.subHeading}
-              image={study.image}
-              altText={study.altText}
-            />
+            <Link key={study._id} href={`/case-studies/${study.projectName}`}>
+              <CaseStudiesCard
+                _id={study._id}
+                heading={study.heading}
+                projectName={study.projectName}
+                subHeading={study.subHeading}
+                image={study.image}
+                altText={study.altText}
+              />
+            </Link>
           ))}
         </div>
       </div>

@@ -9,6 +9,7 @@ const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({
   heading,
   subHeading,
   image,
+  _id,
 }) => {
   const projectBackgrounds: Record<string, string> = {
     morrent: 'bg-morent-background',
