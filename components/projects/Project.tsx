@@ -1,7 +1,10 @@
+import Link from 'next/link';
+
 import { getProjects } from '@/sanity/sanity.query';
 import ProjectCard from './ProjectCard';
 import { Project } from '@/types';
 import ProjectHeading from './ProjectHeading';
+import CustomButton from '../reusable/CustomButton';
 
 const Projects = async () => {
   const projects = await getProjects();
@@ -22,6 +25,12 @@ const Projects = async () => {
             />
           ))}
         </div>
+        <Link
+          className="mx-auto mt-[3rem] flex max-w-[20rem] "
+          href="/case-studies"
+        >
+          <CustomButton title="See more case studies" />
+        </Link>
       </div>
     </section>
   );
