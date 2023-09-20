@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { PortableTextBlock } from 'sanity';
 
 export type ProfileType = {
@@ -183,4 +183,49 @@ export type IconProps = {
   className?: string;
   height?: number | string;
   width?: number | string;
+};
+
+export interface WrapperProps {
+  additionalStyles?: string;
+  children: ReactNode;
+}
+
+export type HeadingProps = {
+  subHeading: string;
+  mainHeading: string;
+  additionalStylesMainHeading?: string;
+  additionalStylesSubHeading?: string;
+};
+
+export type FigmaProps = {
+  figmaDesignUrl: string;
+  figmaDesignAlt: string;
+};
+
+export type ProjectDetails = {
+  problemStatement: string;
+  problemStatementImageUrl: string;
+  problemStatementImageAlt: string;
+};
+
+export type SingleProcessProps = {
+  imageUrl: string;
+  imageAlt: string;
+  title: string;
+};
+
+export type ProblemStatementProps = {
+  myProcess: SingleProcessProps[];
+};
+
+export type ChallengesLearningsProps = {
+  challenges: string[];
+  learnings: string[];
+};
+
+export type SectionListProps = {
+  items: string[];
+  title: string;
+  iconSrc: StaticImageData;
+  color: string;
 };

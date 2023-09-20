@@ -126,11 +126,23 @@ const caseStudy = {
       type: 'array',
       of: [
         {
-          type: 'image',
+          type: 'object',
+          name: 'processStep',
+          title: 'Process Step',
           fields: [
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+            },
             {
               name: 'alt',
               title: 'Alt',
+              type: 'string',
+            },
+            {
+              name: 'title',
+              title: 'Title',
               type: 'string',
             },
           ],

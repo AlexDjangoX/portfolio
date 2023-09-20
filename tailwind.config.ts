@@ -28,6 +28,8 @@ const config: Config = {
         'black-200': '#151E2C',
         'line-gray': 'rgba(255,255,255,0.5)',
         'line-black': 'rgba(21,30,44,0.4)',
+        'heading-red': '#E15A46',
+        'heading-green': '#02BC7D',
       },
       screens: {
         l: '1400px',

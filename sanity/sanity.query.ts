@@ -162,13 +162,15 @@ export async function getCaseStudyByProjectName(projectName: string) {
         "figmaDesignUrl": figmaDesign.asset->url,
         "figmaDesignAlt": figmaDesign.alt,
         myProcess[] {
-          "imageUrl": asset->url,
-          "imageAlt": alt
+          "imageUrl": image.asset->url,
+          "imageAlt": alt,
+          title
         },
         challenges,
         learnings
       }[0]
     `,
-    { projectName }
+    { projectName },
+    { next: { revalidate } }
   );
 }
