@@ -229,3 +229,14 @@ export type SectionListProps = {
   iconSrc: StaticImageData;
   color: string;
 };
+
+export type CaseStudy = {
+  otherCaseStudyHeading: string;
+  otherCaseStudyDescription: string;
+  otherCaseStudyImageUrl: string;
+  otherCaseStudyImageAlt: string;
+};
+
+export type OtherCaseStudiesProps = {
+  otherCaseStudies: CaseStudy[];
+};

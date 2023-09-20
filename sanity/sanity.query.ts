@@ -167,7 +167,14 @@ export async function getCaseStudyByProjectName(projectName: string) {
           title
         },
         challenges,
-        learnings
+        learnings,
+        otherCaseStudies[] {
+          "otherCaseStudyImageUrl": otherCaseStudyImage.asset->url,
+          "otherCaseStudyImageAlt": otherCaseStudyImage.alt,
+          otherCaseStudyHeading,
+          otherCaseStudyDescription
+        }
+        
       }[0]
     `,
     { projectName },

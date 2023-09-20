@@ -15,7 +15,7 @@ const FigmaDesign: React.FC<FigmaProps> = ({
         </p>
       </div>
       <Image
-        className="w-full object-cover"
+        className="w-full object-cover "
         src={figmaDesignUrl}
         alt={figmaDesignAlt}
         width={500}

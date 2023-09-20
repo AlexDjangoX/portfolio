@@ -11,10 +11,10 @@ import FigmaDesign from './FigmaDesign';
 import ProjectDetailsProcess from './ProjectDetailsProcess';
 import ChallengesLearnings from './ChallengesLearnings';
 import CallToAction from '../action/CallToAction';
+import OtherCaseStudies from './OtherCaseStudies';
 
 const ProjectDetails = async ({ projectId }: { projectId: string }) => {
   const project = await getCaseStudyByProjectName(projectId);
-  console.log(project.challenges);
   return (
     <section className="flex w-full flex-col">
       <ProjectDetailsHeader
@@ -50,6 +50,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
         challenges={project?.challenges}
         learnings={project?.learnings}
       />
+      <OtherCaseStudies otherCaseStudies={project?.otherCaseStudies} />
       <CallToAction />
     </section>
   );

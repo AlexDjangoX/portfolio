@@ -163,6 +163,44 @@ const caseStudy = {
       of: [{ type: 'string' }],
       description: 'List of key takeaways from the project.',
     },
+    {
+      name: 'otherCaseStudies',
+      title: 'Other Case Studies',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          title: 'Case Study',
+          fields: [
+            {
+              name: 'otherCaseStudyImage',
+              title: 'Case Study Image',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+              fields: [
+                {
+                  name: 'alt',
+                  title: 'Alt',
+                  type: 'string',
+                },
+              ],
+            },
+            {
+              name: 'otherCaseStudyHeading',
+              title: 'Case Study Heading',
+              type: 'string',
+            },
+            {
+              name: 'otherCaseStudyDescription',
+              title: 'Case Study Description',
+              type: 'text',
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
 
