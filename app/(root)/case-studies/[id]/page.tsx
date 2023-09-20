@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
 import { git, site, blueArrow } from '@/public/assets/index';
 
-import { SkillsProps } from '@/types';
-
 interface StudyDetailProps {
   params: {
     id: string;

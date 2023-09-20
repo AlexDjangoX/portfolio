@@ -12,7 +12,7 @@ const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({
   _id,
 }) => {
   const projectBackgrounds: Record<string, string> = {
-    morrent: 'bg-morent-background',
+    morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
     filmpire: 'bg-filmpire-background',
   };
