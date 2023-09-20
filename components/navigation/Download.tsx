@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import DownloadIcon from './DownloadIcon';
+import DownloadIcon from '../reusable/DownloadIcon';
 import useDownloadResume from '@/hooks/useDownloadResume';
 
 const DownloadResume: React.FC = () => {

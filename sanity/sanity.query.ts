@@ -148,7 +148,14 @@ export async function getCaseStudyByProjectName(projectName: string) {
           "imageUrl": asset->url,
           "imageAlt": alt
         },
-        description,
+        description[]{
+          ...,
+          children[]{
+            text,
+            marks[]
+          },
+          markDefs[]
+        },
         problemStatement,
         "problemStatementImageUrl": problemStatementImage.asset->url,
         "problemStatementImageAlt": problemStatementImage.alt,

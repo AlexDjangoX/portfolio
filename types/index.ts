@@ -153,3 +153,34 @@ export type CaseStudiesCardProps = {
   subHeading: string;
   image: string;
 };
+
+export interface StudyDetailParams {
+  _id: string;
+  imageUrl: string;
+  imageAlt: string;
+}
+
+export interface Child {
+  text: string;
+  marks: any[];
+}
+
+export interface BlockProps {
+  _key?: string;
+  markDefs: any[];
+  children: Child[];
+  _type: string;
+  style: string;
+}
+
+export interface ProjectDetailsProps {
+  params: {
+    id: string;
+  };
+}
+
+export type IconProps = {
+  className?: string;
+  height?: number | string;
+  width?: number | string;
+};
