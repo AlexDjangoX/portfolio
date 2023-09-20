@@ -8,7 +8,6 @@ import CustomButton from '../reusable/CustomButton';
 
 const Projects = async () => {
   const projects = await getProjects();
-  console.log(projects);
   return (
     <section className="flex justify-center bg-white-900 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem] lg:flex-row">
       <div className="flex max-w-7xl flex-col ">
