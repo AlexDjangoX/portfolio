@@ -16,6 +16,3 @@ export { default as star } from './star.svg';
 
 export { default as github } from './github.svg';
 export { default as linkedin } from './linkedin.svg';
-
-export { default as callToActionLarge } from './callToActionLarge.svg';
-export { default as callToActionSmall } from './callToActionSmall.svg';

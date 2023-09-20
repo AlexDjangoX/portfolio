@@ -5,7 +5,6 @@ import Work from '@/components/work/Work';
 import Project from '@/components/projects/Project';
 import Testimonials from '@/components/testimonials/Testimonials';
 import CallToAction from '@/components/action/CallToAction';
-import Footer from '@/components/footer/Footer';
 
 const Home = () => {
   return (
@@ -17,7 +16,6 @@ const Home = () => {
       <Project />
       <Testimonials />
       <CallToAction />
-      <Footer />
     </>
   );
 };

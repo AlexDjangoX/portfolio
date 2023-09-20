@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 import client from './sanity.client';
 
-const revalidate = 1800;
+const revalidate = 1;
 
 export async function getProfile() {
   return client.fetch(
@@ -78,6 +78,20 @@ export async function getTestimonials() {
       subheadingName,
       "testimonialImage": testimonialImage.asset->url,
       "altText": testimonialImage.alt
+    }`,
+    { next: { revalidate } }
+  );
+}
+
+export async function getCaseStudies() {
+  return client.fetch(
+    groq`*[_type == "caseStudies"]{
+      _id,
+      heading,
+      projectName,
+      subHeading,
+      "image": image.asset->url,
+      "altText": image.alt
     }`,
     { next: { revalidate } }
   );
