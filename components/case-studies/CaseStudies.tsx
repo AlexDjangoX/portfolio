@@ -15,14 +15,7 @@ const CaseStudies = async () => {
         <div className="mt-[3rem] flex flex-wrap justify-center gap-[3rem]">
           {caseStudies?.map((study: CaseStudiesCardProps) => (
             <Link key={study._id} href={`/case-studies/${study.projectName}`}>
-              <CaseStudiesCard
-                _id={study._id}
-                heading={study.heading}
-                projectName={study.projectName}
-                subHeading={study.subHeading}
-                image={study.image}
-                altText={study.altText}
-              />
+              <CaseStudiesCard {...study} />
             </Link>
           ))}
         </div>
