@@ -1,4 +1,4 @@
-import CaseStudies from '@/components/case sudies/CaseStudies';
+import CaseStudies from '@/components/case-studies/CaseStudies';
 
 const Page = () => {
   return <CaseStudies />;
