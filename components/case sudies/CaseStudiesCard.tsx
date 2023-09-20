@@ -11,13 +11,13 @@ const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({
   image,
   _id,
 }) => {
-  const projectBackgrounds: Record<string, string> = {
+  const projectColorBackgrounds: Record<string, string> = {
     morrent: 'bg-morent-background',
     jobit: 'bg-jobit-background',
     filmpire: 'bg-filmpire-background',
   };
 
-  const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
+  const cardBackground = projectColorBackgrounds[projectName] || 'bg-white-900';
 
   return (
     <div className="mb-[1.25rem] bg-white-900 dark:bg-black-200 sm:mb-[2.25rem]">
