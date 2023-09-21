@@ -1,10 +1,9 @@
-import React from 'react';
 import Image from 'next/image';
 
 import { star } from '@/public/assets';
-import { StarComponentProps } from '@/types';
+import { StarComponentType } from '@/types';
 
-const StarComponent: React.FC<StarComponentProps> = ({ count }) => {
+const StarComponent = ({ count }: StarComponentType) => {
   return (
     <div className="mt-4 flex">
       {Array.from({ length: count }).map((_, index) => (

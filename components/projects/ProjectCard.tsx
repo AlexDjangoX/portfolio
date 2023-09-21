@@ -1,28 +1,25 @@
-import React from 'react';
-
 import ProjectCardContent from './ProjectCardContent';
 import ProjectCardImage from './ProjectCardImage';
-import { ProjectCardProps } from '@/types';
+import { ProjectCardType } from '@/types';
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard = ({
   heading,
   projectName,
   image,
   technologies,
   index,
-}) => {
+}: ProjectCardType) => {
   const projectBackgrounds: Record<string, string> = {
-    morrent: 'bg-morent-background',
+    morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
     filmpire: 'bg-filmpire-background',
   };
 
   const buttonBackgrounds: Record<string, string> = {
-    morent: 'bg-morent-button',
+    morrent: 'bg-morrent-button',
     jobit: 'bg-jobit-button',
     filmpire: 'bg-filmpire-button',
   };
-
   const isOdd = index % 2 !== 0;
 
   const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';

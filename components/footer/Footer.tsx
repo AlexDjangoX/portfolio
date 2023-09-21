@@ -1,7 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 import { icons } from '@/utils/constants';
+import FooterLinks from './FooterLinks';
 
 const Footer = () => {
   return (
@@ -9,11 +7,11 @@ const Footer = () => {
       <p>© 2023 Alexander Mc Lachlan. All rights reserved.</p>
       <div className="mt-[0.5rem] flex gap-6">
         {icons.map((icon) => (
-          <Link key={icon.src.toString()} href={icon.href} target="_blank">
-            <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-black-400 dark:bg-transparent">
-              <Image src={icon.src} alt="social icon" width={24} height={24} />
-            </div>
-          </Link>
+          <FooterLinks
+            key={icon.src.toString()}
+            iconSrc={icon.src}
+            href={icon.href}
+          />
         ))}
       </div>
     </footer>

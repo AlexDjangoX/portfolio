@@ -1,9 +1,5 @@
-import React from 'react';
-
-type Props = {};
-
-const Page = (props: Props) => {
-  return <div>Page</div>;
+const Contact = () => {
+  return <div>Contact</div>;
 };
 
-export default Page;
+export default Contact;

@@ -1,17 +1,16 @@
-import React from 'react';
 import Image from 'next/image';
 
 import DownloadResume from './Download';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavbarRoutes from './NavbarRoutes';
-import { DeskTopNavbarProps } from '@/types';
+import { DeskTopNavbarType } from '@/types';
 
-const DesktopNavbar: React.FC<DeskTopNavbarProps> = ({
+const DesktopNavbar = ({
   toggleMobile,
   showMobileNavbar,
   openImgSrc,
   pathname,
-}) => {
+}: DeskTopNavbarType) => {
   return (
     <div className="flex items-center justify-around">
       <div className="hidden items-center md:flex">

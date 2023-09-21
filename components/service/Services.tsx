@@ -1,18 +1,9 @@
-import React from 'react';
 import { getServices } from '@/sanity/sanity.query';
-
-import SkillsCard from '../skills/SkillsCard';
+import ServiceCard from './ServiceCard';
 import ServiceHeading from './ServiceHeading';
+import { Service } from '@/types';
 
-type Service = {
-  _id: string;
-  heading: string;
-  content: string;
-  whiteImage: string;
-  blueImage: string;
-};
-
-const Services: React.FC = async () => {
+const Services = async () => {
   const services = await getServices();
 
   return (
@@ -20,13 +11,7 @@ const Services: React.FC = async () => {
       <ServiceHeading />
       <div className="flex flex-wrap  justify-center gap-x-4 gap-y-[2.5rem] md:justify-around ">
         {services?.map((card: Service) => (
-          <SkillsCard
-            key={card?._id}
-            heading={card?.heading}
-            content={card?.content}
-            imgSrcWhite={card?.whiteImage}
-            imgSrcBlue={card?.blueImage}
-          />
+          <ServiceCard key={card?._id} {...card} />
         ))}
       </div>
     </section>

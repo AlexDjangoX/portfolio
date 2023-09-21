@@ -4,7 +4,7 @@ import skills from './skills';
 import work from './work';
 import projects from './projects';
 import testimonials from './testimonials';
-import caseStudies from './caseStudies';
+import caseStudy from './caseStudy';
 
 export const schemaTypes = [
   profile,
@@ -13,5 +13,5 @@ export const schemaTypes = [
   work,
   projects,
   testimonials,
-  caseStudies,
+  caseStudy,
 ];

@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -10,7 +9,7 @@ import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 import useNavigationBar from '@/hooks/useNavigationBar';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const pathname = usePathname();
 
   const { showMobileNavbar, openImgSrc, closeImgSrc, toggleMobile } =

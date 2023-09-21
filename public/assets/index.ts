@@ -16,3 +16,10 @@ export { default as star } from './star.svg';
 
 export { default as github } from './github.svg';
 export { default as linkedin } from './linkedin.svg';
+
+export { default as git } from './git.svg';
+export { default as site } from './site.svg';
+export { default as blueArrow } from './blueArrow.svg';
+
+export { default as tick } from './tick.svg';
+export { default as challenge } from './challenge.svg';

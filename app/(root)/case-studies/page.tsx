@@ -1,7 +1,7 @@
-import CaseStudies from '@/components/caseStudies/CaseStudies';
+import CaseStudies from '@/components/case-studies/CaseStudies';
 
-const Page = () => {
+const CaseStudy = () => {
   return <CaseStudies />;
 };
 
-export default Page;
+export default CaseStudy;

@@ -96,3 +96,88 @@ export async function getCaseStudies() {
     { next: { revalidate } }
   );
 }
+
+export async function getCaseStudyDetails() {
+  return client.fetch(
+    groq`
+      *[_type == "caseStudy"] {
+        headingUnderline,
+        heading, 
+        projectName,
+        "imageUrl": image.asset->url,
+        "imageAlt": image.alt,
+        demoSite,
+        sourceCode,
+        techStack[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        description,
+        problemStatement,
+        "problemStatementImageUrl": problemStatementImage.asset->url,
+        "problemStatementImageAlt": problemStatementImage.alt,
+        "figmaDesignUrl": figmaDesign.asset->url,
+        "figmaDesignAlt": figmaDesign.alt,
+        myProcess[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        challenges,
+        learnings
+      }
+    `,
+    { next: { revalidate } }
+  );
+}
+
+export async function getCaseStudyByProjectName(projectName: string) {
+  return client.fetch(
+    groq`
+      *[_type == "caseStudy" && projectName == $projectName] {
+        headingUnderline,
+        heading,
+        projectName,
+        startDate,
+        endDate,
+        myRole,
+        "imageUrl": image.asset->url,
+        "imageAlt": image.alt,
+        demoSite,
+        sourceCode,
+        techStack[] {
+          "imageUrl": asset->url,
+          "imageAlt": alt
+        },
+        description[]{
+          ...,
+          children[]{
+            text,
+            marks[]
+          },
+          markDefs[]
+        },
+        problemStatement,
+        "problemStatementImageUrl": problemStatementImage.asset->url,
+        "problemStatementImageAlt": problemStatementImage.alt,
+        "figmaDesignUrl": figmaDesign.asset->url,
+        "figmaDesignAlt": figmaDesign.alt,
+        myProcess[] {
+          "imageUrl": image.asset->url,
+          "imageAlt": alt,
+          title
+        },
+        challenges,
+        learnings,
+        otherCaseStudies[] {
+          "otherCaseStudyImageUrl": otherCaseStudyImage.asset->url,
+          "otherCaseStudyImageAlt": otherCaseStudyImage.alt,
+          otherCaseStudyHeading,
+          otherCaseStudyDescription
+        }
+        
+      }[0]
+    `,
+    { projectName },
+    { next: { revalidate } }
+  );
+}

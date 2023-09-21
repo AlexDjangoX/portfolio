@@ -1,18 +1,13 @@
 import Image from 'next/image';
 
-type CardProps = {
-  heading: string;
-  content: string;
-  imgSrcWhite?: string;
-  imgSrcBlue?: string;
-};
+import { CardPropType } from '@/types';
 
 const SkillsCard = ({
   imgSrcWhite,
   imgSrcBlue,
   heading,
   content,
-}: CardProps) => {
+}: CardPropType) => {
   return (
     <div className="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 transition duration-300 hover:translate-y-[1.2rem] hover:bg-primary-light dark:bg-black-200">
       <div className="absolute left-[1.5625rem] top-[1.875rem] flex h-[3.875rem] w-[3.875rem] items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-white">

@@ -1,13 +1,6 @@
 import WorkCard from './WorkCard';
 import { getWork } from '@/sanity/sanity.query';
-
-type CardProps = {
-  _id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  imgSrc: string;
-};
+import { WorkCardType } from '@/types';
 
 const Work = async () => {
   const work = await getWork();
@@ -37,14 +30,8 @@ const Work = async () => {
           </div>
         </div>
         <div className="ml-6  mt-4 flex w-full max-w-3xl  flex-col justify-around space-y-6 bg-white-800 dark:bg-black-200 xl:mt-0 xl:gap-7">
-          {work.map((workItem: CardProps) => (
-            <WorkCard
-              key={workItem._id}
-              title={workItem.title}
-              subtitle={workItem.subtitle}
-              description={workItem.description}
-              imageSrc={workItem.imgSrc}
-            />
+          {work.map((workItem: WorkCardType) => (
+            <WorkCard key={workItem._id} {...workItem} />
           ))}
         </div>
       </div>

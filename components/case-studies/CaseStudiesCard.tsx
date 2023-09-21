@@ -1,23 +1,21 @@
-import React from 'react';
 import Image from 'next/image';
 
-import { CaseStudiesCardProps } from '@/types';
+import { CaseStudiesCardType } from '@/types';
 
-const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({
+const CaseStudiesCard = ({
   altText,
   projectName,
   heading,
   subHeading,
   image,
   _id,
-}) => {
-  const projectColorBackgrounds: Record<string, string> = {
-    morrent: 'bg-morent-background',
+}: CaseStudiesCardType) => {
+  const projectBackgrounds: Record<string, string> = {
+    morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
     filmpire: 'bg-filmpire-background',
   };
-
-  const cardBackground = projectColorBackgrounds[projectName] || 'bg-white-900';
+  const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
 
   return (
     <div className="mb-[1.25rem] bg-white-900 dark:bg-black-200 sm:mb-[2.25rem]">

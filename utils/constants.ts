@@ -10,3 +10,11 @@ export const icons = [
     href: 'https://github.com/AlexDjangoX',
   },
 ];
+
+
+
+export const routes = [
+  { path: '/', label: 'Home' },
+  { path: '/case-studies', label: 'Case Studies' },
+  { path: '/contact', label: 'Contacts' },
+];
