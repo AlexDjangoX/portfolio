@@ -1,7 +1,7 @@
 import { getCaseStudies } from '@/sanity/sanity.query';
 import CaseStudiesHeading from './CaseStudiesHeadingContent';
 import CaseStudiesCard from './CaseStudiesCard';
-import { CaseStudiesCardProps } from '@/types';
+import { CaseStudiesCardType } from '@/types';
 import CallToAction from '../action/CallToAction';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ const CaseStudies = async () => {
       <CaseStudiesHeading />
       <div className="flex  flex-col bg-white-900 dark:bg-black-200">
         <div className="mt-[3rem] flex flex-wrap justify-center gap-[3rem]">
-          {caseStudies?.map((study: CaseStudiesCardProps) => (
+          {caseStudies?.map((study: CaseStudiesCardType) => (
             <Link key={study._id} href={`/case-studies/${study.projectName}`}>
               <CaseStudiesCard {...study} />
             </Link>

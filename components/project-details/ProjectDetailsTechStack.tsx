@@ -1,13 +1,12 @@
-import React from 'react';
 import Image from 'next/image';
 
-import { StudyDetailParams } from '@/types';
+import { ProjectDetailsTechStackInterface } from '@/types';
 import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
 import ProjectDetailsHeading from '@/components/reusable/ProjectDetailsHeading';
 
-const ProjectDetailsTechStack: React.FC<{
-  techStack: StudyDetailParams[];
-}> = ({ techStack }) => (
+const ProjectDetailsTechStack = ({
+  techStack,
+}: ProjectDetailsTechStackInterface) => (
   <WrapperStudyDetails additionalStyles="bg-white-900 dark:bg-black-200">
     <ProjectDetailsHeading
       subHeading="Technologies used"

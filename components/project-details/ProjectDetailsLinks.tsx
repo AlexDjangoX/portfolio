@@ -1,14 +1,18 @@
-import React from 'react';
 import Link from 'next/link';
 
 import { GitIcon } from '../reusable/GitIcon';
 import { WorldIcon } from '../reusable/WorldIcon';
 import { BlueArrowIcon } from '../reusable/BlueArrowIcon';
 
-const ProjectDetailsLinks: React.FC<{
+type ProjectDetailsLinksProps = {
   demoSite: string;
   sourceCode: string;
-}> = ({ demoSite, sourceCode }) => (
+};
+
+const ProjectDetailsLinks = ({
+  demoSite,
+  sourceCode,
+}: ProjectDetailsLinksProps) => (
   <div className="flex items-center justify-center bg-white-800 pb-[3rem] pt-[1.563rem] dark:bg-black-300 md:pb-[4.125rem]">
     <Link
       className="mr-[2.563rem] flex items-center text-[0.874rem] font-semibold text-primary-light dark:text-primary-dark md:text-[1.25rem]"

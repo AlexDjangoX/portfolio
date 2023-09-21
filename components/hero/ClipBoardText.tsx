@@ -1,13 +1,12 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 
 import { frame } from '@/public/assets';
-import { ClipboardTextProps } from '@/types';
+import { ClipboardTextInterface } from '@/types';
 import useClipboardText from '@/hooks/useClipboardText';
 
-const ClipboardText: React.FC<ClipboardTextProps> = ({ text }) => {
+const ClipboardText = ({ text }: ClipboardTextInterface) => {
   const { handleCopyClick } = useClipboardText(text);
 
   return (

@@ -1,4 +1,4 @@
-import { BiComment } from 'react-icons/bi'; // A comment icon seems fitting for testimonials, but you can change this
+import { BiComment } from 'react-icons/bi';
 import { defineField } from 'sanity';
 import { Rule } from '@sanity/types';
 

@@ -1,16 +1,14 @@
-import React from 'react';
-
 import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
 import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
-import { ChallengesLearningsProps } from '@/types';
+import { ChallengesLearningsType } from '@/types';
 import ChallengesLearningsList from './ChallengesLearningsList';
 
 import { challenge, tick } from '@/public/assets/index';
 
-const ChallengesLearnings: React.FC<ChallengesLearningsProps> = ({
+const ChallengesLearnings = ({
   challenges,
   learnings,
-}) => {
+}: ChallengesLearningsType) => {
   return (
     <WrapperStudyDetails additionalStyles="bg-white-900 dark:bg-black-200 py-[1.5rem] px-[0.9rem] ">
       <ProjectDetailsHeading

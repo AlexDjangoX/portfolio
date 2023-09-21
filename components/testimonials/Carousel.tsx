@@ -1,15 +1,14 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 
-import { CarouselProps } from '@/types';
+import { CarouselType } from '@/types';
 import TestimonialDetails from './TestimonialDetails';
 import ArrowLeftControl from './ArrowLeftControl';
 import ArrowRightControl from './ArrowRightControl';
 import useCarousel from '@/hooks/useCarousel';
 
-const Carousel: React.FC<CarouselProps> = ({ testimonials }) => {
+const Carousel = ({ testimonials }: CarouselType) => {
   const { activeIndex, show, nextSlide, prevSlide } = useCarousel(
     testimonials.length
   );

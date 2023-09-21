@@ -1,11 +1,9 @@
 'use client';
 
-import React from 'react';
-
 import DownloadIcon from '../reusable/DownloadIcon';
 import useDownloadResume from '@/hooks/useDownloadResume';
 
-const DownloadResume: React.FC = () => {
+const DownloadResume = () => {
   const { resumeUrl, error } = useDownloadResume();
 
   if (!resumeUrl || error) {

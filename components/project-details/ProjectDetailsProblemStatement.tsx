@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
@@ -6,11 +5,11 @@ import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
 
 import { ProjectDetails } from '@/types';
 
-const ProjectDetailsProblemStatement: React.FC<ProjectDetails> = ({
+const ProjectDetailsProblemStatement = ({
   problemStatement,
   problemStatementImageUrl,
   problemStatementImageAlt,
-}) => {
+}: ProjectDetails) => {
   return (
     <WrapperStudyDetails additionalStyles="bg-white-900 dark:bg-black-200 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
       <ProjectDetailsHeading

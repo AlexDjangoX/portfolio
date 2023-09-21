@@ -1,14 +1,13 @@
-import React from 'react';
 import Image from 'next/image';
 
 import { CaseStudy } from '@/types';
 
-const OtherCaseStudyCard: React.FC<CaseStudy> = ({
+const OtherCaseStudyCard = ({
   otherCaseStudyHeading,
   otherCaseStudyDescription,
   otherCaseStudyImageUrl,
   otherCaseStudyImageAlt,
-}) => (
+}: CaseStudy) => (
   <div className="m-4 w-[344px] rounded-lg p-4 dark:bg-black-200 md:mb-6 md:w-[429px]">
     <div className="relative h-[187px]  rounded-md md:h-[232px]">
       <Image

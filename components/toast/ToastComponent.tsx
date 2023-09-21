@@ -1,11 +1,6 @@
-import React from 'react';
+import { ToastInterface } from '@/types';
 
-interface ToastProps {
-  message: string;
-  type: 'success' | 'error';
-}
-
-const ToastComponent: React.FC<ToastProps> = ({ message, type }) => {
+const ToastComponent = ({ message, type }: ToastInterface) => {
   const bgColor = type === 'error' ? 'bg-red-500' : 'bg-green-500';
 
   return (

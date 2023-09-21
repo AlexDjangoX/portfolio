@@ -1,14 +1,12 @@
-import React from 'react';
-
 import StarComponent from './Star';
-import { TestimonialDetailsProps } from '@/types';
+import { TestimonialDetailsType } from '@/types';
 
-const TestimonialDetails: React.FC<TestimonialDetailsProps> = ({
+const TestimonialDetails = ({
   content,
   headingName,
   subheadingName,
   show,
-}) => {
+}: TestimonialDetailsType) => {
   const opacityClass = show ? 'opacity-100' : 'opacity-0';
   return (
     <div

@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 
-import { NavbarRoutesProps } from '@/types';
+import { NavbarRoutesType } from '@/types';
 
 const routes = [
   { path: '/', label: 'Home' },
@@ -9,10 +8,7 @@ const routes = [
   { path: '/contact', label: 'Contacts' },
 ];
 
-const NavbarRoutes: React.FC<NavbarRoutesProps> = ({
-  pathname,
-  showMobileNavbar,
-}) => {
+const NavbarRoutes = ({ pathname, showMobileNavbar }: NavbarRoutesType) => {
   return (
     <>
       {routes?.map((route) => (

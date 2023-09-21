@@ -1,14 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
 
-import { WorkCardProps } from '@/types';
+import { WorkCardType } from '@/types';
 
-const WorkCard: React.FC<WorkCardProps> = ({
-  title,
-  subtitle,
-  description,
-  imageSrc,
-}) => {
+const WorkCard = ({ title, subtitle, description, imageSrc }: WorkCardType) => {
   return (
     <div className="flex flex-col items-start  rounded-md bg-white-800 transition-transform duration-300 hover:translate-x-[2rem] hover:bg-white-900 dark:bg-black-200 dark:hover:bg-black-300 ">
       <div className="flex items-center justify-start">

@@ -1,9 +1,9 @@
-import React from 'react';
+import { ProjectDetailsHeaderTypes } from '@/types';
 
-const ProjectDetailsHeader: React.FC<{
-  headingUnderline: string;
-  heading: string;
-}> = ({ headingUnderline, heading }) => (
+const ProjectDetailsHeader = ({
+  headingUnderline,
+  heading,
+}: ProjectDetailsHeaderTypes) => (
   <div className=" flex flex-col justify-center bg-white-800 pt-[7.5rem] dark:bg-black-300 md:pt-[9rem]">
     <h3 className="mb-[0.625rem] text-center font-semibold text-primary-light dark:text-primary-dark md:text-[1.25rem] md:leading-[130%] md:tracking-[6px]">
       WEB DEV PROJECT

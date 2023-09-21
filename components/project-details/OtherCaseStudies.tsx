@@ -1,13 +1,9 @@
-import React from 'react';
-
 import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
-import { OtherCaseStudiesProps } from '@/types';
+import { OtherCaseStudiesType } from '@/types';
 import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
 import OtherCaseStudyCard from './OtherCaseStudyCard';
 
-const OtherCaseStudies: React.FC<OtherCaseStudiesProps> = ({
-  otherCaseStudies,
-}) => {
+const OtherCaseStudies = ({ otherCaseStudies }: OtherCaseStudiesType) => {
   return (
     <WrapperStudyDetails additionalStyles="bg-white-800 dark:bg-black-300 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
       <ProjectDetailsHeading

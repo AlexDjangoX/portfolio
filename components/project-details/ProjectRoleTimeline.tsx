@@ -1,10 +1,10 @@
-import React from 'react';
+import { ProjectRoleTimelineType } from '@/types';
 
-const ProjectRoleTimeline: React.FC<{
-  myRole: string;
-  startDate: string;
-  endDate: string;
-}> = ({ myRole, startDate, endDate }) => (
+const ProjectRoleTimeline = ({
+  myRole,
+  startDate,
+  endDate,
+}: ProjectRoleTimelineType) => (
   <div className="flex w-full flex-col justify-center bg-white-900 px-[1.5rem] py-[2.5rem] dark:bg-black-200 md:flex-row md:justify-around md:px-[10.5rem] ">
     <div className="flex-col">
       <h4 className="mb-[0.625rem] text-[0.874rem] font-semibold leading-[145%] text-black-400 dark:text-white-500  md:font-[1.125rem] md:leading-[160%]">

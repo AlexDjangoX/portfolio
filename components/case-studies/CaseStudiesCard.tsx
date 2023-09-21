@@ -1,16 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
 
-import { CaseStudiesCardProps } from '@/types';
+import { CaseStudiesCardType } from '@/types';
 
-const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({
+const CaseStudiesCard = ({
   altText,
   projectName,
   heading,
   subHeading,
   image,
   _id,
-}) => {
+}: CaseStudiesCardType) => {
   const projectBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',

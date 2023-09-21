@@ -1,17 +1,16 @@
-import React from 'react';
 import Image from 'next/image';
 
 import DownloadResume from './Download';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavbarRoutes from './NavbarRoutes';
-import { MobileNavbarProps } from '@/types';
+import { MobileNavbarType } from '@/types';
 
-const MobileNavbar: React.FC<MobileNavbarProps> = ({
+const MobileNavbar = ({
   toggleMobile,
   showMobileNavbar,
   closeImgSrc,
   pathname,
-}) => {
+}: MobileNavbarType) => {
   return (
     <div className="fixed right-0 z-30  flex h-full w-2/4 items-center bg-white-800 dark:bg-black-200 md:hidden">
       <Image

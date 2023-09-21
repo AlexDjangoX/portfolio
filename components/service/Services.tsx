@@ -1,18 +1,9 @@
-import React from 'react';
 import { getServices } from '@/sanity/sanity.query';
-
 import SkillsCard from '../skills/SkillsCard';
 import ServiceHeading from './ServiceHeading';
+import { Service } from '@/types';
 
-type Service = {
-  _id: string;
-  heading: string;
-  content: string;
-  whiteImage: string;
-  blueImage: string;
-};
-
-const Services: React.FC = async () => {
+const Services = async () => {
   const services = await getServices();
 
   return (

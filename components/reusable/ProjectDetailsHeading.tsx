@@ -1,13 +1,11 @@
-import React from 'react';
+import { HeadingType } from '@/types';
 
-import { HeadingProps } from '@/types';
-
-const ProjectDetailsHeading: React.FC<HeadingProps> = ({
+const ProjectDetailsHeading = ({
   subHeading,
   mainHeading,
   additionalStylesMainHeading,
   additionalStylesSubHeading,
-}) => {
+}: HeadingType) => {
   return (
     <>
       <p

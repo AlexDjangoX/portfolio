@@ -1,16 +1,14 @@
-import React from 'react';
-
 import ProjectCardContent from './ProjectCardContent';
 import ProjectCardImage from './ProjectCardImage';
-import { ProjectCardProps } from '@/types';
+import { ProjectCardType } from '@/types';
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard = ({
   heading,
   projectName,
   image,
   technologies,
   index,
-}) => {
+}: ProjectCardType) => {
   const projectBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',

@@ -1,12 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
 
-import { FigmaProps } from '@/types';
+import { FigmaType } from '@/types';
 
-const FigmaDesign: React.FC<FigmaProps> = ({
-  figmaDesignUrl,
-  figmaDesignAlt,
-}) => {
+const FigmaDesign = ({ figmaDesignUrl, figmaDesignAlt }: FigmaType) => {
   return (
     <div>
       <div className="flex h-[6.6rem] w-full items-center justify-center bg-primary-light dark:bg-primary-dark">

@@ -1,13 +1,10 @@
-import React from 'react';
 import Image from 'next/image';
 
 import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
 import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
-import { ProblemStatementProps } from '@/types';
+import { ProblemStatementType } from '@/types';
 
-const ProjectDetailsProcess: React.FC<ProblemStatementProps> = ({
-  myProcess,
-}) => {
+const ProjectDetailsProcess = ({ myProcess }: ProblemStatementType) => {
   return (
     <WrapperStudyDetails additionalStyles="bg-white-900 dark:bg-black-200 py-[2.25rem] px-[1.5rem] ">
       <ProjectDetailsHeading

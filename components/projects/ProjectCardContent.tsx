@@ -1,15 +1,15 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { arrow } from '@/public/assets';
-import { ProjectCardContentProps } from '@/types';
 
-const ProjectCardContent: React.FC<ProjectCardContentProps> = ({
+import { arrow } from '@/public/assets';
+import { ProjectCardContentType } from '@/types';
+
+const ProjectCardContent = ({
   heading,
   projectName,
   technologies,
   buttonBackground,
-}) => {
+}: ProjectCardContentType) => {
   return (
     <div className=" lg:ml-[5.4rem] lg:w-1/2">
       <h2 className="mb-[1.5rem] text-[2rem] font-bold leading-[2.3rem] text-white-900  lg:text-[2.8rem] lg:leading-[3.45rem]">

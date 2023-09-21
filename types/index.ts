@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { PortableTextBlock } from 'sanity';
 
 export type ProfileType = {
@@ -23,19 +23,19 @@ export type ResumeType = {
   resumeURL: string;
 };
 
-export type MobileNavbarProps = {
+export type MobileNavbarType = {
   toggleMobile: () => void;
   showMobileNavbar: boolean;
   closeImgSrc: string;
   pathname: string;
 };
 
-export type NavbarRoutesProps = {
+export type NavbarRoutesType = {
   pathname: string;
   showMobileNavbar: boolean;
 };
 
-export type DeskTopNavbarProps = Omit<MobileNavbarProps, 'closeImgSrc'> & {
+export type DeskTopNavbarType = Omit<MobileNavbarType, 'closeImgSrc'> & {
   openImgSrc: string;
 };
 
@@ -48,7 +48,7 @@ export type Project = {
   index: number;
 };
 
-export type ProjectCardProps = {
+export type ProjectCardType = {
   heading: string;
   projectName: string;
   image: string;
@@ -56,14 +56,14 @@ export type ProjectCardProps = {
   index: number;
 };
 
-export type ProjectCardContentProps = {
+export type ProjectCardContentType = {
   heading: string;
   projectName: string;
   technologies: string[];
   buttonBackground: string;
 };
 
-export type ProjectCardImageProps = {
+export type ProjectCardImageType = {
   image: string;
   heading: string;
 };
@@ -77,75 +77,53 @@ export type Testimonial = {
   altText: string;
 };
 
-export type CarouselProps = {
+export type CarouselType = {
   testimonials: Testimonial[];
 };
 
-export type ArrowLeftControlProps = {
+export type ArrowLeftControlType = {
   onClick: () => void;
   isHiddenOnLg?: boolean;
 };
 
-export type ArrowRightControlProps = {
+export type ArrowRightControlType = {
   onClick: () => void;
   isHiddenOnLg?: boolean;
 };
 
-export type StarComponentProps = {
+export type StarComponentType = {
   count: number;
 };
 
-export type TestimonialDetailsProps = {
+export type TestimonialDetailsType = {
   content: string;
   headingName: string;
   subheadingName: string;
   show: boolean;
 };
 
-export interface WrapperDark200Props {
+export interface WrapperDark200Interface {
   children: React.ReactNode;
 }
 
-export type Service = {
-  _id: string;
-  heading: string;
-  content: string;
-  whiteImage: string;
-  blueImage: string;
-};
-
-export type SkillsProps = {
+export type SkillsType = {
   _id: string;
   image: string;
   altText: string;
 };
 
-export interface ClipboardTextProps {
+export interface ClipboardTextInterface {
   text: string;
 }
 
-export type WorkCardProps = {
+export type WorkCardType = {
   title: string;
   subtitle: string;
   description: string;
   imageSrc: string;
 };
 
-type ImageSrc = StaticImageData | string;
-
-export interface GeometricItem {
-  src: ImageSrc;
-  alt: string;
-  width: number;
-  height: number;
-  position: string;
-}
-
-export type GeometricBackgroundProps = {
-  items: GeometricItem[];
-};
-
-export type CaseStudiesCardProps = {
+export type CaseStudiesCardType = {
   altText: string;
   _id: string;
   heading: string;
@@ -154,50 +132,58 @@ export type CaseStudiesCardProps = {
   image: string;
 };
 
-export interface StudyDetailParams {
+export interface StudyDetailInterface {
   _id: string;
   imageUrl: string;
   imageAlt: string;
 }
 
-export interface Child {
+export interface ProjectDetailsTechStackInterface {
+  techStack: StudyDetailInterface[];
+}
+
+export interface ChildInterface {
   text: string;
   marks: any[];
 }
 
-export interface BlockProps {
+export interface BlockInterface {
   _key?: string;
   markDefs: any[];
-  children: Child[];
+  children: ChildInterface[];
   _type: string;
   style: string;
 }
 
-export interface ProjectDetailsProps {
+export interface ProjectDetailsDescriptionInterface {
+  description: BlockInterface[];
+}
+
+export interface ProjectDetailsInterface {
   params: {
     id: string;
   };
 }
 
-export type IconProps = {
+export type IconType = {
   className?: string;
   height?: number | string;
   width?: number | string;
 };
 
-export interface WrapperProps {
+export interface WrapperInterface {
+  children: React.ReactNode;
   additionalStyles?: string;
-  children: ReactNode;
 }
 
-export type HeadingProps = {
+export type HeadingType = {
   subHeading: string;
   mainHeading: string;
   additionalStylesMainHeading?: string;
   additionalStylesSubHeading?: string;
 };
 
-export type FigmaProps = {
+export type FigmaType = {
   figmaDesignUrl: string;
   figmaDesignAlt: string;
 };
@@ -208,22 +194,22 @@ export type ProjectDetails = {
   problemStatementImageAlt: string;
 };
 
-export type SingleProcessProps = {
+export type SingleProcessType = {
   imageUrl: string;
   imageAlt: string;
   title: string;
 };
 
-export type ProblemStatementProps = {
-  myProcess: SingleProcessProps[];
+export type ProblemStatementType = {
+  myProcess: SingleProcessType[];
 };
 
-export type ChallengesLearningsProps = {
+export type ChallengesLearningsType = {
   challenges: string[];
   learnings: string[];
 };
 
-export type SectionListProps = {
+export type SectionListType = {
   items: string[];
   title: string;
   iconSrc: StaticImageData;
@@ -237,6 +223,30 @@ export type CaseStudy = {
   otherCaseStudyImageAlt: string;
 };
 
-export type OtherCaseStudiesProps = {
+export type OtherCaseStudiesType = {
   otherCaseStudies: CaseStudy[];
+};
+
+export type ProjectRoleTimelineType = {
+  myRole: string;
+  startDate: string;
+  endDate: string;
+};
+
+export interface ToastInterface {
+  message: string;
+  type: 'success' | 'error';
+}
+
+export type Service = {
+  _id: string;
+  heading: string;
+  content: string;
+  whiteImage: string;
+  blueImage: string;
+};
+
+export type ProjectDetailsHeaderTypes = {
+  headingUnderline: string;
+  heading: string;
 };

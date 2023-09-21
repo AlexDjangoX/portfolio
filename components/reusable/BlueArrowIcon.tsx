@@ -1,10 +1,14 @@
-import React from 'react';
-import { IconProps } from '@/types';
+import { IconType } from '@/types';
 
-export const BlueArrowIcon: React.FC<IconProps> = () => (
+export const BlueArrowIcon = ({
+  className,
+  height = 24,
+  width = 24,
+}: IconType) => (
   <svg
-    width="24"
-    height="24"
+    className={className}
+    width={width}
+    height={height}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
