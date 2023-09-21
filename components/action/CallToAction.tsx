@@ -1,5 +1,4 @@
-import CallToActionButton from './CallToActionButton';
-import CallToActionHeader from './CallToActionHeader';
+import { CallToActionButton, CallToActionHeader } from '.';
 
 const CallToAction = () => {
   return (

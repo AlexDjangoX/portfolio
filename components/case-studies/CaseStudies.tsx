@@ -1,9 +1,12 @@
-import { getCaseStudies } from '@/sanity/sanity.query';
-import CaseStudiesHeading from './CaseStudiesHeadingContent';
-import CaseStudiesCard from './CaseStudiesCard';
-import { CaseStudiesCardType } from '@/types';
-import CallToAction from '../action/CallToAction';
 import Link from 'next/link';
+
+import {
+  CaseStudiesHeading,
+  CaseStudiesCard,
+  getCaseStudies,
+  CallToAction,
+} from '.';
+import { CaseStudiesCardType } from '@/types';
 
 const CaseStudies = async () => {
   const caseStudies = await getCaseStudies();
