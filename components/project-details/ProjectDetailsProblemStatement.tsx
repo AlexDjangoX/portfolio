@@ -1,8 +1,7 @@
 import Image from 'next/image';
 
-import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
+import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
 import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
-
 import { ProjectDetails } from '@/types';
 
 const ProjectDetailsProblemStatement = ({
@@ -11,7 +10,7 @@ const ProjectDetailsProblemStatement = ({
   problemStatementImageAlt,
 }: ProjectDetails) => {
   return (
-    <WrapperStudyDetails additionalStyles="bg-white-900 dark:bg-black-200 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
+    <WrapperProjectDetails additionalStyles="bg-white-900 dark:bg-black-200 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
       <ProjectDetailsHeading
         subHeading="Problem"
         mainHeading="Problem Statement"
@@ -26,7 +25,7 @@ const ProjectDetailsProblemStatement = ({
         height={263}
         alt={problemStatementImageAlt}
       />
-    </WrapperStudyDetails>
+    </WrapperProjectDetails>
   );
 };
 

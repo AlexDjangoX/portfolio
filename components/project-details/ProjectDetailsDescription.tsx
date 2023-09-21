@@ -1,10 +1,10 @@
 import { ProjectDetailsDescriptionInterface } from '@/types';
-import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
+import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
 
 const ProjectDetailsDescription = ({
   description,
 }: ProjectDetailsDescriptionInterface) => (
-  <WrapperStudyDetails additionalStyles="bg-white-800 dark:bg-black-300 px-[1.5rem] py-[2.25rem] md:px-[5.6rem] md:py-[4.5rem]">
+  <WrapperProjectDetails additionalStyles="bg-white-800 dark:bg-black-300 px-[1.5rem] py-[2.25rem] md:px-[5.6rem] md:py-[4.5rem]">
     {description.map((block) => (
       <p
         key={block._key}
@@ -15,7 +15,7 @@ const ProjectDetailsDescription = ({
         ))}
       </p>
     ))}
-  </WrapperStudyDetails>
+  </WrapperProjectDetails>
 );
 
 export default ProjectDetailsDescription;

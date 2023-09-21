@@ -116,13 +116,6 @@ export interface ClipboardTextInterface {
   text: string;
 }
 
-export type WorkCardType = {
-  title: string;
-  subtitle: string;
-  description: string;
-  imageSrc: string;
-};
-
 export type CaseStudiesCardType = {
   altText: string;
   _id: string;
@@ -246,7 +239,78 @@ export type Service = {
   blueImage: string;
 };
 
-export type ProjectDetailsHeaderTypes = {
+export type ProjectDetailsHeaderType = {
   headingUnderline: string;
   heading: string;
+};
+
+export type ProjectDetailsImageType = {
+  imageUrl: string;
+  imageAlt: string;
+};
+
+export type CardPropType = {
+  heading: string;
+  content: string;
+  imgSrcWhite?: string;
+  imgSrcBlue?: string;
+};
+
+export type WorkCardType = {
+  _id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  imgSrc: string;
+};
+
+export type FooterLinksType = {
+  iconSrc: StaticImageData;
+  href: string;
+};
+
+export type NavbarLinkType = {
+  path: string;
+  label: string;
+  isActive: boolean;
+  showMobileNavbar: boolean;
+};
+
+export type ChallengesLearningsItemType = {
+  text: string;
+  title: string;
+  iconSrc: any;
+};
+
+export type ProcessCardType = {
+  imageUrl: string;
+  imageAlt: string;
+  title: string;
+};
+
+export type TechSkillIconType = {
+  imageUrl: string;
+  imageAlt: string;
+  id?: string;
+};
+
+export interface ProjectCardProps extends Project {
+  index: number;
+}
+
+export type TechnologyType = {
+  tech: string;
+  buttonBackground: string;
+};
+
+export type ProjectDetailsTopType = {
+  headingUnderline: string;
+  heading: string;
+  imageUrl: string;
+  imageAlt: string;
+  demoSite: string;
+  sourceCode: string;
+  myRole: string;
+  startDate: string;
+  endDate: string;
 };

@@ -1,11 +1,11 @@
-import WrapperStudyDetails from '@/HOC/WrapperStudyDetails';
+import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
 import { OtherCaseStudiesType } from '@/types';
 import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
 import OtherCaseStudyCard from './OtherCaseStudyCard';
 
 const OtherCaseStudies = ({ otherCaseStudies }: OtherCaseStudiesType) => {
   return (
-    <WrapperStudyDetails additionalStyles="bg-white-800 dark:bg-black-300 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
+    <WrapperProjectDetails additionalStyles="bg-white-800 dark:bg-black-300 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
       <ProjectDetailsHeading
         subHeading="Projects"
         mainHeading="Other Case Studies"
@@ -16,7 +16,7 @@ const OtherCaseStudies = ({ otherCaseStudies }: OtherCaseStudiesType) => {
           <OtherCaseStudyCard key={index} {...study} />
         ))}
       </div>
-    </WrapperStudyDetails>
+    </WrapperProjectDetails>
   );
 };
 

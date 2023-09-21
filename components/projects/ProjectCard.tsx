@@ -20,7 +20,6 @@ const ProjectCard = ({
     jobit: 'bg-jobit-button',
     filmpire: 'bg-filmpire-button',
   };
-
   const isOdd = index % 2 !== 0;
 
   const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';

@@ -15,7 +15,6 @@ const CaseStudiesCard = ({
     jobit: 'bg-jobit-background',
     filmpire: 'bg-filmpire-background',
   };
-
   const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
 
   return (

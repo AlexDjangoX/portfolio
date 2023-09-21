@@ -10,3 +10,4 @@ export { default as ProjectDetailsProcess } from './ProjectDetailsProcess';
 export { default as ChallengesLearnings } from './ChallengesLearnings';
 export { default as CallToAction } from '../action/CallToAction';
 export { default as OtherCaseStudies } from './OtherCaseStudies';
+export { default as ProjectDetailsTopContent } from './ProjectDetailsTopContent';

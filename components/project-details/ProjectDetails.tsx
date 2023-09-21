@@ -1,12 +1,8 @@
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
-
 import {
+  ProjectDetailsTopContent,
   ProjectDetailsDescription,
-  ProjectDetailsHeader,
-  ProjectDetailsImage,
-  ProjectDetailsLinks,
   ProjectDetailsTechStack,
-  ProjectRoleTimeline,
   ProjectDetailsProblemStatement,
   FigmaDesign,
   ProjectDetailsProcess,
@@ -19,19 +15,13 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
   const project = await getCaseStudyByProjectName(projectId);
   return (
     <section className="flex w-full flex-col">
-      <ProjectDetailsHeader
+      <ProjectDetailsTopContent
         headingUnderline={project?.headingUnderline}
         heading={project?.heading}
-      />
-      <ProjectDetailsImage
         imageUrl={project?.imageUrl}
         imageAlt={project?.imageAlt}
-      />
-      <ProjectDetailsLinks
         demoSite={project?.demoSite}
         sourceCode={project?.sourceCode}
-      />
-      <ProjectRoleTimeline
         myRole={project?.myRole}
         startDate={project?.startDate}
         endDate={project?.endDate}

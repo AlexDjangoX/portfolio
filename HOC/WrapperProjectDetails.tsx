@@ -1,6 +1,6 @@
 import { WrapperInterface } from '@/types';
 
-const WrapperStudyDetails = ({
+const WrapperProjectDetails = ({
   children,
   additionalStyles = '',
 }: WrapperInterface) => {
@@ -13,4 +13,4 @@ const WrapperStudyDetails = ({
   );
 };
 
-export default WrapperStudyDetails;
+export default WrapperProjectDetails;

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import ClipboardText from './ClipBoardText';
 
 const HeroHeadingContent = () => {

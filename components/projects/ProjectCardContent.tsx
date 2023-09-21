@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Technology from './Technology';
 import { arrow } from '@/public/assets';
 import { ProjectCardContentType } from '@/types';
 
@@ -17,15 +18,14 @@ const ProjectCardContent = ({
       </h2>
       <div className=" mb-[1.5rem] flex w-fit gap-x-4 gap-y-2">
         {technologies.map((tech) => (
-          <p
-            className={` ${buttonBackground} rounded-md p-2  font-normal text-white-900`}
+          <Technology
             key={tech}
-          >
-            {tech}
-          </p>
+            tech={tech}
+            buttonBackground={buttonBackground}
+          />
         ))}
       </div>
-      <div className="mb-[1.5rem] flex gap-x-4 ">
+      <div className="mb-[1.5rem] flex gap-x-4">
         <Link
           className="font-semibold text-white-900"
           href={`/projects/${projectName} `}
