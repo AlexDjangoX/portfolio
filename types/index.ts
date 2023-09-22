@@ -264,7 +264,7 @@ export type WorkCardType = {
   imgSrc: string;
 };
 
-export type FooterLinksType = {
+export type SocialLinksType = {
   iconSrc: StaticImageData;
   href: string;
 };
