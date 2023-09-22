@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import { getServices } from '@/sanity/sanity.query';
 import ServiceCard from './ServiceCard';
 import ServiceHeading from './ServiceHeading';
@@ -5,6 +7,11 @@ import { Service } from '@/types';
 
 const Services = async () => {
   const services = await getServices();
+
+  if (!services) {
+    notFound();
+  }
+
   return (
     <section className="flex flex-col items-center justify-center bg-white-800 px-[5.3125rem] py-[4.5rem] dark:bg-black-300">
       <ServiceHeading />
