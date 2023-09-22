@@ -1,14 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 
 import { schema } from '@/schemas/contactFormZodValidation';
 import { FormDataType } from '@/types/index';
+import { ToastContext } from '@/components/toast/ToastContext';
 
 export const useContactForm = () => {
+  const showToast = useContext(ToastContext);
+
   const [loading, setLoading] = useState<boolean>(false);
 
   const {
@@ -42,14 +45,24 @@ export const useContactForm = () => {
       )
       .then(
         () => {
-          alert('Thank you. I will get back to you as soon as possible.');
+          if (showToast) {
+            showToast(
+              'Thank you. I will get back to you as soon as possible.',
+              'success'
+            );
+          }
           reset();
           setLoading(false);
         },
         (error) => {
           setLoading(false);
           console.error(error);
-          alert('Ahh, something went wrong. Please try again later.');
+          if (showToast) {
+            showToast(
+              'Ahh, something went wrong. Please try again later.',
+              'error'
+            );
+          }
         }
       );
   };
