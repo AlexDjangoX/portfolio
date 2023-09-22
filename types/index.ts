@@ -314,3 +314,10 @@ export type ProjectDetailsTopType = {
   startDate: string;
   endDate: string;
 };
+
+export type FormDataType = {
+  name: string;
+  email: string;
+  message: string;
+  contact: string;
+};
