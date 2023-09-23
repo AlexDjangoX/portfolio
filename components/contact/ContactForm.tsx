@@ -87,10 +87,10 @@ const ContactForm = () => {
         )}
       </div>
 
-      <div className="flex max-w-[21.6rem] flex-wrap justify-between s:max-w-[40rem]">
+      <div className="flex max-w-[21.6rem] flex-wrap  justify-end s:max-w-[40rem]">
         <button
           type="submit"
-          className="w-full min-w-[8rem] rounded-full bg-primary-light px-4 py-2 text-center text-[0.875rem] font-semibold leading-[1.625rem] text-white-900 dark:bg-primary-dark md:mb-4 md:text-[1.125rem]"
+          className=" w-full min-w-[8rem] rounded-full bg-primary-light px-4 py-2 text-center text-[0.875rem] font-semibold leading-[1.625rem] text-white-900 dark:bg-primary-dark md:mb-4 md:max-w-[8rem] md:text-[1.125rem]"
         >
           Send
         </button>
