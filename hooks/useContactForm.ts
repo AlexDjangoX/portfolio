@@ -3,7 +3,7 @@
 import { useState, useContext } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
-import { useForm } from 'react-hook-form';
+import { useForm, FieldError } from 'react-hook-form';
 
 import { schema } from '@/schemas/contactFormZodValidation';
 import { FormDataType } from '@/types/index';
@@ -11,8 +11,13 @@ import { ToastContext } from '@/components/toast/ToastContext';
 
 export const useContactForm = () => {
   const showToast = useContext(ToastContext);
-
   const [loading, setLoading] = useState<boolean>(false);
+
+  const getErrorStyle = (error: FieldError | undefined) =>
+    error ? 'input-error' : '';
+
+  const getInputStyle = (error: FieldError | undefined) =>
+    `input-base input-focus ${getErrorStyle(error)}`;
 
   const {
     register,
@@ -25,6 +30,10 @@ export const useContactForm = () => {
 
   const handleFormSubmit = async (data: FormDataType) => {
     setLoading(true);
+
+    if (showToast) {
+      showToast('Sending email...', 'info');
+    }
 
     const templateParams = {
       from_name: data.name,
@@ -67,7 +76,15 @@ export const useContactForm = () => {
       );
   };
 
-  return { handleFormSubmit, register, handleSubmit, loading, errors };
+  return {
+    handleFormSubmit,
+    register,
+    handleSubmit,
+    loading,
+    errors,
+    getErrorStyle,
+    getInputStyle,
+  };
 };
 
 export default useContactForm;

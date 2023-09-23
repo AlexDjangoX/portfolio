@@ -18,3 +18,25 @@
   border-radius: 1px;
   z-index: -1;
 }
+
+.input-base {
+  @apply mb-9 pl-3 block h-[3.75rem] w-full rounded-md bg-white-800 dark:bg-black-300 md:h-[5rem];
+}
+
+.input-focus {
+  @apply focus:border-primary-light dark:focus:border-primary-dark focus:outline-none focus:ring focus:ring-primary-light dark:focus:ring-primary-dark;
+}
+
+.input-error {
+  @apply border-red-800;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 40s linear infinite;
+}
