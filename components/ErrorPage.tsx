@@ -5,16 +5,19 @@ import { errorImage } from '@/public/assets-png';
 
 const ErrorPage = () => {
   return (
-    <div className=" flex h-full w-full flex-col items-center justify-center bg-error-background px-10   pt-16">
-      <h1 className="my-2 pt-8 text-2xl font-bold text-gray-800 dark:text-gray-700">
-        Looks like you have found the doorway to the great nothing
-      </h1>
-      <Image
-        src={errorImage}
-        alt="Error page Image - broken connection"
-        width={200}
-        height={200}
-      />
+    <section className=" flex h-full w-full flex-col items-center justify-center bg-error-background px-10   pt-16">
+      <header>
+        <h1 className="my-2 pt-8 text-2xl font-bold text-gray-800 dark:text-gray-700">
+          Looks like you have found the doorway to the great nothing
+        </h1>
+        <Image
+          src={errorImage}
+          alt="error-image-broken-connection"
+          width={200}
+          height={200}
+        />
+      </header>
+
       <p className="my-2 text-gray-800 dark:text-gray-700">
         Sorry about that! Please visit our homepage to get where you need to be.
       </p>
@@ -26,7 +29,7 @@ const ErrorPage = () => {
       <div className="p-3">
         <p className="text-7xl dark:text-gray-700">404</p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -19,8 +19,8 @@ const Services = async () => {
         {services?.map((card: Service) => (
           <ServiceCard
             key={card?._id}
-            imgSrcWhite={card?.whiteImage}
-            imgSrcBlue={card?.blueImage}
+            imgSrcWhite={card?.whiteImage ?? '@/public/assets/redux.svg'}
+            imgSrcBlue={card?.blueImage ?? '@/public/assets/redux.svg'}
             {...card}
           />
         ))}
