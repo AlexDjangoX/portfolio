@@ -30,6 +30,7 @@ const config: Config = {
         'line-black': 'rgba(21,30,44,0.4)',
         'heading-red': '#E15A46',
         'heading-green': '#02BC7D',
+        'error-background': '#f3f4f6',
       },
       screens: {
         l: '1400px',
