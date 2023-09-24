@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
 import {
   ProjectDetailsTopContent,
@@ -13,6 +15,11 @@ import {
 
 const ProjectDetails = async ({ projectId }: { projectId: string }) => {
   const project = await getCaseStudyByProjectName(projectId);
+
+  if (!project) {
+    notFound();
+  }
+
   return (
     <section className="flex w-full flex-col">
       <ProjectDetailsTopContent

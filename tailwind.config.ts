@@ -31,6 +31,7 @@ const config: Config = {
         'heading-red': '#E15A46',
         'heading-green': '#02BC7D',
         'input-border': '#CCE1FF',
+        'error-background': '#f3f4f6',
       },
       screens: {
         l: '1400px',
