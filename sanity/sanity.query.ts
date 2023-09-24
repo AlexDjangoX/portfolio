@@ -44,14 +44,17 @@ export async function getSkills() {
 }
 
 export async function getWork() {
-  return client.fetch(
+  return await client.fetch(
     groq`*[_type == "work"]{
       _id,
       title,
       subtitle,
       description,
+      certified,
+      certificateLink,
       "imgSrc": imgSrc.asset->url
-    }`
+    }`,
+    { next: { revalidate } }
   );
 }
 
