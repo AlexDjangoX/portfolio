@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 import useNavigationBar from '@/hooks/useNavigationBar';
-import { AlexanderBrand } from '../reusable/opengraph-image';
+import { AlexanderBrand } from '../reusable/AlexanderBrand';
 
 const Navbar = () => {
   const pathname = usePathname();

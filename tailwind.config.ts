@@ -34,12 +34,16 @@ const config: Config = {
       },
       screens: {
         l: '1400px',
-        vs: '350px',
+        plusLarge: '1120px',
+        vs: '355px',
         s: '450px',
       },
       backgroundImage: {
         BGLarge: "url('/assets-png/BGPatternLarge.png')",
         BGSmall: "url('/assets-png/BGPatternSmall.png')",
+      },
+      spacing: {
+        '4.5': '1.125rem',
       },
     },
   },

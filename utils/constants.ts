@@ -14,7 +14,7 @@ export const icons = [
 export const routes = [
   { path: '/', label: 'Home' },
   { path: '/case-studies', label: 'Case Studies' },
-  { path: '/contact', label: 'Contacts' },
+  { path: '/contact', label: 'Contact' },
 ];
 
 export const contactFormFields = [

@@ -13,7 +13,7 @@ const NavbarLinks = ({
       className={`mx-3.5 ${
         showMobileNavbar ? 'mt-6' : ''
       } flex h-full items-center text-[0.875rem] font-normal text-white-500 dark:text-white-800 ${
-        isActive && 'font-semibold text-primary-light dark:text-primary-dark'
+        isActive && 'font-semibold text-[#0252CD] dark:text-[#428DFF]'
       }`}
     >
       {label}
