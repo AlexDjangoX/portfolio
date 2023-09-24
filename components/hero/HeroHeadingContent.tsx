@@ -19,23 +19,17 @@ const HeroHeadingContent = () => {
         HI, I AM ALEXANDER
       </motion.p>
 
-      <motion.h1
-        variants={fadeIn('right', 'spring', 0.5 * 1, 2.75)}
-        viewport={{ once: true, amount: 0.1 }}
-        initial="hidden"
-        whileInView="show"
-        className="mt-[15.5625rem] text-[2.3rem] font-bold leading-[3.0rem] tracking-[-0.42px] text-black-200 dark:text-white-900 sm:text-[2.625rem]  lg:text-[3.8rem] lg:leading-[5.2rem] lg:tracking-[0.64px]"
-      >
+      <h1 className="mt-[15.5625rem] text-[2.3rem] font-bold leading-[3.0rem] tracking-[-0.42px] text-black-200 dark:text-white-900 sm:text-[2.625rem]  lg:text-[3.8rem] lg:leading-[5.2rem] lg:tracking-[0.64px]">
         Professional{' '}
         <div className="relative inline-flex items-center whitespace-nowrap">
           <p className="z-20">Web Developer</p>
           <div className="absolute z-10 mt-8 h-[1.02rem] w-full  rounded-sm bg-secondary-dark sm:h-[1.1rem] lg:mt-12 lg:h-[1.6rem]" />
         </div>{' '}
         based in Poland
-      </motion.h1>
+      </h1>
 
       <motion.p
-        variants={fadeIn('right', 'spring', 0.5 * 1, 3.75)}
+        variants={fadeIn('left', 'spring', 0.5 * 1, 3.75)}
         viewport={{ once: true, amount: 0.1 }}
         initial="hidden"
         whileInView="show"

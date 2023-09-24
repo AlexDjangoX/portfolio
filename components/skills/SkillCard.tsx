@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 
 const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
   <motion.div
-    variants={fadeIn('right', 'spring', 0.5 * index, 1.75)}
-    viewport={{ once: true, amount: 0.1 }}
+    variants={fadeIn('left', 'spring', 0.05 * index, 1.75)}
+    viewport={{ once: false, amount: 0.1 }}
     initial="hidden"
     whileInView="show"
     key={_id}

@@ -238,6 +238,7 @@ export type Service = {
   content: string;
   whiteImage: string;
   blueImage: string;
+  index: number;
 };
 
 export type ProjectDetailsHeaderType = {
@@ -255,6 +256,7 @@ export type CardPropType = {
   content: string;
   imgSrcWhite?: string;
   imgSrcBlue?: string;
+  index: number;
 };
 
 export type WorkCardType = {
@@ -263,6 +265,7 @@ export type WorkCardType = {
   subtitle: string;
   description: string;
   imgSrc: string;
+  index: number;
 };
 
 export type FooterLinksType = {
