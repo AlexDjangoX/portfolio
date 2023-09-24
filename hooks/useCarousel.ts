@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const useCarousel = (itemsLength: number) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [show, setShow] = useState(true);
+  const intervalRef = useRef<number | null>(null);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const nextSlide = () => {
     setShow(false);
@@ -24,12 +26,37 @@ const useCarousel = (itemsLength: number) => {
     }, 300);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startAutoPlay = () => {
+    stopAutoPlay();
+    intervalRef.current = window.setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 5000) as number;
+  };
 
-    return () => clearInterval(interval);
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    const carouselElement = carouselRef.current;
+
+    if (carouselElement) {
+      carouselElement.addEventListener('mouseover', stopAutoPlay);
+      carouselElement.addEventListener('mouseout', startAutoPlay);
+    }
+
+    startAutoPlay();
+
+    return () => {
+      if (carouselElement) {
+        carouselElement.removeEventListener('mouseover', stopAutoPlay);
+        carouselElement.removeEventListener('mouseout', startAutoPlay);
+      }
+      stopAutoPlay();
+    };
   }, []);
 
   return {
@@ -37,6 +64,7 @@ const useCarousel = (itemsLength: number) => {
     show,
     nextSlide,
     prevSlide,
+    carouselRef,
   };
 };
 

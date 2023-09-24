@@ -9,13 +9,16 @@ import ArrowRightControl from './ArrowRightControl';
 import useCarousel from '@/hooks/useCarousel';
 
 const Carousel = ({ testimonials }: CarouselType) => {
-  const { activeIndex, show, nextSlide, prevSlide } = useCarousel(
+  const { activeIndex, show, nextSlide, prevSlide, carouselRef } = useCarousel(
     testimonials.length
   );
   const data = testimonials[activeIndex];
 
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center">
+    <div
+      ref={carouselRef}
+      className="flex flex-col lg:flex-row lg:items-center"
+    >
       <ArrowLeftControl onClick={prevSlide} />
 
       <div

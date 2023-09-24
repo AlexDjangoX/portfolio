@@ -35,7 +35,7 @@ const WorkCard = ({
       {certificateLink && (
         <Link
           target="_blank"
-          className="ml-[1.5rem] inline-flex items-center text-[0.875rem] font-thin leading-[2rem] text-primary-light dark:text-primary-dark md:text-[1.125rem]"
+          className="m-1 ml-[1.5rem] inline-flex items-center rounded-lg bg-white-900 px-2 py-1 text-[0.875rem] font-thin leading-[2rem] text-primary-light dark:bg-black-300 dark:text-primary-dark md:text-[1.125rem]"
           href={certificateLink}
         >
           <LinkIcon /> Certificate
