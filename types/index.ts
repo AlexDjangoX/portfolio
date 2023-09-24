@@ -335,6 +335,7 @@ export interface ContactFieldType {
   label: string;
   id: string;
   type: string;
+  component: string;
   getInputStyle: (error?: any) => string;
   register: any;
   errors: any;

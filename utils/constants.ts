@@ -22,20 +22,24 @@ export const contactFormFields = [
     id: 'name',
     label: 'What is your name?',
     type: 'text',
+    component: 'input',
   },
   {
     id: 'email',
     label: 'What is your email?',
     type: 'email',
+    component: 'input',
   },
   {
     id: 'message',
     label: 'Write something',
     type: 'text',
+    component: 'textarea',
   },
   {
     id: 'contact',
     label: 'How can we contact you?',
     type: 'text',
+    component: 'input',
   },
 ];

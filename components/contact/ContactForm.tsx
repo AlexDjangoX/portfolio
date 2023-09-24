@@ -24,6 +24,7 @@ const ContactForm = () => {
         <ContactField
           key={field.id}
           id={field.id}
+          component={field.component}
           label={field.label}
           type={field.type}
           register={register}

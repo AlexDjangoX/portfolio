@@ -4,10 +4,17 @@ const ContactField = ({
   label,
   id,
   type = 'text',
+  component = 'input',
   getInputStyle,
   register,
   errors,
 }: ContactFieldType) => {
+  const inputProps = {
+    ...register(id),
+    type,
+    className: getInputStyle(errors[id]),
+  };
+
   return (
     <div className="max-w-[21.6rem] s:max-w-[35rem] md:max-w-[40rem]">
       <label
@@ -16,11 +23,13 @@ const ContactField = ({
       >
         {label}
       </label>
-      <input
-        {...register(id)}
-        type={type}
-        className={getInputStyle(errors[id])}
-      />
+
+      {component === 'input' ? (
+        <input {...inputProps} />
+      ) : component === 'textarea' ? (
+        <textarea {...inputProps}></textarea>
+      ) : null}
+
       {errors[id] && (
         <p className="mb-[2rem] mt-[-2rem] text-sm text-red-500">
           {errors[id].message}
