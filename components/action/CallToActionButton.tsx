@@ -4,7 +4,7 @@ import CustomButton from '../reusable/CustomButton';
 
 const CallToActionButton = () => {
   return (
-    <Link className="" href="/work">
+    <Link className="" href="/contact">
       <CustomButton title="Get in touch with me" />
     </Link>
   );
