@@ -110,6 +110,7 @@ export type SkillsType = {
   _id: string;
   image: string;
   altText: string;
+  index: number;
 };
 
 export interface ClipboardTextInterface {
