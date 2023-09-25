@@ -34,10 +34,11 @@ const config: Config = {
         'error-background': '#f3f4f6',
       },
       screens: {
-        l: '1400px',
-        plusLarge: '1120px',
         vs: '355px',
         s: '450px',
+        plusLarge: '1120px',
+        l: '1400px',
+        xlPlus: '1800px',
       },
       backgroundImage: {
         BGLarge: "url('/assets-png/BGPatternLarge.png')",

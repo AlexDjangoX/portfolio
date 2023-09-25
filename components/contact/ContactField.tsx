@@ -16,7 +16,7 @@ const ContactField = ({
   };
 
   return (
-    <div className="max-w-[21.6rem] s:max-w-[35rem] md:max-w-[40rem]">
+    <div className="max-w-[21.6rem] s:max-w-[35rem] md:max-w-[40rem] lg:max-w-[55rem]">
       <label
         htmlFor={id}
         className="mb-4 block text-lg font-normal leading-[160%] text-black-300 dark:text-white-900 md:text-xl"
@@ -27,7 +27,7 @@ const ContactField = ({
       {component === 'input' ? (
         <input {...inputProps} />
       ) : component === 'textarea' ? (
-        <textarea {...inputProps}></textarea>
+        <textarea style={{ resize: 'none' }} {...inputProps}></textarea>
       ) : null}
 
       {errors[id] && (

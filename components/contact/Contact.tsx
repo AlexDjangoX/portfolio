@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 import ContactDetails from './ContactDetails';
 const Contact = () => {
   return (
-    <section className="w-full bg-white-900 px-[1.5rem] py-[3rem] dark:bg-black-200 sm:px-[5.3rem]">
+    <section className="w-full bg-white-900 px-[1.5rem] py-[3rem] dark:bg-black-200 sm:px-[5.3rem]  2xl:px-[15rem] xlPlus:px-[25rem]">
       <div className="mx-auto  mt-6  md:max-w-7xl">
         <ContactHeader />
       </div>
