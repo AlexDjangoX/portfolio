@@ -11,7 +11,6 @@ const Work = async () => {
   if (!work) {
     notFound();
   }
-
   return (
     <section className="flex h-full w-full flex-col  justify-center bg-white-800 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem]  xl:flex-row ">
       <div className="flex w-full max-w-7xl flex-col items-center xl:flex-row">
@@ -39,6 +38,8 @@ const Work = async () => {
               title={workItem.title}
               subtitle={workItem.subtitle}
               description={workItem.description}
+              certificateLink={workItem.certificateLink}
+              certified={workItem.certified}
               index={index}
               imgSrc={workItem.imgSrc}
               _id={workItem._id}

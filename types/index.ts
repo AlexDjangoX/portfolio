@@ -266,6 +266,8 @@ export type WorkCardType = {
   description: string;
   imgSrc: string;
   index: number;
+  certified: boolean;
+  certificateLink: string;
 };
 
 export type FooterLinksType = {
