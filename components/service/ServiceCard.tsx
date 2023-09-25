@@ -1,10 +1,7 @@
-'use client';
-
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 import { CardPropType } from '@/types';
-import { fadeIn } from '@/utils/motion';
+import MotionWrapperCardDiv from '../reusable/MotionWrapperCardDiv';
 
 const SkillsCard = ({
   imgSrcWhite,
@@ -14,12 +11,12 @@ const SkillsCard = ({
   index,
 }: CardPropType) => {
   return (
-    <motion.div
-      variants={fadeIn('right', 'spring', 0.05 * index, 1.75)}
-      viewport={{ once: false, amount: 0.1 }}
-      initial="hidden"
-      whileInView="show"
-      className="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 transition duration-300 hover:translate-y-[1.2rem] hover:bg-primary-light dark:bg-black-200"
+    <MotionWrapperCardDiv
+      direction="right"
+      type="spring"
+      delay={0.05 * index}
+      duration={1.75}
+      additionalStyles="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 transition duration-300 hover:translate-y-[1.2rem] hover:bg-primary-light dark:bg-black-200"
     >
       <div className="absolute left-[1.5625rem] top-[1.875rem] flex h-[3.875rem] w-[3.875rem] items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-white">
         <Image
@@ -43,7 +40,7 @@ const SkillsCard = ({
       <p className="mt-2 text-[0.875rem] leading-[1.375rem] text-white-500 transition-colors duration-300 group-hover:text-[#F3F8FF]">
         {content}
       </p>
-    </motion.div>
+    </MotionWrapperCardDiv>
   );
 };
 

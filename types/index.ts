@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { PortableTextBlock } from 'sanity';
 
 export type ProfileType = {
@@ -317,4 +317,23 @@ export type ProjectDetailsTopType = {
   myRole: string;
   startDate: string;
   endDate: string;
+};
+
+type Direction = 'left' | 'right' | 'up' | 'down';
+export interface MotionHeadingTwoProps {
+  children: ReactNode;
+  direction: Direction;
+  type: 'tween' | 'spring';
+  delay: number;
+  duration: number;
+  additionalStyles?: string;
+}
+
+export type MotionWrapperCardDivProps = {
+  children: React.ReactNode;
+  direction: 'right' | 'up' | 'down' | 'left';
+  type: 'tween' | 'spring';
+  delay: number;
+  duration: number;
+  additionalStyles?: string;
 };
