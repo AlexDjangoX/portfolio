@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Full Stack NextJS Dev',
     images: [
       {
-        url: 'https://portfolio-alexander.vercel.app/opengraph-image.ico',
+        url: '/opengraph-image.png',
         width: 800,
         height: 600,
         alt: 'Logo representing Alexander McLachlan, a Full Stack NextJS Developer',

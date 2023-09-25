@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { PortableTextBlock } from 'sanity';
 
 export type ProfileType = {
@@ -228,8 +228,17 @@ export type ProjectRoleTimelineType = {
 
 export interface ToastInterface {
   message: string;
-  type: 'success' | 'error';
+  type: 'success' | 'error' | 'warning' | 'info';
 }
+
+export interface ToastProviderInterface {
+  children: ReactNode;
+}
+
+export type ToastFunction = (
+  message: string,
+  type?: 'success' | 'error' | 'warning' | 'info'
+) => void;
 
 export type Service = {
   _id: string;
@@ -266,7 +275,7 @@ export type WorkCardType = {
   certificateLink: string;
 };
 
-export type FooterLinksType = {
+export type SocialLinksType = {
   iconSrc: StaticImageData;
   href: string;
 };
@@ -316,3 +325,20 @@ export type ProjectDetailsTopType = {
   startDate: string;
   endDate: string;
 };
+
+export type FormDataType = {
+  name: string;
+  email: string;
+  message: string;
+  contact: string;
+};
+
+export interface ContactFieldType {
+  label: string;
+  id: string;
+  type: string;
+  component: string;
+  getInputStyle: (error?: any) => string;
+  register: any;
+  errors: any;
+}

@@ -24,7 +24,7 @@ const HeroHeadingContent = () => {
         excellence.
       </p>
       <div className="flex flex-col space-y-4 md:w-full md:flex-row md:space-x-4 md:space-y-0">
-        <Link href="/work" className="flex-1">
+        <Link href="/case-studies" className="flex-1">
           <button className="w-full min-w-[8rem] rounded-full bg-primary-light px-4 py-2 text-center text-[0.875rem] font-semibold leading-[1.625rem] text-white-900 dark:bg-primary-dark md:mb-4 md:text-[1.125rem] ">
             My Work
           </button>

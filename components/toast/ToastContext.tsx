@@ -1,19 +1,12 @@
-import { createContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useState, useCallback } from 'react';
+
 import ToastComponent from './ToastComponent';
-
-type ToastFunction = (message: string, type?: 'success' | 'error') => void;
-
-interface ToastProviderProps {
-  children: ReactNode;
-}
+import { ToastFunction, ToastInterface, ToastProviderInterface } from '@/types';
 
 export const ToastContext = createContext<ToastFunction | undefined>(undefined);
 
-export const ToastProvider = ({ children }: ToastProviderProps) => {
-  const [toastInfo, setToastInfo] = useState<{
-    message: string;
-    type: 'success' | 'error';
-  } | null>(null);
+export const ToastProvider = ({ children }: ToastProviderInterface) => {
+  const [toastInfo, setToastInfo] = useState<ToastInterface | null>(null);
 
   const showToast: ToastFunction = useCallback((message, type = 'success') => {
     setToastInfo({ message, type });
