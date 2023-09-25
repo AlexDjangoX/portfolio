@@ -271,6 +271,8 @@ export type WorkCardType = {
   subtitle: string;
   description: string;
   imgSrc: string;
+  certified: boolean;
+  certificateLink: string;
 };
 
 export type SocialLinksType = {

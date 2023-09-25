@@ -20,6 +20,17 @@ const work = {
       description: 'A short summary or subtitle for the work item.',
     },
     {
+      name: 'certificateLink',
+      title: 'Certificate Link',
+      type: 'string',
+    },
+    {
+      name: 'certified',
+      title: 'Certified',
+      type: 'boolean',
+      description: 'Does this course carry a certification?',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
