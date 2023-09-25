@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { SkillsType } from '@/types';
 import { fadeIn } from '@/utils/motion';
-import { motion } from 'framer-motion';
 
 const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
   <motion.div
-    variants={fadeIn('left', 'spring', 0.05 * index, 1.75)}
+    variants={fadeIn('up', 'spring', 0.05 * index, 1.75)}
     viewport={{ once: false, amount: 0.1 }}
     initial="hidden"
     whileInView="show"

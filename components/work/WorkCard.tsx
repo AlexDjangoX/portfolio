@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { WorkCardType } from '@/types';
 import { fadeIn } from '@/utils/motion';
-import { motion } from 'framer-motion';
 
 const WorkCard = ({
   title,

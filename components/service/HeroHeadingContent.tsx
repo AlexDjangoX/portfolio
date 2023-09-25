@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import ClipboardText from './ClipBoardText';
 import { fadeIn } from '@/utils/motion';
+import ClipboardText from '../hero/ClipBoardText';
 
 const HeroHeadingContent = () => {
   return (

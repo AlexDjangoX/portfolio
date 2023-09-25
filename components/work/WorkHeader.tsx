@@ -1,8 +1,8 @@
 'use client';
 
-import { fadeIn } from '@/utils/motion';
 import { motion } from 'framer-motion';
-import React from 'react';
+
+import { fadeIn } from '@/utils/motion';
 
 const WorkHeader = () => {
   return (

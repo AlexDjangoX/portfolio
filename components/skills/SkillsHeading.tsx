@@ -1,7 +1,8 @@
 'use client';
 
-import { fadeIn } from '@/utils/motion';
 import { motion } from 'framer-motion';
+
+import { fadeIn } from '@/utils/motion';
 
 const SkillsHeading = () => {
   return (
