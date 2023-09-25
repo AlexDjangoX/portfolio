@@ -16,7 +16,7 @@ const Navbar = () => {
     useNavigationBar();
 
   return (
-    <div className="fixed z-50 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">
+    <nav className="fixed z-50 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">
       <Link href="/" className="ml-[85px] flex items-center">
         <Image
           src={logo}
@@ -41,7 +41,7 @@ const Navbar = () => {
           toggleMobile={toggleMobile}
         />
       )}
-    </div>
+    </nav>
   );
 };
 

@@ -8,7 +8,7 @@ import { fadeIn } from '@/utils/motion';
 
 const HeroHeadingContent = () => {
   return (
-    <div className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6">
+    <header className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6">
       <motion.p
         variants={fadeIn('right', 'spring', 0.5 * 1, 0.75)}
         viewport={{ once: true, amount: 0.1 }}
@@ -49,7 +49,7 @@ const HeroHeadingContent = () => {
           <ClipboardText text="alexMonk17@gmail.com" />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
