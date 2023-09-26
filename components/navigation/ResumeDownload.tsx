@@ -1,6 +1,6 @@
 'use client';
 
-import DownloadIcon from '../reusable/DownloadIcon';
+import DownloadIcon from '../icons/DownloadIcon';
 import useDownloadResume from '@/hooks/useDownloadResume';
 
 const DownloadResume = () => {

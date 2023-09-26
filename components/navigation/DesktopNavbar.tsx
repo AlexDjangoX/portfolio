@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import DownloadResume from './Download';
+import DownloadResume from './ResumeDownload';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavbarRoutes from './NavbarRoutes';
 import { DeskTopNavbarType } from '@/types';

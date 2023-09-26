@@ -1,6 +1,6 @@
 import { icons } from '@/utils/constants';
-import CallIcon from '../reusable/CallIcon';
-import MessageIcon from '../reusable/MessageIcon';
+import CallIcon from '../icons/CallIcon';
+import MessageIcon from '../icons/MessageIcon';
 import SocialLinks from '../reusable/SocialLinks';
 
 const ContactDetails = () => {

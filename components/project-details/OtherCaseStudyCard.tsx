@@ -13,8 +13,8 @@ const OtherCaseStudyCard = ({
       <Image
         src={otherCaseStudyImageUrl}
         alt={otherCaseStudyImageAlt}
-        layout="fill"
-        objectFit="cover"
+        width={345}
+        height={163}
       />
     </div>
     <h4 className="mt-[1.25rem] font-semibold text-primary-light  dark:text-primary-dark">
