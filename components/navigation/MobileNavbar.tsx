@@ -12,12 +12,12 @@ const MobileNavbar = ({
   pathname,
 }: MobileNavbarType) => {
   return (
-    <div className="fixed right-0 z-30  flex h-full w-2/4 items-center bg-white-800 dark:bg-black-200 md:hidden">
+    <nav className="fixed right-0 z-30  flex h-full w-2/4 items-center bg-white-800 dark:bg-black-200 md:hidden">
       <Image
         src={closeImgSrc}
         width={30}
         height={30}
-        alt="logo"
+        alt="close menu"
         className="absolute right-9 top-9 cursor-pointer md:hidden"
         onClick={toggleMobile}
       />
@@ -30,7 +30,7 @@ const MobileNavbar = ({
           <ThemeSwitcher />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

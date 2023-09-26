@@ -3,9 +3,10 @@ import { ProjectCardImageType } from '@/types';
 
 const ProjectCardImage = ({ image, heading }: ProjectCardImageType) => {
   return (
-    <div className="lg:w-1/2">
+    <figure className="lg:w-1/2">
       <Image src={image} alt={heading} width={560} height={590} />
-    </div>
+      <figcaption className="sr-only">{heading}</figcaption>
+    </figure>
   );
 };
 

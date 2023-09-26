@@ -110,6 +110,7 @@ export type SkillsType = {
   _id: string;
   image: string;
   altText: string;
+  index: number;
 };
 
 export interface ClipboardTextInterface {
@@ -246,6 +247,7 @@ export type Service = {
   content: string;
   whiteImage: string;
   blueImage: string;
+  index: number;
 };
 
 export type ProjectDetailsHeaderType = {
@@ -263,6 +265,7 @@ export type CardPropType = {
   content: string;
   imgSrcWhite?: string;
   imgSrcBlue?: string;
+  index: number;
 };
 
 export type WorkCardType = {
@@ -271,6 +274,7 @@ export type WorkCardType = {
   subtitle: string;
   description: string;
   imgSrc: string;
+  index: number;
   certified: boolean;
   certificateLink: string;
 };
@@ -326,6 +330,24 @@ export type ProjectDetailsTopType = {
   endDate: string;
 };
 
+type Direction = 'left' | 'right' | 'up' | 'down';
+export interface MotionHeadingTwoProps {
+  children: ReactNode;
+  direction: Direction;
+  type: 'tween' | 'spring';
+  delay: number;
+  duration: number;
+  additionalStyles?: string;
+}
+
+export type MotionWrapperCardDivProps = {
+  children: React.ReactNode;
+  direction: Direction;
+  type: 'tween' | 'spring';
+  delay: number;
+  duration: number;
+  additionalStyles?: string;
+};
 export type FormDataType = {
   name: string;
   email: string;

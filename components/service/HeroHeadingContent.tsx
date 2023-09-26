@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import ClipboardText from './ClipBoardText';
 import { fadeIn } from '@/utils/motion';
+import ClipboardText from '../hero/ClipBoardText';
 
 const HeroHeadingContent = () => {
   return (
-    <header className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6">
+    <div className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6">
       <motion.p
         variants={fadeIn('right', 'spring', 0.5 * 1, 0.75)}
         viewport={{ once: true, amount: 0.1 }}
@@ -40,7 +40,7 @@ const HeroHeadingContent = () => {
         excellence.
       </motion.p>
       <div className="flex flex-col space-y-4 md:w-full md:flex-row md:space-x-4 md:space-y-0">
-        <Link href="/case-studies" className="flex-1">
+        <Link href="/work" className="flex-1">
           <button className="w-full min-w-[8rem] rounded-full bg-primary-light px-4 py-2 text-center text-[0.875rem] font-semibold leading-[1.625rem] text-white-900 dark:bg-primary-dark md:mb-4 md:text-[1.125rem] ">
             My Work
           </button>
@@ -49,7 +49,7 @@ const HeroHeadingContent = () => {
           <ClipboardText text="alexMonk17@gmail.com" />
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import WorkCard from './WorkCard';
 import { getWork } from '@/sanity/sanity.query';
 import { WorkCardType } from '@/types';
+import WorkHeader from './WorkHeader';
 
 const Work = async () => {
   const work = await getWork();
@@ -10,18 +11,12 @@ const Work = async () => {
   if (!work) {
     notFound();
   }
-
   return (
     <section className="flex h-full w-full flex-col  justify-center bg-white-800 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem]  xl:flex-row ">
       <div className="flex w-full max-w-7xl flex-col items-center xl:flex-row">
         <div className="flex  w-full max-w-3xl flex-col items-center justify-center rounded-lg bg-black-200 px-[2.375rem] pb-[2.375rem] pt-[3.5rem] dark:bg-white-800  md:pb-[6.6rem] md:pl-[6.6rem] md:pr-[8.9rem] md:pt-[9.5rem] xl:w-1/2">
           <div className="flex w-full flex-col">
-            <h2 className="mb-[1.486rem] flex flex-col justify-center text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] text-white-900 dark:bg-white-800 dark:text-black-200 md:mb-[2.4rem] md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]">
-              <span>Developer</span>
-              <div className="relative inline-flex items-center whitespace-nowrap">
-                <span className="custom-underline z-10">Experi</span>ence
-              </div>
-            </h2>
+            <WorkHeader />
             <p className="mt-[2.2rem] h-[5.4rem] text-[0.874rem] font-normal leading-[1.8rem] text-white-800 dark:text-white-500 md:text-[1.125rem]">
               Progress and milestones: A simple walkthrough of roles, projects,
               and achievements in my career.
@@ -37,8 +32,18 @@ const Work = async () => {
           </div>
         </div>
         <div className="ml-6  mt-4 flex w-full max-w-3xl  flex-col justify-around space-y-6 bg-white-800 dark:bg-black-200 xl:mt-0 xl:gap-7">
-          {work.map((workItem: WorkCardType) => (
-            <WorkCard key={workItem._id} {...workItem} />
+          {work.map((workItem: WorkCardType, index: number) => (
+            <WorkCard
+              key={workItem._id}
+              title={workItem.title}
+              subtitle={workItem.subtitle}
+              description={workItem.description}
+              certificateLink={workItem.certificateLink}
+              certified={workItem.certified}
+              index={index}
+              imgSrc={workItem.imgSrc}
+              _id={workItem._id}
+            />
           ))}
         </div>
       </div>
