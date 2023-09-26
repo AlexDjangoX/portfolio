@@ -229,8 +229,17 @@ export type ProjectRoleTimelineType = {
 
 export interface ToastInterface {
   message: string;
-  type: 'success' | 'error';
+  type: 'success' | 'error' | 'warning' | 'info';
 }
+
+export interface ToastProviderInterface {
+  children: ReactNode;
+}
+
+export type ToastFunction = (
+  message: string,
+  type?: 'success' | 'error' | 'warning' | 'info'
+) => void;
 
 export type Service = {
   _id: string;
@@ -270,7 +279,7 @@ export type WorkCardType = {
   certificateLink: string;
 };
 
-export type FooterLinksType = {
+export type SocialLinksType = {
   iconSrc: StaticImageData;
   href: string;
 };
@@ -333,9 +342,25 @@ export interface MotionHeadingTwoProps {
 
 export type MotionWrapperCardDivProps = {
   children: React.ReactNode;
-  direction: 'right' | 'up' | 'down' | 'left';
+  direction: Direction;
   type: 'tween' | 'spring';
   delay: number;
   duration: number;
   additionalStyles?: string;
 };
+export type FormDataType = {
+  name: string;
+  email: string;
+  message: string;
+  contact: string;
+};
+
+export interface ContactFieldType {
+  label: string;
+  id: string;
+  type: string;
+  component: string;
+  getInputStyle: (error?: any) => string;
+  register: any;
+  errors: any;
+}

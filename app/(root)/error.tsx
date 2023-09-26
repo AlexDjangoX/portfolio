@@ -2,8 +2,6 @@
 
 import { useEffect } from 'react';
 
-import ErrorPage from '@/components/ErrorPage';
-
 export default function Error({
   error,
   reset,
@@ -17,7 +15,6 @@ export default function Error({
 
   return (
     <div>
-      <ErrorPage />
       <button onClick={() => reset()}>Try again</button>
     </div>
   );

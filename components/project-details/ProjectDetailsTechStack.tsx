@@ -13,7 +13,7 @@ const ProjectDetailsTechStack = ({
       additionalStylesMainHeading="mb-[1.5rem] md:pb-[2.75rem]"
     />
 
-    <div className="flex max-w-[45rem] flex-wrap justify-between">
+    <div className="flex max-w-[45rem] flex-wrap justify-center gap-5 py-10 md:gap-9 md:pb-[4.5rem] md:pt-[3.3rem]">
       {techStack.map((skill) => (
         <TechSkillIcon
           key={skill?._id}
