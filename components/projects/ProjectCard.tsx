@@ -12,13 +12,13 @@ const ProjectCard = ({
   const projectBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
-    filmpire: 'bg-filmpire-background',
+    portfolio: 'bg-portfolio-background',
   };
 
   const buttonBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-button',
     jobit: 'bg-jobit-button',
-    filmpire: 'bg-filmpire-button',
+    portfolio: 'bg-portfolio-button',
   };
   const isOdd = index % 2 !== 0;
 
