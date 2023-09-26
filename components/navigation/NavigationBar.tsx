@@ -8,7 +8,7 @@ import MobileNavbar from './MobileNavbar';
 import useNavigationBar from '@/hooks/useNavigationBar';
 import { AlexanderBrand } from '../reusable/AlexanderBrand';
 
-const Navbar = () => {
+const NavigationBar = () => {
   const pathname = usePathname();
 
   const { showMobileNavbar, openImgSrc, closeImgSrc, toggleMobile } =
@@ -38,4 +38,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavigationBar;
