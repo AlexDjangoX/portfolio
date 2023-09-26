@@ -13,7 +13,7 @@ const CaseStudiesCard = ({
   const projectBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
-    filmpire: 'bg-filmpire-background',
+    portfolio: 'bg-portfolio-background',
   };
   const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
 

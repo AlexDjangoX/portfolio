@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 import client from './sanity.client';
 
-const revalidate = 1;
+const revalidate = 1800;
 
 export async function getProfile() {
   return client.fetch(
@@ -86,18 +86,38 @@ export async function getTestimonials() {
   );
 }
 
+// export async function getCaseStudies() {
+//   return client.fetch(
+//     groq`*[_type == "caseStudies"]{
+//       _id,
+//       heading,
+//       projectName,
+//       subHeading,
+//       "image": image.asset->url,
+//       "altText": image.alt
+//     }`,
+//     { next: { revalidate } }
+//   );
+// }
+
 export async function getCaseStudies() {
-  return client.fetch(
-    groq`*[_type == "caseStudies"]{
-      _id,
-      heading,
-      projectName,
-      subHeading,
-      "image": image.asset->url,
-      "altText": image.alt
-    }`,
-    { next: { revalidate } }
-  );
+  try {
+    const data = await client.fetch(
+      groq`*[_type == "caseStudies"]{
+        _id,
+        heading,
+        projectName,
+        subHeading,
+        "image": image.asset->url,
+        "altText": image.alt
+      }`
+    );
+    console.log('Fetched data:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching case studies:', error);
+    throw error;
+  }
 }
 
 export async function getCaseStudyDetails() {
