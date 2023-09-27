@@ -11,7 +11,7 @@ const FigmaDesign = ({ figmaDesignUrl, figmaDesignAlt }: FigmaType) => {
         </p>
       </div>
       <Image
-        className="w-full object-cover "
+        className="h-[30rem] w-full object-cover "
         src={figmaDesignUrl}
         alt={figmaDesignAlt}
         width={500}
