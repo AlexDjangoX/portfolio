@@ -10,7 +10,7 @@ const SkillsCard = ({
   content,
 }: CardPropType) => {
   return (
-    <div className="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 transition duration-300 hover:translate-y-[1.2rem] hover:bg-primary-light dark:bg-black-200 dark:hover:bg-primary-dark">
+    <div className="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 pb-3 transition duration-300 hover:translate-y-[1.2rem] hover:bg-primary-light  hover:shadow-2xl  hover:shadow-black/30 dark:bg-black-200 dark:hover:bg-primary-dark  hover:dark:shadow-servicesCard dark:hover:shadow-black/50">
       <div className="absolute left-[1.5625rem] top-[1.875rem] flex h-[3.875rem] w-[3.875rem] items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-white dark:bg-primary-dark">
         <Image
           src={imgSrcWhite || '/assets/redux.svg'}

@@ -11,9 +11,8 @@ const WorkCard = ({
   description,
   imgSrc,
   index,
-  certified,
+
   certificateLink,
-  _id,
 }: WorkCardType) => {
   return (
     <MotionWrapperCardDiv
@@ -21,8 +20,10 @@ const WorkCard = ({
       type="spring"
       delay={0.05 * index}
       duration={1.75}
+      translateX="1.5rem"
+      additionalStyles="hover:dark:shadow-servicesCard dark:hover:shadow-black/50 hover:shadow-2xl pb-3 dark:hover:shadow-black-900 rounded-xl overflow-hidden"
     >
-      <div className="flex items-center justify-start">
+      <div className="flex  items-center justify-start">
         <figure>
           <Image
             className="m-[1.5rem]"

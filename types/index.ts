@@ -355,6 +355,7 @@ export type MotionWrapperCardDivProps = {
   duration: number;
   additionalStyles?: string;
   once?: boolean;
+  translateX?: string;
 };
 export type FormDataType = {
   name: string;
