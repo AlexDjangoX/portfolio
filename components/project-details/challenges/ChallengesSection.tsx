@@ -1,27 +1,27 @@
 import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
-import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
-import { ChallengesLearningsType } from '@/types';
-import ChallengesLearningsList from './ChallengesLearningsList';
+import SectionHeading from '../../reusable/SectionHeading';
+import { ChallengesSectionType } from '@/types';
+import ChallengesList from './ChallengesList';
 import { challenge, tick } from '@/public/assets/index';
 
-const ChallengesLearnings = ({
+const ChallengesSection = ({
   challenges,
   learnings,
-}: ChallengesLearningsType) => {
+}: ChallengesSectionType) => {
   return (
     <WrapperProjectDetails additionalStyles="bg-white-900 dark:bg-black-200 py-[1.5rem] px-[0.9rem] ">
-      <ProjectDetailsHeading
+      <SectionHeading
         subHeading="Way of work"
         mainHeading="My Process"
         additionalStylesMainHeading="pb-[1.5rem]"
       />
-      <ChallengesLearningsList
+      <ChallengesList
         items={challenges}
         title="CHALLENGES"
         iconSrc={challenge}
         color="text-heading-red"
       />
-      <ChallengesLearningsList
+      <ChallengesList
         items={learnings}
         title="LEARNINGS"
         iconSrc={tick}
@@ -31,4 +31,4 @@ const ChallengesLearnings = ({
   );
 };
 
-export default ChallengesLearnings;
+export default ChallengesSection;

@@ -1,12 +1,8 @@
 import Image from 'next/image';
 
-import { ChallengesLearningsItemType } from '@/types';
+import { ChallengesItemType } from '@/types';
 
-const ChallengesLearningsItem = ({
-  text,
-  title,
-  iconSrc,
-}: ChallengesLearningsItemType) => (
+const ChallengesItem = ({ text, title, iconSrc }: ChallengesItemType) => (
   <li className="mb-2 flex items-start">
     <Image
       src={iconSrc}
@@ -21,4 +17,4 @@ const ChallengesLearningsItem = ({
   </li>
 );
 
-export default ChallengesLearningsItem;
+export default ChallengesItem;

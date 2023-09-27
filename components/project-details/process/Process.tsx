@@ -1,12 +1,12 @@
 import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
 import { ProblemStatementType } from '@/types';
-import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
+import SectionHeading from '../../reusable/SectionHeading';
 import ProcessCard from './ProcessCard';
 
-const ProjectDetailsProcess = ({ myProcess }: ProblemStatementType) => {
+const Process = ({ myProcess }: ProblemStatementType) => {
   return (
     <WrapperProjectDetails additionalStyles="bg-white-900 dark:bg-black-200 py-[2.25rem] px-[1.5rem] ">
-      <ProjectDetailsHeading
+      <SectionHeading
         subHeading="Way of work"
         mainHeading="My Process"
         additionalStylesMainHeading="pb-[1.5rem]"
@@ -20,4 +20,4 @@ const ProjectDetailsProcess = ({ myProcess }: ProblemStatementType) => {
   );
 };
 
-export default ProjectDetailsProcess;
+export default Process;

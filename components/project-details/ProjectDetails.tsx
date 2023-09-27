@@ -2,14 +2,14 @@ import { notFound } from 'next/navigation';
 
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
 import {
-  ProjectDetailsTopContent,
-  ProjectDetailsDescription,
-  ProjectDetailsTechStack,
-  ProjectDetailsProblemStatement,
+  TopContent,
+  Description,
+  TechStack,
+  ProblemStatement,
   FigmaDesign,
-  ProjectDetailsProcess,
-  ChallengesLearnings,
-  OtherCaseStudies,
+  Process,
+  ChallengesSection,
+  CaseStudies,
   CallToAction,
 } from '.';
 
@@ -22,7 +22,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
 
   return (
     <section className="flex w-full flex-col">
-      <ProjectDetailsTopContent
+      <TopContent
         headingUnderline={project?.headingUnderline}
         heading={project?.heading}
         imageUrl={project?.imageUrl}
@@ -33,9 +33,9 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
         startDate={project?.startDate}
         endDate={project?.endDate}
       />
-      <ProjectDetailsTechStack techStack={project?.techStack} />
-      <ProjectDetailsDescription description={project?.description} />
-      <ProjectDetailsProblemStatement
+      <TechStack techStack={project?.techStack} />
+      <Description description={project?.description} />
+      <ProblemStatement
         problemStatement={project?.problemStatement}
         problemStatementImageUrl={project?.problemStatementImageUrl}
         problemStatementImageAlt={project?.problemStatementImageAlt}
@@ -44,12 +44,12 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
         figmaDesignUrl={project?.figmaDesignUrl}
         figmaDesignAlt={project?.figmaDesignAlt}
       />
-      <ProjectDetailsProcess myProcess={project?.myProcess} />
-      <ChallengesLearnings
+      <Process myProcess={project?.myProcess} />
+      <ChallengesSection
         challenges={project?.challenges}
         learnings={project?.learnings}
       />
-      <OtherCaseStudies otherCaseStudies={project?.otherCaseStudies} />
+      <CaseStudies otherCaseStudies={project?.otherCaseStudies} />
       <CallToAction />
     </section>
   );

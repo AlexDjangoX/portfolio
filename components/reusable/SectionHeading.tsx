@@ -1,6 +1,6 @@
 import { HeadingType } from '@/types';
 
-const ProjectDetailsHeading = ({
+const SectionHeading = ({
   subHeading,
   mainHeading,
   additionalStylesMainHeading,
@@ -22,4 +22,4 @@ const ProjectDetailsHeading = ({
   );
 };
 
-export default ProjectDetailsHeading;
+export default SectionHeading;

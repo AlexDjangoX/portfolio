@@ -1,13 +1,11 @@
 import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
-import { ProjectDetailsTechStackInterface } from '@/types';
-import ProjectDetailsHeading from '../reusable/ProjectDetailsHeading';
+import { TechStackInterface } from '@/types';
+import SectionHeading from '../../reusable/SectionHeading';
 import TechSkillIcon from './TechSkillIcon';
 
-const ProjectDetailsTechStack = ({
-  techStack,
-}: ProjectDetailsTechStackInterface) => (
+const TechStack = ({ techStack }: TechStackInterface) => (
   <WrapperProjectDetails additionalStyles="bg-white-900 dark:bg-black-200">
-    <ProjectDetailsHeading
+    <SectionHeading
       subHeading="Technologies used"
       mainHeading="Tech Stack"
       additionalStylesMainHeading="mb-[1.5rem] md:pb-[2.75rem]"
@@ -26,4 +24,4 @@ const ProjectDetailsTechStack = ({
   </WrapperProjectDetails>
 );
 
-export default ProjectDetailsTechStack;
+export default TechStack;

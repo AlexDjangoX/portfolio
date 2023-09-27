@@ -1,9 +1,6 @@
-import { ProjectDetailsHeaderType } from '@/types';
+import { DetailsHeaderType } from '@/types';
 
-const ProjectDetailsHeader = ({
-  headingUnderline,
-  heading,
-}: ProjectDetailsHeaderType) => (
+const Header = ({ headingUnderline, heading }: DetailsHeaderType) => (
   <div className=" flex flex-col justify-center bg-white-800 pt-[7.5rem] dark:bg-black-300 md:pt-[9rem]">
     <h3 className="mb-[0.625rem] text-center font-semibold text-primary-light dark:text-primary-dark md:text-[1.25rem] md:leading-[130%] md:tracking-[6px]">
       WEB DEV PROJECT
@@ -18,4 +15,4 @@ const ProjectDetailsHeader = ({
   </div>
 );
 
-export default ProjectDetailsHeader;
+export default Header;

@@ -1,4 +1,4 @@
-import MotionWrapperHeadingTwo from '@/components/reusable/MotionWrapperHeadingTwo';
+import MotionWrapperHeadingTwo from '@/HOC/MotionWrapperHeadingTwo';
 
 const SkillsHeading = () => {
   return (

@@ -1,18 +1,11 @@
 import Link from 'next/link';
 
-import { GitIcon } from '../reusable/GitIcon';
-import { WorldIcon } from '../reusable/WorldIcon';
-import { BlueArrowIcon } from '../reusable/BlueArrowIcon';
+import { GitIcon } from '../../icons/GitIcon';
+import { WorldIcon } from '../../icons/WorldIcon';
+import { BlueArrowIcon } from '../../icons/BlueArrowIcon';
+import { DetailsLinksType } from '@/types';
 
-type ProjectDetailsLinksProps = {
-  demoSite: string;
-  sourceCode: string;
-};
-
-const ProjectDetailsLinks = ({
-  demoSite,
-  sourceCode,
-}: ProjectDetailsLinksProps) => (
+const DetailsLinks = ({ demoSite, sourceCode }: DetailsLinksType) => (
   <div className="flex items-center justify-center bg-white-800 pb-[3rem] pt-[1.563rem] dark:bg-black-300 md:pb-[4.125rem]">
     <Link
       className="mr-[2.563rem] flex items-center text-[0.874rem] font-semibold text-primary-light dark:text-primary-dark md:text-[1.25rem]"
@@ -36,4 +29,4 @@ const ProjectDetailsLinks = ({
   </div>
 );
 
-export default ProjectDetailsLinks;
+export default DetailsLinks;

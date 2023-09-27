@@ -1,7 +1,7 @@
 import CaseStudies from '@/components/case-studies/CaseStudies';
 
-const CaseStudy = () => {
+const StudyCardType = () => {
   return <CaseStudies />;
 };
 
-export default CaseStudy;
+export default StudyCardType;

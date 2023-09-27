@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { SkillsType } from '@/types';
-import MotionWrapperCardDiv from '../reusable/MotionWrapperCardDiv';
+import MotionWrapperCardDiv from '../../HOC/MotionWrapperCardDiv';
 
 const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
   <MotionWrapperCardDiv

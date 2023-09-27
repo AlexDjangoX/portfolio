@@ -132,7 +132,7 @@ export interface StudyDetailInterface {
   imageAlt: string;
 }
 
-export interface ProjectDetailsTechStackInterface {
+export interface TechStackInterface {
   techStack: StudyDetailInterface[];
 }
 
@@ -149,7 +149,7 @@ export interface BlockInterface {
   style: string;
 }
 
-export interface ProjectDetailsDescriptionInterface {
+export interface DetailsDescriptionInterface {
   description: BlockInterface[];
 }
 
@@ -198,7 +198,7 @@ export type ProblemStatementType = {
   myProcess: SingleProcessType[];
 };
 
-export type ChallengesLearningsType = {
+export type ChallengesSectionType = {
   challenges: string[];
   learnings: string[];
 };
@@ -210,18 +210,18 @@ export type SectionListType = {
   color: string;
 };
 
-export type CaseStudy = {
+export type StudyCardType = {
   otherCaseStudyHeading: string;
   otherCaseStudyDescription: string;
   otherCaseStudyImageUrl: string;
   otherCaseStudyImageAlt: string;
 };
 
-export type OtherCaseStudiesType = {
-  otherCaseStudies: CaseStudy[];
+export type CaseStudiesType = {
+  otherCaseStudies: StudyCardType[];
 };
 
-export type ProjectRoleTimelineType = {
+export type TimelineType = {
   myRole: string;
   startDate: string;
   endDate: string;
@@ -251,12 +251,12 @@ export type Service = {
   index: number;
 };
 
-export type ProjectDetailsHeaderType = {
+export type DetailsHeaderType = {
   headingUnderline: string;
   heading: string;
 };
 
-export type ProjectDetailsImageType = {
+export type DetailsImageType = {
   imageUrl: string;
   imageAlt: string;
 };
@@ -293,7 +293,7 @@ export type NavbarLinkType = {
   showMobileNavbar: boolean;
 };
 
-export type ChallengesLearningsItemType = {
+export type ChallengesItemType = {
   text: string;
   title: string;
   iconSrc: any;
@@ -320,7 +320,7 @@ export type TechnologyType = {
   buttonBackground: string;
 };
 
-export type ProjectDetailsTopType = {
+export type TopContentType = {
   headingUnderline: string;
   heading: string;
   imageUrl: string;
@@ -366,3 +366,8 @@ export interface ContactFieldType {
   register: any;
   errors: any;
 }
+
+export type DetailsLinksType = {
+  demoSite: string;
+  sourceCode: string;
+};
