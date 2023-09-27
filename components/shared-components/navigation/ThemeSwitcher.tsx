@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { sun, moon } from '../../../public/assets/index';
+import { sun, moon } from '@/public/assets/index';
 import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 
 const ThemeSwitcher = () => {

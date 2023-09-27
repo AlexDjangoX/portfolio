@@ -324,7 +324,7 @@ export type TechnologyType = {
   buttonBackground: string;
 };
 
-export type TopContentType = {
+export type SectionHeroType = {
   headingUnderline: string;
   heading: string;
   imageUrl: string;

@@ -1,8 +1,8 @@
 import { Header, ApplicationHeroImage, SiteGitLinks, Timeline } from '..';
 
-import { TopContentType } from '@/types';
+import { SectionHeroType } from '@/types';
 
-const TopContent = ({
+const SectionHero = ({
   headingUnderline,
   heading,
   imageUrl,
@@ -12,7 +12,7 @@ const TopContent = ({
   myRole,
   startDate,
   endDate,
-}: TopContentType) => (
+}: SectionHeroType) => (
   <div className="overflow:hidden bg-white-800 dark:bg-black-300">
     <Header headingUnderline={headingUnderline} heading={heading} />
     <ApplicationHeroImage imageUrl={imageUrl} imageAlt={imageAlt} />
@@ -21,4 +21,4 @@ const TopContent = ({
   </div>
 );
 
-export default TopContent;
+export default SectionHero;

@@ -10,4 +10,4 @@ export { default as FigmaDesign } from './figma/FigmaDesign';
 export { default as ChallengesSection } from './challenges/ChallengesSection';
 export { default as CallToAction } from '../shared-components/action/CallToAction';
 export { default as CaseStudies } from './caseStudiesPreview/Preview';
-export { default as TopContent } from './header-hero-section/TopContent';
+export { default as SectionHero } from './header-hero-section/SectionHero';

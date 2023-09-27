@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import CustomButton from '../../reusable/CustomButton';
+import CustomButton from '@/components/reusable/CustomButton';
 
 const CallToActionButton = () => {
   return (

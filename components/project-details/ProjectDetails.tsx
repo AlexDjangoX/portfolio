@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
 import {
-  TopContent,
+  SectionHero,
   ApplicationDescription,
   TechStack,
   ProblemStatement,
@@ -22,7 +22,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
 
   return (
     <section className="flex w-full flex-col overflow-hidden">
-      <TopContent
+      <SectionHero
         headingUnderline={project?.headingUnderline}
         heading={project?.heading}
         imageUrl={project?.imageUrl}
