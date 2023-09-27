@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { WorkCardType } from '@/types';
-import MotionWrapperCardDiv from '../../HOC/MotionWrapperCardDiv';
-import { LinkIcon } from '../icons/LinkIcon';
+import MotionWrapperCardDiv from '../../../HOC/MotionWrapperCardDiv';
+import { LinkIcon } from '../../icons/LinkIcon';
 
 const WorkCard = ({
   title,

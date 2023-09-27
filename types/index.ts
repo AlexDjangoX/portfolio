@@ -210,15 +210,15 @@ export type SectionListType = {
   color: string;
 };
 
-export type StudyCardType = {
+export type PreviewCardType = {
   otherCaseStudyHeading: string;
   otherCaseStudyDescription: string;
   otherCaseStudyImageUrl: string;
   otherCaseStudyImageAlt: string;
 };
 
-export type CaseStudiesType = {
-  otherCaseStudies: StudyCardType[];
+export type PreviewType = {
+  otherCaseStudies: PreviewCardType[];
 };
 
 export type TimelineType = {

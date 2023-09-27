@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 
 import { icons } from '@/utils/constants';
-import SocialLinks from '../reusable/SocialLinks';
+import SocialLinks from '../../reusable/SocialLinks';
 
 const Footer = () => {
   const pathname = usePathname();

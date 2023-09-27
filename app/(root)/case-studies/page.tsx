@@ -1,7 +1,7 @@
 import CaseStudies from '@/components/case-studies/CaseStudies';
 
-const StudyCardType = () => {
+const PreviewCardType = () => {
   return <CaseStudies />;
 };
 
-export default StudyCardType;
+export default PreviewCardType;

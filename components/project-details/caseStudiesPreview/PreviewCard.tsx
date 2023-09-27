@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-import { StudyCardType } from '@/types';
+import { PreviewCardType } from '@/types';
 
-const StudyCard = ({
+const PreviewCard = ({
   otherCaseStudyHeading,
   otherCaseStudyDescription,
   otherCaseStudyImageUrl,
   otherCaseStudyImageAlt,
-}: StudyCardType) => (
+}: PreviewCardType) => (
   <div className="m-4 w-[344px] rounded-lg p-4 dark:bg-black-200 md:mb-6 md:w-[429px]">
     <div className="relative h-[187px]  rounded-md md:h-[232px]">
       <Image
@@ -31,4 +31,4 @@ const StudyCard = ({
   </div>
 );
 
-export default StudyCard;
+export default PreviewCard;

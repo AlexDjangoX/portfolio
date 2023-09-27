@@ -1,4 +1,4 @@
-import MotionWrapperHeadingTwo from '../../HOC/MotionWrapperHeadingTwo';
+import MotionWrapperHeadingTwo from '../../../HOC/MotionWrapperHeadingTwo';
 
 const ServiceHeading = () => {
   return (
