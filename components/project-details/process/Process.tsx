@@ -12,8 +12,14 @@ const Process = ({ myProcess }: ProblemStatementType) => {
         additionalStylesMainHeading="pb-[1.5rem]"
       />
       <div className="flex flex-wrap justify-between">
-        {myProcess.map((processItem) => (
-          <ProcessCard key={processItem.imageAlt} {...processItem} />
+        {myProcess.map((processItem, index) => (
+          <ProcessCard
+            key={processItem.imageAlt}
+            imageUrl={processItem.imageUrl}
+            imageAlt={processItem.imageAlt}
+            title={processItem.title}
+            index={index}
+          />
         ))}
       </div>
     </WrapperProjectDetails>

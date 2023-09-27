@@ -12,13 +12,14 @@ const MotionWrapperCardDiv = ({
   delay,
   duration,
   additionalStyles = '',
+  once = true,
 }: MotionWrapperCardDivProps) => (
   <motion.div
     variants={fadeIn(direction, type, delay, duration)}
-    viewport={{ once: false, amount: 0.1 }}
+    viewport={{ once, amount: 0.1 }}
     initial="hidden"
     whileInView="show"
-    className={additionalStyles}
+    className={`${additionalStyles} `}
   >
     {children}
   </motion.div>

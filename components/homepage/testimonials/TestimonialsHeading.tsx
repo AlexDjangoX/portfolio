@@ -7,7 +7,7 @@ const TestimonialsHeading = () => {
       type="spring"
       delay={0.5}
       duration={2.75}
-      additionalStyles="text-center mb-[2.5rem] text-black-200 dark:bg-black-200 dark:text-white-900"
+      additionalStyles="text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px] text-center mb-[2.5rem] text-black-200 dark:bg-black-200 dark:text-white-900"
     >
       What{' '}
       <span className="relative  inline-flex items-center">

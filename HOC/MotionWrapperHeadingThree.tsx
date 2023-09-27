@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/utils/motion';
 import { MotionHeadingTwoProps } from '@/types';
 
-const MotionWrapperHeadingTwo = ({
+const MotionWrapperHeadingThree = ({
   children,
   direction,
   type,
@@ -15,16 +15,16 @@ const MotionWrapperHeadingTwo = ({
   once = true,
 }: MotionHeadingTwoProps) => {
   return (
-    <motion.h2
+    <motion.h3
       variants={fadeIn(direction, type, delay, duration)}
       viewport={{ once, amount: 0.1 }}
       initial="hidden"
       whileInView="show"
-      className={`${additionalStyles} `}
+      className={`${additionalStyles}`}
     >
       {children}
-    </motion.h2>
+    </motion.h3>
   );
 };
 
-export default MotionWrapperHeadingTwo;
+export default MotionWrapperHeadingThree;

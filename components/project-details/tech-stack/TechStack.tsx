@@ -11,12 +11,13 @@ const TechStack = ({ techStack }: TechStackInterface) => (
       additionalStylesMainHeading="mb-[1.5rem] md:pb-[2.75rem]"
     />
 
-    <div className="flex max-w-[45rem] flex-wrap justify-center gap-5 py-10 md:gap-9 md:pb-[4.5rem] md:pt-[3.3rem]">
-      {techStack.map((skill) => (
+    <div className="flex max-w-[45rem] flex-wrap justify-center gap-5 overflow-hidden py-10 md:gap-9 md:pb-[4.5rem] md:pt-[3.3rem]">
+      {techStack.map((skill, index) => (
         <TechSkillIcon
           key={skill?._id}
           imageUrl={skill?.imageUrl}
           imageAlt={skill?.imageAlt}
+          index={index}
           id={skill?._id}
         />
       ))}

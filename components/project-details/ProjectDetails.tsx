@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getCaseStudyByProjectName } from '@/sanity/sanity.query';
 import {
   TopContent,
-  Description,
+  ApplicationDescription,
   TechStack,
   ProblemStatement,
   FigmaDesign,
@@ -21,7 +21,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
   }
 
   return (
-    <section className="flex w-full flex-col">
+    <section className="flex w-full flex-col overflow-hidden">
       <TopContent
         headingUnderline={project?.headingUnderline}
         heading={project?.heading}
@@ -34,7 +34,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
         endDate={project?.endDate}
       />
       <TechStack techStack={project?.techStack} />
-      <Description description={project?.description} />
+      <ApplicationDescription description={project?.description} />
       <ProblemStatement
         problemStatement={project?.problemStatement}
         problemStatementImageUrl={project?.problemStatementImageUrl}

@@ -15,6 +15,7 @@ const ChallengesList = ({ items, title, iconSrc, color }: SectionListType) => (
           text={item}
           title={title}
           iconSrc={iconSrc}
+          index={index}
         />
       ))}
     </ul>

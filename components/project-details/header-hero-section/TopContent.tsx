@@ -1,4 +1,4 @@
-import { Header, DetailsImage, DetailsLinks, Timeline } from '..';
+import { Header, ApplicationHeroImage, SiteGitLinks, Timeline } from '..';
 
 import { TopContentType } from '@/types';
 
@@ -13,12 +13,12 @@ const TopContent = ({
   startDate,
   endDate,
 }: TopContentType) => (
-  <>
+  <div className="overflow:hidden bg-white-800 dark:bg-black-300">
     <Header headingUnderline={headingUnderline} heading={heading} />
-    <DetailsImage imageUrl={imageUrl} imageAlt={imageAlt} />
-    <DetailsLinks demoSite={demoSite} sourceCode={sourceCode} />
+    <ApplicationHeroImage imageUrl={imageUrl} imageAlt={imageAlt} />
+    <SiteGitLinks demoSite={demoSite} sourceCode={sourceCode} />
     <Timeline myRole={myRole} startDate={startDate} endDate={endDate} />
-  </>
+  </div>
 );
 
 export default TopContent;

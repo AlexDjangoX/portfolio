@@ -149,7 +149,7 @@ export interface BlockInterface {
   style: string;
 }
 
-export interface DetailsDescriptionInterface {
+export interface ApplicationDescriptionType {
   description: BlockInterface[];
 }
 
@@ -256,7 +256,7 @@ export type DetailsHeaderType = {
   heading: string;
 };
 
-export type DetailsImageType = {
+export type ApplicationHeroImageType = {
   imageUrl: string;
   imageAlt: string;
 };
@@ -297,18 +297,22 @@ export type ChallengesItemType = {
   text: string;
   title: string;
   iconSrc: any;
+  index: number;
+  key: number;
 };
 
 export type ProcessCardType = {
   imageUrl: string;
   imageAlt: string;
   title: string;
+  index: number;
 };
 
 export type TechSkillIconType = {
   imageUrl: string;
   imageAlt: string;
   id?: string;
+  index: number;
 };
 
 export interface ProjectCardProps extends Project {
@@ -340,6 +344,7 @@ export interface MotionHeadingTwoProps {
   delay: number;
   duration: number;
   additionalStyles?: string;
+  once?: boolean;
 }
 
 export type MotionWrapperCardDivProps = {
@@ -349,6 +354,7 @@ export type MotionWrapperCardDivProps = {
   delay: number;
   duration: number;
   additionalStyles?: string;
+  once?: boolean;
 };
 export type FormDataType = {
   name: string;
@@ -367,7 +373,7 @@ export interface ContactFieldType {
   errors: any;
 }
 
-export type DetailsLinksType = {
+export type SiteGitLinksType = {
   demoSite: string;
   sourceCode: string;
 };

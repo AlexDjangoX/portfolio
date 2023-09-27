@@ -30,13 +30,3 @@
 .input-error {
   @apply border-red-800;
 }
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin 40s linear infinite;
-}

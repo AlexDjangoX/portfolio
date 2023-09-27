@@ -1,7 +1,9 @@
-import { DetailsDescriptionInterface } from '@/types';
+import { ApplicationDescriptionType } from '@/types';
 import WrapperProjectDetails from '@/HOC/WrapperProjectDetails';
 
-const Description = ({ description }: DetailsDescriptionInterface) => (
+const ApplicationDescription = ({
+  description,
+}: ApplicationDescriptionType) => (
   <WrapperProjectDetails additionalStyles="bg-white-800 dark:bg-black-300 px-[1.5rem] py-[2.25rem] md:px-[5.6rem] md:py-[4.5rem]">
     {description.map((block) => (
       <p
@@ -16,4 +18,4 @@ const Description = ({ description }: DetailsDescriptionInterface) => (
   </WrapperProjectDetails>
 );
 
-export default Description;
+export default ApplicationDescription;
