@@ -15,8 +15,8 @@ const NavigationBar = () => {
     useNavigationBar();
 
   return (
-    <nav className="fixed z-50 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">
-      <Link href="/" className="ml-[85px] flex items-center">
+    <nav className="fixed z-50  flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">
+      <Link href="/" className="ml-[1.5rem] flex items-center md:ml-[5.3rem]">
         <AlexanderBrand />
       </Link>
       <DesktopNavbar

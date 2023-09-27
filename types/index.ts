@@ -247,6 +247,7 @@ export type Service = {
   content: string;
   whiteImage: string;
   blueImage: string;
+  blueImagePrimaryDark: string;
   index: number;
 };
 
@@ -265,6 +266,7 @@ export type CardPropType = {
   content: string;
   imgSrcWhite?: string;
   imgSrcBlue?: string;
+  blueImagePrimaryDark?: string;
   index: number;
 };
 

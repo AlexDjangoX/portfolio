@@ -28,7 +28,7 @@ const DesktopNavbar = ({
           width={30}
           height={30}
           alt="open menu"
-          className="mr-24 flex md:hidden"
+          className="mr-6 flex md:mr-24 md:hidden"
           onClick={toggleMobile}
         />
       )}
