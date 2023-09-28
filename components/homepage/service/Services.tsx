@@ -26,6 +26,7 @@ const Services = async () => {
             }
             heading={card?.heading}
             content={card?.content}
+            _id={card?._id}
           />
         ))}
       </div>

@@ -124,6 +124,7 @@ export type CaseStudiesCardType = {
   projectName: string;
   subHeading: string;
   image: string;
+  index: number;
 };
 
 export interface StudyDetailInterface {
@@ -268,6 +269,7 @@ export type CardPropType = {
   imgSrcBlue?: string;
   blueImagePrimaryDark?: string;
   index: number;
+  _id: string;
 };
 
 export type WorkCardType = {
@@ -356,6 +358,7 @@ export type MotionWrapperCardDivProps = {
   additionalStyles?: string;
   once?: boolean;
   translateX?: string;
+  translateY?: string;
 };
 export type FormDataType = {
   name: string;

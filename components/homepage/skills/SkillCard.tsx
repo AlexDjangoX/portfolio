@@ -5,7 +5,7 @@ import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
 
 const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
   <MotionWrapperCardDiv
-    aria-label="Skill animation card"
+    aria-label="Preview Card"
     direction="up"
     type="spring"
     delay={0.05 * index}

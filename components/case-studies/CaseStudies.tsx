@@ -17,14 +17,14 @@ const CaseStudies = async () => {
   }
 
   return (
-    <section className="flex w-full flex-col  dark:bg-black-200  ">
+    <section className="flex w-full flex-col dark:bg-black-200">
       <CaseStudiesHeading />
 
       <div className="flex  flex-col bg-white-900 dark:bg-black-200">
         <div className="mt-[3rem] flex flex-wrap justify-center gap-[3rem]">
-          {caseStudies?.map((study: CaseStudiesCardType) => (
+          {caseStudies?.map((study: CaseStudiesCardType, index: number) => (
             <Link key={study._id} href={`/case-studies/${study.projectName}`}>
-              <CaseStudiesCard {...study} />
+              <CaseStudiesCard {...study} index={index} />
             </Link>
           ))}
         </div>
