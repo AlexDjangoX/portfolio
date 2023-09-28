@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useContext } from 'react';
+import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import emailjs from '@emailjs/browser';
 import { useForm, FieldError } from 'react-hook-form';
@@ -12,6 +13,7 @@ import { ToastContext } from '@/components/toast/ToastContext';
 export const useContactForm = () => {
   const showToast = useContext(ToastContext);
   const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   const getErrorStyle = (error: FieldError | undefined) =>
     error ? 'input-error' : '';
@@ -32,7 +34,7 @@ export const useContactForm = () => {
     setLoading(true);
 
     if (showToast) {
-      showToast('Sending email...', 'info');
+      showToast('Sending email', 'info');
     }
 
     const templateParams = {
@@ -54,12 +56,7 @@ export const useContactForm = () => {
       )
       .then(
         () => {
-          if (showToast) {
-            showToast(
-              'Thank you. I will get back to you as soon as possible.',
-              'success'
-            );
-          }
+          router.push('/contact-reply');
           reset();
           setLoading(false);
         },
