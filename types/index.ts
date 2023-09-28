@@ -355,6 +355,19 @@ export type FormDataType = {
   contact: string;
 };
 
+export type MotionWrapperType = {
+  children: React.ReactNode;
+  direction: Direction;
+  type: 'tween' | 'spring';
+  delay: number;
+  duration: number;
+  className?: string;
+  once?: boolean;
+  translateX?: string;
+  translateY?: string;
+  tagType?: string;
+};
+
 export interface ContactFieldType {
   label: string;
   id: string;
