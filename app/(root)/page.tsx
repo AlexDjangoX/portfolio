@@ -5,7 +5,6 @@ import Work from '@/components/work/Work';
 import Project from '@/components/projects/Project';
 import Testimonials from '@/components/testimonials/Testimonials';
 import CallToAction from '@/components/action/CallToAction';
-
 const Home = () => {
   return (
     <>

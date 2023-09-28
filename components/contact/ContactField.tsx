@@ -27,7 +27,10 @@ const ContactField = ({
       {component === 'input' ? (
         <input {...inputProps} />
       ) : component === 'textarea' ? (
-        <textarea style={{ resize: 'none' }} {...inputProps}></textarea>
+        <textarea
+          style={{ resize: 'none', textAlign: 'left', padding: '1rem' }}
+          {...inputProps}
+        ></textarea>
       ) : null}
 
       {errors[id] && (

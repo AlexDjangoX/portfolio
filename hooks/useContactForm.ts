@@ -56,7 +56,7 @@ export const useContactForm = () => {
       )
       .then(
         () => {
-          router.push('/contact-reply');
+          router.push('/success-page');
           reset();
           setLoading(false);
         },
