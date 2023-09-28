@@ -11,7 +11,7 @@ const Preview = ({ otherCaseStudies }: PreviewType) => {
         mainHeading="Other Case Studies"
         additionalStylesMainHeading="mb-[2.25rem] md:pb-[2.5rem]"
       />
-      <div className="flex flex-col items-center justify-between dark:bg-black-200 sm:flex-row">
+      <div className="flex flex-col items-center justify-between gap-x-10 dark:bg-black-300 sm:flex-row">
         {otherCaseStudies.map((study, index) => (
           <StudyCard key={index} {...study} />
         ))}

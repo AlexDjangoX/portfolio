@@ -35,7 +35,8 @@ const config: Config = {
       },
       boxShadow: {
         cardShadow: '-25px 47px 66px 0px',
-        servicesCard: '30px 30px 40px #0252cd50',
+        cardShadowSmall: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+        cardShadowLarge: '10px 10px 10px 8px rgba(0, 0, 0, 0.5)',
       },
       screens: {
         vs: '355px',

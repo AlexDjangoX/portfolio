@@ -8,19 +8,20 @@ const PreviewCard = ({
   otherCaseStudyImageUrl,
   otherCaseStudyImageAlt,
 }: PreviewCardType) => (
-  <div className="m-4 w-[344px] rounded-lg p-4 dark:bg-black-200 md:mb-6 md:w-[429px]">
-    <div className="relative h-[187px]  rounded-md md:h-[232px]">
+  <div className="m-4  w-[21.5rem] gap-x-7 rounded-2xl p-4 shadow-xl transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl dark:bg-black-200 dark:shadow-cardShadowSmall dark:hover:shadow-cardShadowLarge md:mb-6 md:w-[429px]">
+    <div className="relative h-[11.68rem] rounded-lg   md:h-[14.5rem]">
       <Image
         src={otherCaseStudyImageUrl}
         alt={otherCaseStudyImageAlt}
         width={345}
         height={163}
+        className="rounded-lg "
       />
     </div>
     <h4 className="mt-[1.25rem] font-semibold text-primary-light  dark:text-primary-dark">
       {otherCaseStudyHeading}
     </h4>
-    <p className="text-[0.875rem] leading-[150%] text-white-500 dark:text-white-800 md:leading-[160%] ">
+    <p className="min-h-[8rem] text-[0.875rem] leading-[150%] text-white-500 dark:text-white-800 md:leading-[160%] ">
       {otherCaseStudyDescription}
     </p>
     <button className="mt-[1rem] w-full min-w-[8rem] rounded-full bg-primary-light p-2 px-4 text-center text-[0.875rem] font-semibold leading-[1.625rem] text-white-900 dark:bg-primary-dark md:mb-4 md:text-[1.125rem]">

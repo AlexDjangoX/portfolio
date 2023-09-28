@@ -18,13 +18,13 @@ const ChallengesItem = ({
     key={index}
   >
     <li className="mb-2 flex items-start">
-      <figure>
+      <figure className="min-h-[1.5rem] min-w-[1.5rem]">
         <Image
           src={iconSrc}
           alt={`${title} icon`}
           width={24}
           height={24}
-          className="mr-1.5"
+          className="mr-1.5 mt-2"
         />
         <figcaption className="sr-only">{title}</figcaption>
       </figure>
