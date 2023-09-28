@@ -199,18 +199,22 @@ export type ProblemStatementType = {
   myProcess: SingleProcessType[];
 };
 
+type ItemType = {
+  _key: string;
+  description: string;
+};
+
 export type ChallengesSectionType = {
-  challenges: string[];
-  learnings: string[];
- 
+  challenges: ItemType[];
+  learnings: ItemType[];
+  _key: string;
 };
 
 export type SectionListType = {
-  items: string[];
+  items: ItemType[];
   title: string;
   iconSrc: StaticImageData;
   color: string;
- 
 };
 
 export type PreviewCardType = {
@@ -302,7 +306,7 @@ export type ChallengesItemType = {
   title: string;
   iconSrc: any;
   index: number;
-  key: number;
+  key: string;
 };
 
 export type ProcessCardType = {

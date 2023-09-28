@@ -15,9 +15,7 @@ import {
 
 const ProjectDetails = async ({ projectId }: { projectId: string }) => {
   const project = await getCaseStudyByProjectName(projectId);
-  console.log(project.learnings);
   if (!project) notFound();
-
   return (
     <section className="flex w-full flex-col overflow-hidden">
       <SectionHero

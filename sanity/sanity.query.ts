@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 import client from './sanity.client';
 
-const revalidate = 1800;
+const revalidate = 1;
 
 export async function getProfile() {
   try {
@@ -219,8 +219,14 @@ export async function getCaseStudyByProjectName(projectName: string) {
             "imageAlt": alt,
             title
           },
-          challenges,
-          learnings,
+          challenges[]{
+            _key,
+            description
+          },
+          learnings[]{
+            _key,
+            description
+          },
           otherCaseStudies[] {
             "otherCaseStudyImageUrl": otherCaseStudyImage.asset->url,
             "otherCaseStudyImageAlt": otherCaseStudyImage.alt,
@@ -233,7 +239,6 @@ export async function getCaseStudyByProjectName(projectName: string) {
       { projectName },
       { next: { revalidate } }
     );
-
     return data;
   } catch (error) {
     console.error('Error fetching case studies:', error);

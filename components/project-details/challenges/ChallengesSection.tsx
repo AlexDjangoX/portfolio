@@ -8,7 +8,7 @@ const ChallengesSection = ({
   challenges,
   learnings,
 }: ChallengesSectionType) => (
-  <WrapperProjectDetails className="bg-white-900 dark:bg-black-200 py-[1.5rem] px-[0.9rem] ">
+  <WrapperProjectDetails className="bg-white-900 px-[0.9rem] py-[1.5rem] dark:bg-black-200 ">
     <SectionHeading
       subHeading="Way of work"
       mainHeading="My Process"
