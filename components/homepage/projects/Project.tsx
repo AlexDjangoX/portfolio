@@ -10,9 +10,7 @@ import CustomButton from '../../reusable/CustomButton';
 const Projects = async () => {
   const projects = await getProjects();
 
-  if (!projects) {
-    notFound();
-  }
+  if (!projects) notFound();
 
   return (
     <section className="flex justify-center bg-white-900 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem] lg:flex-row">

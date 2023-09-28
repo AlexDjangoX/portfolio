@@ -8,9 +8,7 @@ import WrapperDark200 from '@/HOC/WrapperDark200';
 const Testimonials = async () => {
   const testimonials = await getTestimonials();
 
-  if (!testimonials) {
-    notFound();
-  }
+  if (!testimonials) notFound();
 
   return (
     <WrapperDark200>

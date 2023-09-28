@@ -7,9 +7,8 @@ import { Service } from '@/types';
 
 const Services = async () => {
   const services = await getServices();
-  if (!services) {
-    notFound();
-  }
+
+  if (!services) notFound();
 
   return (
     <section className="flex flex-col items-center justify-center bg-white-800 px-[1.5rem] py-[3rem] dark:bg-black-300 md:px-[5.3125rem] md:py-[4.5rem]">

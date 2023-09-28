@@ -12,9 +12,7 @@ import { CaseStudiesCardType } from '@/types';
 const CaseStudies = async () => {
   const caseStudies = await getCaseStudies();
 
-  if (!caseStudies) {
-    notFound();
-  }
+  if (!caseStudies) notFound();
 
   return (
     <section className="flex w-full flex-col dark:bg-black-200">

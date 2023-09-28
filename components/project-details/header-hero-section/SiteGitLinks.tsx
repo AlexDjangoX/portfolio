@@ -4,15 +4,15 @@ import { GitIcon } from '../../icons/GitIcon';
 import { WorldIcon } from '../../icons/WorldIcon';
 import { BlueArrowIcon } from '../../icons/BlueArrowIcon';
 import { SiteGitLinksType } from '@/types';
-import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
+import MotionWrapper from '@/HOC/MotionWrapper';
 
 const SiteGitLinks = ({ demoSite, sourceCode }: SiteGitLinksType) => (
-  <MotionWrapperCardDiv
+  <MotionWrapper
     direction="up"
     type="spring"
     delay={0.5}
     duration={2.75}
-    additionalStyles="flex items-center justify-center bg-white-800 pb-[3rem] pt-[1.563rem] dark:bg-black-300 md:pb-[4.125rem]"
+    className="flex items-center justify-center bg-white-800 pb-[3rem] pt-[1.563rem] dark:bg-black-300 md:pb-[4.125rem]"
   >
     <Link
       className="mr-[2.563rem] flex items-center text-[0.874rem] font-semibold text-primary-light dark:text-primary-dark md:text-[1.25rem]"
@@ -33,7 +33,7 @@ const SiteGitLinks = ({ demoSite, sourceCode }: SiteGitLinksType) => (
       <p className="mx-2">Source Code</p>
       <BlueArrowIcon />
     </Link>
-  </MotionWrapperCardDiv>
+  </MotionWrapper>
 );
 
 export default SiteGitLinks;

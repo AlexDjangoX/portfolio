@@ -1,17 +1,17 @@
 import Image from 'next/image';
 
 import { ProcessCardType } from '@/types';
-import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
+import MotionWrapper from '@/HOC/MotionWrapper';
 
 const ProcessCard = ({ imageUrl, imageAlt, title, index }: ProcessCardType) => (
-  <MotionWrapperCardDiv
+  <MotionWrapper
     aria-label="Skill animation card"
     direction="up"
     type="spring"
     delay={0.05 * index}
     duration={1.75}
     key={index}
-    additionalStyles="mb-4 mr-4 flex flex-col items-center"
+    className="mb-4 mr-4 flex flex-col items-center"
   >
     <figure className="flex h-[4.75rem] w-[4.75rem] items-center justify-center rounded-full bg-white-800 dark:bg-black-300 md:h-[6.25rem] md:w-[6.25rem]">
       <Image
@@ -27,7 +27,7 @@ const ProcessCard = ({ imageUrl, imageAlt, title, index }: ProcessCardType) => (
     <p className="mt-2 text-[0.875rem]  font-medium leading-[145%] text-black-300 dark:text-white-900 md:text-[1.25rem] md:font-semibold md:leading-[130%]">
       {title}
     </p>
-  </MotionWrapperCardDiv>
+  </MotionWrapper>
 );
 
 export default ProcessCard;

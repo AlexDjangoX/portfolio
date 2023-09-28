@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { CaseStudiesCardType } from '@/types';
-import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
+import MotionWrapper from '@/HOC/MotionWrapper';
 
 const CaseStudiesCard = ({
   altText,
@@ -20,7 +20,7 @@ const CaseStudiesCard = ({
   const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
 
   return (
-    <MotionWrapperCardDiv
+    <MotionWrapper
       aria-label="Skill animation card"
       direction="up"
       type="spring"
@@ -28,7 +28,7 @@ const CaseStudiesCard = ({
       translateX="1.5rem"
       duration={1.75}
       key={_id}
-      additionalStyles="mb-[1.25rem] bg-white-900 dark:bg-black-200 sm:mb-[2.25rem]"
+      className="mb-[1.25rem] bg-white-900 dark:bg-black-200 sm:mb-[2.25rem]"
     >
       <div className={`flex rounded-xl  ${cardBackground}`}>
         <div className="mx-[2.25rem] mt-[2.75rem] h-[10.3rem] w-[17.4rem] sm:mt-[4.375rem] sm:h-[16.4rem] sm:w-[27.74rem]">
@@ -43,7 +43,7 @@ const CaseStudiesCard = ({
           {subHeading}
         </p>
       </div>
-    </MotionWrapperCardDiv>
+    </MotionWrapper>
   );
 };
 

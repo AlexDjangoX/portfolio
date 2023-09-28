@@ -8,9 +8,8 @@ import WorkHeader from './WorkHeader';
 const Work = async () => {
   const work = await getWork();
 
-  if (!work) {
-    notFound();
-  }
+  if (!work) notFound();
+
   return (
     <section className="flex h-full w-full flex-col  justify-center bg-white-800 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem]  xl:flex-row ">
       <div className="flex w-full max-w-7xl flex-col items-center xl:flex-row">

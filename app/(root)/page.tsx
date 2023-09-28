@@ -6,18 +6,16 @@ import Project from '@/components/homepage/projects/Project';
 import Testimonials from '@/components/homepage/testimonials/Testimonials';
 import CallToAction from '@/components/shared-components/action/CallToAction';
 
-const Home = () => {
-  return (
-    <>
-      <Hero />
-      <Skills />
-      <Services />
-      <Work />
-      <Project />
-      <Testimonials />
-      <CallToAction />
-    </>
-  );
-};
+const Home = () => (
+  <>
+    <Hero />
+    <Skills />
+    <Services />
+    <Work />
+    <Project />
+    <Testimonials />
+    <CallToAction />
+  </>
+);
 
 export default Home;

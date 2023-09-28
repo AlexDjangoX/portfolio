@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 import { SkillsType } from '@/types';
-import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
+import MotionWrapper from '@/HOC/MotionWrapper';
 
 const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
-  <MotionWrapperCardDiv
+  <MotionWrapper
     aria-label="Preview Card"
     direction="up"
     type="spring"
@@ -18,7 +18,7 @@ const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
       </div>
       <figcaption className="sr-only">{altText}</figcaption>
     </figure>
-  </MotionWrapperCardDiv>
+  </MotionWrapper>
 );
 
 export default SkillCard;

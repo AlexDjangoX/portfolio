@@ -168,7 +168,7 @@ export type IconType = {
 
 export interface WrapperInterface {
   children: React.ReactNode;
-  additionalStyles?: string;
+  className?: string;
 }
 
 export type HeadingType = {
@@ -202,6 +202,7 @@ export type ProblemStatementType = {
 export type ChallengesSectionType = {
   challenges: string[];
   learnings: string[];
+ 
 };
 
 export type SectionListType = {
@@ -209,6 +210,7 @@ export type SectionListType = {
   title: string;
   iconSrc: StaticImageData;
   color: string;
+ 
 };
 
 export type PreviewCardType = {
@@ -339,27 +341,20 @@ export type SectionHeroType = {
 };
 
 type Direction = 'left' | 'right' | 'up' | 'down';
-export interface MotionHeadingTwoProps {
-  children: ReactNode;
-  direction: Direction;
-  type: 'tween' | 'spring';
-  delay: number;
-  duration: number;
-  additionalStyles?: string;
-  once?: boolean;
-}
 
-export type MotionWrapperCardDivProps = {
+export type MotionWrapperType = {
   children: React.ReactNode;
   direction: Direction;
   type: 'tween' | 'spring';
   delay: number;
   duration: number;
-  additionalStyles?: string;
+  className?: string;
   once?: boolean;
   translateX?: string;
   translateY?: string;
+  tagType?: string;
 };
+
 export type FormDataType = {
   name: string;
   email: string;

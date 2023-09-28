@@ -4,7 +4,7 @@ import SectionHeading from '../../reusable/SectionHeading';
 import TechSkillIcon from './TechSkillIcon';
 
 const TechStack = ({ techStack }: TechStackInterface) => (
-  <WrapperProjectDetails additionalStyles="bg-white-900 dark:bg-black-200">
+  <WrapperProjectDetails className="bg-white-900 dark:bg-black-200">
     <SectionHeading
       subHeading="Technologies used"
       mainHeading="Tech Stack"

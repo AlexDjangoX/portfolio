@@ -136,7 +136,6 @@ export async function getCaseStudies() {
         "altText": image.alt
       }`
     );
-    console.log('Fetched data:', data);
     return data;
   } catch (error) {
     console.error('Error fetching case studies:', error);

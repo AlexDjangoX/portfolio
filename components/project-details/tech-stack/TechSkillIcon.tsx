@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { TechSkillIconType } from '@/types';
-import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
+import MotionWrapper from '@/HOC/MotionWrapper';
 
 const TechSkillIcon = ({
   imageUrl,
@@ -9,7 +9,7 @@ const TechSkillIcon = ({
   id,
   index,
 }: TechSkillIconType) => (
-  <MotionWrapperCardDiv
+  <MotionWrapper
     aria-label="Tech Skill animation card"
     direction="up"
     type="spring"
@@ -27,7 +27,7 @@ const TechSkillIcon = ({
       />{' '}
       <figcaption className="sr-only">{imageAlt}</figcaption>
     </figure>
-  </MotionWrapperCardDiv>
+  </MotionWrapper>
 );
 
 export default TechSkillIcon;

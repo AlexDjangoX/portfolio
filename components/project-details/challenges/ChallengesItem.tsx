@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { ChallengesItemType } from '@/types';
-import MotionWrapperCardDiv from '@/HOC/MotionWrapperCardDiv';
+import MotionWrapper from '@/HOC/MotionWrapper';
 
 const ChallengesItem = ({
   text,
@@ -9,7 +9,7 @@ const ChallengesItem = ({
   iconSrc,
   index,
 }: ChallengesItemType) => (
-  <MotionWrapperCardDiv
+  <MotionWrapper
     aria-label="Tech Skill animation card"
     direction="right"
     type="spring"
@@ -32,7 +32,7 @@ const ChallengesItem = ({
         {text}
       </span>
     </li>
-  </MotionWrapperCardDiv>
+  </MotionWrapper>
 );
 
 export default ChallengesItem;
