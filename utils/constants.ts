@@ -1,4 +1,6 @@
 import { linkedin, github } from '@/public/assets-png/index';
+import { TagTypeMapping } from '@/types';
+import { motion } from 'framer-motion';
 
 export const icons = [
   {
@@ -43,3 +45,11 @@ export const contactFormFields = [
     component: 'input',
   },
 ];
+
+export const tagTypeMapping: TagTypeMapping = {
+  h1: motion.h1,
+  h2: motion.h2,
+  h3: motion.h3,
+  h4: motion.h4,
+  div: motion.div,
+};

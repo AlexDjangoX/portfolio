@@ -33,6 +33,11 @@ const config: Config = {
         'input-border': '#CCE1FF',
         'error-background': '#f3f4f6',
       },
+      boxShadow: {
+        cardShadow: '-25px 47px 66px 0px',
+        cardShadowSmall: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+        cardShadowLarge: '3px 7px 7px 2px rgba(0, 0, 0, 0.5)',
+      },
       screens: {
         vs: '355px',
         s: '450px',
