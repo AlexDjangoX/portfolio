@@ -381,6 +381,12 @@ export interface ContactFieldType {
   errors: any;
 }
 
+export type HighlightedHeaderProps = {
+  children: React.ReactNode;
+  className?: string;
+  highlightClassName?: string;
+};
+
 export type SiteGitLinksType = {
   demoSite: string;
   sourceCode: string;
