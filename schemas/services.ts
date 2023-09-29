@@ -43,6 +43,18 @@ const services = {
         },
       ],
     },
+    {
+      name: 'imgSrcBluePrimaryDark',
+      title: 'Image Source (Blue - Primary Dark)',
+      type: 'image',
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt Text',
+          type: 'string',
+        },
+      ],
+    },
   ],
 };
 

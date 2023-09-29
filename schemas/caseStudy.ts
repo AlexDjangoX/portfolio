@@ -153,16 +153,43 @@ const caseStudy = {
       name: 'challenges',
       title: 'Challenges',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [
+        {
+          type: 'object',
+          name: 'challengeItem',
+          title: 'Challenge Item',
+          fields: [
+            {
+              name: 'description',
+              title: 'Challenge Description',
+              type: 'string',
+            },
+          ],
+        },
+      ],
       description: 'List of challenges faced during the project.',
     },
     {
       name: 'learnings',
       title: 'Learnings',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [
+        {
+          type: 'object',
+          name: 'learningItem',
+          title: 'Learning Item',
+          fields: [
+            {
+              name: 'description',
+              title: 'Learning Description',
+              type: 'string',
+            },
+          ],
+        },
+      ],
       description: 'List of key takeaways from the project.',
     },
+
     {
       name: 'otherCaseStudies',
       title: 'Other Case Studies',

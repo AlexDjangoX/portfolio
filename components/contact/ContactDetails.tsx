@@ -1,7 +1,7 @@
 import { icons } from '@/utils/constants';
-import CallIcon from '../icons/CallIcon';
-import MessageIcon from '../icons/MessageIcon';
-import SocialLinks from '../reusable/SocialLinks';
+import CallIcon from '@/components/icons/CallIcon';
+import MessageIcon from '@/components/icons/MessageIcon';
+import SocialLinks from '@/components/reusable/SocialLinks';
 
 const ContactDetails = () => {
   return (
