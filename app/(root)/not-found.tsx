@@ -1,8 +1,6 @@
 'use client';
 
 import ErrorPage from '@/components/ErrorPage';
-const NotFound = () => {
-  return <ErrorPage />;
-};
+const NotFound = () => <ErrorPage />;
 
 export default NotFound;

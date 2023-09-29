@@ -31,12 +31,6 @@
   @apply border-red-800;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin 40s linear infinite;
+.cardBoxShadowHover {
+  @apply transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl dark:bg-black-200 dark:shadow-cardShadowSmall dark:hover:shadow-cardShadowLarge;
 }

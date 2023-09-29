@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { StaticImageData } from 'next/image';
 import React, { ReactNode } from 'react';
 import { PortableTextBlock } from 'sanity';
@@ -124,6 +125,7 @@ export type CaseStudiesCardType = {
   projectName: string;
   subHeading: string;
   image: string;
+  index: number;
 };
 
 export interface StudyDetailInterface {
@@ -132,7 +134,7 @@ export interface StudyDetailInterface {
   imageAlt: string;
 }
 
-export interface ProjectDetailsTechStackInterface {
+export interface TechStackInterface {
   techStack: StudyDetailInterface[];
 }
 
@@ -149,7 +151,7 @@ export interface BlockInterface {
   style: string;
 }
 
-export interface ProjectDetailsDescriptionInterface {
+export interface ApplicationDescriptionType {
   description: BlockInterface[];
 }
 
@@ -167,14 +169,12 @@ export type IconType = {
 
 export interface WrapperInterface {
   children: React.ReactNode;
-  additionalStyles?: string;
+  className?: string;
 }
 
-export type HeadingType = {
-  subHeading: string;
-  mainHeading: string;
-  additionalStylesMainHeading?: string;
-  additionalStylesSubHeading?: string;
+export type SectionHeadingProps = {
+  children: ReactNode;
+  className?: string;
 };
 
 export type FigmaType = {
@@ -198,30 +198,36 @@ export type ProblemStatementType = {
   myProcess: SingleProcessType[];
 };
 
-export type ChallengesLearningsType = {
-  challenges: string[];
-  learnings: string[];
+type ItemType = {
+  _key: string;
+  description: string;
+};
+
+export type ChallengesSectionType = {
+  challenges: ItemType[];
+  learnings: ItemType[];
+  _key: string;
 };
 
 export type SectionListType = {
-  items: string[];
+  items: ItemType[];
   title: string;
   iconSrc: StaticImageData;
   color: string;
 };
 
-export type CaseStudy = {
+export type PreviewCardType = {
   otherCaseStudyHeading: string;
   otherCaseStudyDescription: string;
   otherCaseStudyImageUrl: string;
   otherCaseStudyImageAlt: string;
 };
 
-export type OtherCaseStudiesType = {
-  otherCaseStudies: CaseStudy[];
+export type PreviewType = {
+  otherCaseStudies: PreviewCardType[];
 };
 
-export type ProjectRoleTimelineType = {
+export type TimelineType = {
   myRole: string;
   startDate: string;
   endDate: string;
@@ -247,15 +253,16 @@ export type Service = {
   content: string;
   whiteImage: string;
   blueImage: string;
+  blueImagePrimaryDark: string;
   index: number;
 };
 
-export type ProjectDetailsHeaderType = {
+export type DetailsHeaderType = {
   headingUnderline: string;
   heading: string;
 };
 
-export type ProjectDetailsImageType = {
+export type ApplicationHeroImageType = {
   imageUrl: string;
   imageAlt: string;
 };
@@ -265,7 +272,9 @@ export type CardPropType = {
   content: string;
   imgSrcWhite?: string;
   imgSrcBlue?: string;
+  blueImagePrimaryDark?: string;
   index: number;
+  _id: string;
 };
 
 export type WorkCardType = {
@@ -291,22 +300,26 @@ export type NavbarLinkType = {
   showMobileNavbar: boolean;
 };
 
-export type ChallengesLearningsItemType = {
+export type ChallengesItemType = {
   text: string;
   title: string;
   iconSrc: any;
+  index: number;
+  key: string;
 };
 
 export type ProcessCardType = {
   imageUrl: string;
   imageAlt: string;
   title: string;
+  index: number;
 };
 
 export type TechSkillIconType = {
   imageUrl: string;
   imageAlt: string;
   id?: string;
+  index: number;
 };
 
 export interface ProjectCardProps extends Project {
@@ -318,7 +331,7 @@ export type TechnologyType = {
   buttonBackground: string;
 };
 
-export type ProjectDetailsTopType = {
+export type SectionHeroType = {
   headingUnderline: string;
   heading: string;
   imageUrl: string;
@@ -330,30 +343,13 @@ export type ProjectDetailsTopType = {
   endDate: string;
 };
 
-type Direction = 'left' | 'right' | 'up' | 'down';
-export interface MotionHeadingTwoProps {
-  children: ReactNode;
-  direction: Direction;
-  type: 'tween' | 'spring';
-  delay: number;
-  duration: number;
-  additionalStyles?: string;
-}
+type TagType = 'h1' | 'h2' | 'h3' | 'h4' | 'div';
 
-export type MotionWrapperCardDivProps = {
-  children: React.ReactNode;
-  direction: Direction;
-  type: 'tween' | 'spring';
-  delay: number;
-  duration: number;
-  additionalStyles?: string;
+export type TagTypeMapping = {
+  [key in TagType]: (typeof motion)[key];
 };
-export type FormDataType = {
-  name: string;
-  email: string;
-  message: string;
-  contact: string;
-};
+
+type Direction = 'left' | 'right' | 'up' | 'down';
 
 export type MotionWrapperType = {
   children: React.ReactNode;
@@ -365,7 +361,14 @@ export type MotionWrapperType = {
   once?: boolean;
   translateX?: string;
   translateY?: string;
-  tagType?: string;
+  tagType?: TagType;
+};
+
+export type FormDataType = {
+  name: string;
+  email: string;
+  message: string;
+  contact: string;
 };
 
 export interface ContactFieldType {
@@ -382,4 +385,9 @@ export type HighlightedHeaderProps = {
   children: React.ReactNode;
   className?: string;
   highlightClassName?: string;
+};
+
+export type SiteGitLinksType = {
+  demoSite: string;
+  sourceCode: string;
 };
