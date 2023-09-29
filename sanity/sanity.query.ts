@@ -134,8 +134,10 @@ export async function getCaseStudies() {
         subHeading,
         "image": image.asset->url,
         "altText": image.alt
-      }`
+      }`,
+      { next: { revalidate } }
     );
+
     return data;
   } catch (error) {
     console.error('Error fetching case studies:', error);
