@@ -4,12 +4,10 @@ import SectionHeading from '../../reusable/SectionHeading';
 import ProcessCard from './ProcessCard';
 
 const Process = ({ myProcess }: ProblemStatementType) => (
-  <WrapperProjectDetails className="bg-white-900 dark:bg-black-200 py-[2.25rem] px-[1.5rem] ">
-    <SectionHeading
-      subHeading="Way of work"
-      mainHeading="My Process"
-      additionalStylesMainHeading="pb-[1.5rem]"
-    />
+  <WrapperProjectDetails className="bg-white-900 px-[1.5rem] py-[2.25rem] dark:bg-black-200 ">
+    <SectionHeading className="pb-[1.5rem]">
+      <sub>Way of work</sub>My Process
+    </SectionHeading>
     <div className="flex flex-wrap justify-between">
       {myProcess.map((processItem, index) => (
         <ProcessCard

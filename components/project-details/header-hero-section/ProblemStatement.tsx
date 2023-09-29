@@ -9,8 +9,10 @@ const ProblemStatement = ({
   problemStatementImageUrl,
   problemStatementImageAlt,
 }: ProjectDetails) => (
-  <WrapperProjectDetails className="bg-white-900 dark:bg-black-200 px-[1.5rem] py-[2.25rem] md:py-[4.5rem] md:px-[4.5rem]">
-    <SectionHeading subHeading="Problem" mainHeading="Problem Statement" />
+  <WrapperProjectDetails className="bg-white-900 px-[1.5rem] py-[2.25rem] dark:bg-black-200 md:p-[4.5rem]">
+    <SectionHeading>
+      <sub>Problem</sub>Problem Statement
+    </SectionHeading>
     <p className="py-[1.75rem] text-[0.875rem] leading-[155%] text-white-500 dark:text-white-800 md:text-[1.25rem]">
       {problemStatement}
     </p>

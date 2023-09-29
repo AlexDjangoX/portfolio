@@ -1,8 +1,9 @@
 'use client';
+import { motion } from 'framer-motion';
 
+import { tagTypeMapping } from '@/utils/constants';
 import { MotionWrapperType } from '@/types';
 import { fadeIn } from '@/utils/motion';
-import { motion } from 'framer-motion';
 
 const MotionWrapper = ({
   children,
@@ -14,24 +15,9 @@ const MotionWrapper = ({
   once = true,
   tagType = 'div',
   translateX = '0',
-  translateY = ' 0',
+  translateY = '0',
 }: MotionWrapperType) => {
-  let Tag;
-  switch (tagType) {
-    case 'h1':
-      Tag = motion.h1;
-      break;
-    case 'h2':
-      Tag = motion.h2;
-      break;
-    case 'h3':
-      Tag = motion.h3;
-      break;
-    case 'h4':
-    default:
-      Tag = motion.div;
-      break;
-  }
+  const Tag = tagTypeMapping[tagType] || motion.div;
   return (
     <Tag
       variants={fadeIn(direction, type, delay, duration)}

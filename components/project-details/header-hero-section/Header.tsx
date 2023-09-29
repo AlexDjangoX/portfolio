@@ -18,11 +18,11 @@ const Header = ({ headingUnderline, heading }: DetailsHeaderType) => (
       type="spring"
       delay={0.5}
       duration={2.75}
-      className="text-center text-[2.625rem] font-bold leading-[115%] tracking-[-0.42px] text-black-200 dark:bg-black-300 dark:text-white-900  md:text-[4rem] md:leading-[130%] md:tracking-[-0.64px]"
+      className="text-center text-[2.625rem] font-bold leading-[115%] tracking-[-0.42px] text-black-200 dark:bg-black-300 dark:text-white-900 md:text-[4rem] md:leading-[130%] md:tracking-[-0.64px]"
       tagType="h1"
     >
       <div className="relative inline-flex ">
-        <p className="z-20 ">{headingUnderline}</p>
+        <p className="z-20">{headingUnderline}</p>
         <div className="absolute z-10 mt-7 h-[0.8rem] w-full rounded-sm bg-secondary-dark md:mt-14  md:h-[1rem]" />
       </div>
       {' - '} {heading}

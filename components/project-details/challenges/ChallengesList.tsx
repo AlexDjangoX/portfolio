@@ -11,8 +11,8 @@ const ChallengesList = ({ items, title, iconSrc, color }: SectionListType) => (
     <ul>
       {items.map((item, index) => (
         <ChallengesItem
-          key={item._key}
-          text={item.description}
+          key={item?._key}
+          text={item?.description}
           title={title}
           iconSrc={iconSrc}
           index={index}

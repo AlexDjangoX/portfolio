@@ -24,21 +24,21 @@ const SkillsCard = ({
   >
     <div className="absolute left-[1.5625rem] top-[1.875rem] flex h-[3.875rem] w-[3.875rem] items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-white dark:bg-primary-dark">
       <Image
-        src={imgSrcWhite ?? '@/public/assets/redux.svg'}
+        src={imgSrcWhite ?? '/assets/redux.svg'}
         alt={heading}
         width="20"
         height="20"
         className="object-cover group-hover:hidden"
       />
       <Image
-        src={imgSrcBlue ?? '@/public/assets/redux.svg'}
+        src={imgSrcBlue ?? '/assets/redux.svg'}
         alt={heading}
         width="20"
         height="20"
         className="hidden object-cover group-hover:block dark:group-hover:hidden"
       />
       <Image
-        src={blueImagePrimaryDark ?? '@/public/assets/redux.svg'}
+        src={blueImagePrimaryDark ?? '/assets/redux.svg'}
         alt={heading}
         width="20"
         height="20"

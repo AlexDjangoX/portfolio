@@ -9,11 +9,10 @@ const ChallengesSection = ({
   learnings,
 }: ChallengesSectionType) => (
   <WrapperProjectDetails className="bg-white-900 px-[0.9rem] py-[1.5rem] dark:bg-black-200 ">
-    <SectionHeading
-      subHeading="Way of work"
-      mainHeading="My Process"
-      additionalStylesMainHeading="pb-[1.5rem]"
-    />
+    <SectionHeading className="pb-[1.5rem]">
+      <sub>Way of work</sub>
+      My Process
+    </SectionHeading>
     <ChallengesList
       items={challenges}
       title="CHALLENGES"

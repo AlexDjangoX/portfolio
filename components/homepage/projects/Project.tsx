@@ -5,7 +5,7 @@ import { getProjects } from '@/sanity/sanity.query';
 import ProjectCard from './ProjectCard';
 import { ProjectCardProps } from '@/types';
 import ProjectHeading from './ProjectHeading';
-import CustomButton from '../../reusable/CustomButton';
+import CustomButton from '@/components/reusable/CustomButton';
 
 const Projects = async () => {
   const projects = await getProjects();

@@ -18,10 +18,10 @@ const Services = async () => {
           <ServiceCard
             key={card?._id}
             index={index}
-            imgSrcWhite={card?.whiteImage ?? '@/public/assets/redux.svg'}
-            imgSrcBlue={card?.blueImage ?? '@/public/assets/redux.svg'}
+            imgSrcWhite={card?.whiteImage ?? '/assets/redux.svg'}
+            imgSrcBlue={card?.blueImage ?? '/assets/redux.svg'}
             blueImagePrimaryDark={
-              card?.blueImagePrimaryDark ?? '@/public/assets/redux.svg'
+              card?.blueImagePrimaryDark ?? '/assets/redux.svg'
             }
             heading={card?.heading}
             content={card?.content}

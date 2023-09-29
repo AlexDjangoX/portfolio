@@ -19,7 +19,7 @@ const WorkCard = ({
     delay={0.05 * index}
     duration={1.75}
     translateX="1.5rem"
-    className="overflow-hidden rounded-xl pb-3  shadow-cardShadowSmall hover:shadow-cardShadowLarge"
+    className="overflow-hidden rounded-xl pb-3 shadow-cardShadowSmall hover:shadow-cardShadowLarge"
   >
     <div className="flex  items-center justify-start">
       <figure>
@@ -37,7 +37,7 @@ const WorkCard = ({
       </h3>
       <p className="ml-4 dark:text-white-800">{subtitle}</p>
     </div>
-    <p className="ml-[1.5rem] font-normal leading-[155%] text-white-500 dark:text-white-900  md:text-[0.875rem]">
+    <p className="ml-[1.5rem] font-normal leading-[155%] text-white-500 dark:text-white-900 md:text-[0.875rem]">
       {description}
     </p>
     {certificateLink && (

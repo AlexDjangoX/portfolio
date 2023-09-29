@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { StaticImageData } from 'next/image';
 import React, { ReactNode } from 'react';
 import { PortableTextBlock } from 'sanity';
@@ -171,11 +172,9 @@ export interface WrapperInterface {
   className?: string;
 }
 
-export type HeadingType = {
-  subHeading: string;
-  mainHeading: string;
-  additionalStylesMainHeading?: string;
-  additionalStylesSubHeading?: string;
+export type SectionHeadingProps = {
+  children: ReactNode;
+  className?: string;
 };
 
 export type FigmaType = {
@@ -344,6 +343,12 @@ export type SectionHeroType = {
   endDate: string;
 };
 
+type TagType = 'h1' | 'h2' | 'h3' | 'h4' | 'div';
+
+export type TagTypeMapping = {
+  [key in TagType]: (typeof motion)[key];
+};
+
 type Direction = 'left' | 'right' | 'up' | 'down';
 
 export type MotionWrapperType = {
@@ -356,7 +361,7 @@ export type MotionWrapperType = {
   once?: boolean;
   translateX?: string;
   translateY?: string;
-  tagType?: string;
+  tagType?: TagType;
 };
 
 export type FormDataType = {
