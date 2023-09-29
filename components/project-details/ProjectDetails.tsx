@@ -17,7 +17,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
   const project = await getCaseStudyByProjectName(projectId);
   if (!project) notFound();
   return (
-    <section className="flex w-full flex-col overflow-hidden">
+    <section className="flex w-full flex-col overflow-hidden dark:bg-black-300">
       <SectionHero
         headingUnderline={project?.headingUnderline}
         heading={project?.heading}
@@ -44,6 +44,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
       <ChallengesSection
         challenges={project?.challenges}
         learnings={project?.learnings}
+        _key={project?._key}
       />
       <CaseStudies otherCaseStudies={project?.otherCaseStudies} />
       <CallToAction />
