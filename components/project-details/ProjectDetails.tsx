@@ -44,6 +44,7 @@ const ProjectDetails = async ({ projectId }: { projectId: string }) => {
       <ChallengesSection
         challenges={project?.challenges}
         learnings={project?.learnings}
+        _key={project?._key}
       />
       <CaseStudies otherCaseStudies={project?.otherCaseStudies} />
       <CallToAction />
