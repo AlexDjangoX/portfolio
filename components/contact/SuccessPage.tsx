@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 import { contactReplyImage } from '@/public/assets-png';
 import MotionWrapper from '@/HOC/MotionWrapper';
+import StyledMainHeader from '@/HOC/StyledMainHeader';
+import Highlight from '../reusable/Highlight';
 
 const SuccessPage = () => (
   <section className="flex h-screen w-screen flex-col items-center justify-center bg-black-300 ">
@@ -14,13 +16,9 @@ const SuccessPage = () => (
       duration={1.75}
       className="flex items-center justify-center"
     >
-      <h1 className=" bg-black-300 text-[1.6rem] font-bold leading-[3.0rem]  tracking-[-0.42px] text-white-900 sm:text-[2.625rem] sm:text-[3.6]  lg:text-[3.8rem] lg:leading-[5.2rem] lg:tracking-[0.64px]">
-        Thank you for your{' '}
-        <div className="relative inline-flex items-center whitespace-nowrap">
-          <p className="z-20">interest</p>
-          <div className="absolute z-10 mt-8 h-[1.02rem] w-full  rounded-sm bg-secondary-dark sm:h-[1.1rem] lg:mt-12 lg:h-[1.6rem]" />
-        </div>
-      </h1>
+      <StyledMainHeader className="sm:text-[3.6]">
+        Thank you for your <Highlight>interest</Highlight>
+      </StyledMainHeader>
     </MotionWrapper>
     <MotionWrapper
       aria-label="Successful email card"
@@ -45,14 +43,9 @@ const SuccessPage = () => (
       duration={1.75}
       className="mb-[1.25rem] bg-black-200 sm:mb-[2.25rem]"
     >
-      <h1 className=" sm:text:[1.8rem] bg-black-300 text-[1.6rem] font-bold  leading-[3.0rem] tracking-[-0.42px] text-white-900 sm:text-[2.625rem]  lg:text-[3.8rem] lg:leading-[5.2rem] lg:tracking-[0.64px]">
-        I will reply{' '}
-        <div className="relative inline-flex items-center whitespace-nowrap">
-          <p className="z-20">as soon</p>
-          <div className="absolute z-10 mt-8 h-[1.02rem] w-full  rounded-sm bg-secondary-dark sm:h-[1.1rem] lg:mt-12 lg:h-[1.6rem]" />
-        </div>{' '}
-        as possible
-      </h1>
+      <StyledMainHeader className="sm:text:[1.8rem]">
+        I will reply as soon <Highlight className="mr-2">as possible</Highlight>
+      </StyledMainHeader>
     </MotionWrapper>
     <MotionWrapper
       aria-label="Successful email card"

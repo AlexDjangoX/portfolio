@@ -377,3 +377,9 @@ export interface ContactFieldType {
   register: any;
   errors: any;
 }
+
+export type HighlightedHeaderProps = {
+  children: React.ReactNode;
+  className?: string;
+  highlightClassName?: string;
+};
