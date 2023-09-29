@@ -19,7 +19,7 @@ const MotionWrapperHeadingTwo = ({
       viewport={{ once: true, amount: 0.1 }}
       initial="hidden"
       whileInView="show"
-      className={`${additionalStyles} text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]`}
+      className={`${additionalStyles}  font-bold    text-[2.25rem] leading-[2.6rem] tracking-[-0.36px] md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]`}
     >
       {children}
     </motion.h2>

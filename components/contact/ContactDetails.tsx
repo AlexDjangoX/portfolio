@@ -6,7 +6,7 @@ import SocialLinks from '../reusable/SocialLinks';
 const ContactDetails = () => {
   return (
     <div>
-      <p className="pb-3.5 text-xl font-normal leading-[150%] text-black-300 dark:text-white-900 lg:text-2xl">
+      <p className="pb-3.5 text-xl font-normal     leading-[150%]  text-black-300 dark:text-white-900 lg:text-2xl">
         My Socials
       </p>
       <div className="mt-[0.5rem] flex gap-6 pb-9">
