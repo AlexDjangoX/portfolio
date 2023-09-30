@@ -37,6 +37,9 @@ const config: Config = {
         cardShadow: '-25px 47px 66px 0px',
         cardShadowSmall: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
         cardShadowLarge: '3px 7px 7px 2px rgba(0, 0, 0, 0.5)',
+        cardShadowSmallBlue: '6px 3px 10px 0px rgba(2, 82, 205, 0.25)',
+        cardShadowLargeBlue: '3px 7px 7px 2px rgba(2, 82, 205, 0.25)',
+        cardShadowLargeWhite: '3px 7px 7px 2px #F3F8FF',
       },
       screens: {
         vs: '355px',
