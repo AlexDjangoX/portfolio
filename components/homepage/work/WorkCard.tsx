@@ -21,10 +21,10 @@ const WorkCard = ({
     translateX="1.875rem"
     className="h-[13.125rem] min-w-[21.563rem] overflow-hidden rounded-xl px-6 py-4 shadow-cardShadowSmallBlue hover:shadow-cardShadowLarge dark:shadow-cardShadowSmall hover:dark:shadow-cardShadowLarge lg:h-[10.5rem]"
   >
-    <div className="flex  items-center justify-start">
+    <div className="flex items-center justify-start">
       <figure>
         <Image
-          className="m-[1.5rem]"
+          className="m-[1.5rem] shadow-cardShadowSmallBlue dark:shadow-cardShadowSmall"
           src={imgSrc}
           alt="Work Card Image"
           width={58}
