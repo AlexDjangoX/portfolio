@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import { contactReplyImage } from '@/public/assets-png';
 import MotionWrapper from '@/HOC/MotionWrapper';
@@ -7,12 +10,18 @@ import StyledMainHeader from '@/HOC/StyledMainHeader';
 import Highlight from '../reusable/Highlight';
 
 const SuccessPage = () => (
-  <section className="flex h-screen w-screen flex-col items-center justify-center bg-black-300 ">
+  <motion.section
+    initial={{ opacity: 0, scale: 0 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.75 }}
+    className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-black-300"
+  >
     <MotionWrapper
       aria-label="Successful email card"
       direction="left"
       type="spring"
-      delay={0.1}
+      delay={0.75}
       duration={1.75}
       className="flex items-center justify-center"
     >
@@ -24,7 +33,7 @@ const SuccessPage = () => (
       aria-label="Successful email card"
       direction="right"
       type="spring"
-      delay={0.1}
+      delay={0.75}
       duration={1.75}
     >
       <Image
@@ -39,7 +48,7 @@ const SuccessPage = () => (
       aria-label="Successful email card"
       direction="left"
       type="spring"
-      delay={0.1}
+      delay={0.75}
       duration={1.75}
       className="mb-[1.25rem] bg-black-200 sm:mb-[2.25rem]"
     >
@@ -51,7 +60,7 @@ const SuccessPage = () => (
       aria-label="Successful email card"
       direction="right"
       type="spring"
-      delay={0.1}
+      delay={0.75}
       duration={1.75}
       className="mb-[1.25rem]  sm:mb-[2.25rem]"
     >
@@ -62,7 +71,7 @@ const SuccessPage = () => (
         Return to Homepage
       </Link>
     </MotionWrapper>
-  </section>
+  </motion.section>
 );
 
 export default SuccessPage;

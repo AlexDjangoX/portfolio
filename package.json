@@ -11,7 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.3.1",
-    "@nextui-org/react": "^2.1.10",
+    "@nextui-org/react": "^2.1.13",
     "@sanity/vision": "^3.16.4",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",

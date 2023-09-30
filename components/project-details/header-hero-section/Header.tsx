@@ -2,7 +2,7 @@ import { DetailsHeaderType } from '@/types';
 import MotionWrapper from '@/HOC/MotionWrapper';
 
 const Header = ({ headingUnderline, heading }: DetailsHeaderType) => (
-  <div className=" overflow:hidden flex flex-col justify-center bg-white-800 pt-[7.5rem] dark:bg-black-300 md:pt-[9rem]">
+  <div className="overflow:hidden flex flex-col justify-center bg-white-800 px-[1.5rem] pt-[7.5rem] dark:bg-black-300 md:px-[5.3rem] md:pt-[9rem]">
     <MotionWrapper
       direction="down"
       type="spring"

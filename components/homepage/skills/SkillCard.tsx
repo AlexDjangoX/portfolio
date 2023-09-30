@@ -15,7 +15,7 @@ const SkillCard = ({ _id, image, altText, index }: SkillsType) => (
     key={_id}
   >
     <Tooltip
-      className="m-1 rounded-md px-2 py-1 text-[0.75rem] text-white-500 shadow-md dark:text-white-800 md:mb-4 "
+      className="m-1 rounded-md px-4 py-1 text-[0.75rem] text-white-500 shadow-md dark:text-white-800 md:mb-4 "
       content={altText}
     >
       <figure className="flex h-[3.1rem] w-[3.1rem] items-center justify-center rounded-full bg-white-800 transition-transform duration-150 hover:scale-125 dark:bg-black-300  md:h-[6.25rem] md:w-[6.25rem]">

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #555555;
+}
+
 .custom-underline {
   position: relative;
   display: inline-block;
