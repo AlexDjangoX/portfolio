@@ -18,8 +18,8 @@ const WorkCard = ({
     type="spring"
     delay={0.05 * index}
     duration={1.75}
-    translateX="1.5rem"
-    className="overflow-hidden rounded-xl pb-3 shadow-cardShadowSmall hover:shadow-cardShadowLarge"
+    translateX="1.875rem"
+    className="h-[13.125rem] min-w-[21.563rem] overflow-hidden rounded-xl px-6 py-4 shadow-cardShadowSmallBlue hover:shadow-cardShadowLarge dark:shadow-cardShadowSmall hover:dark:shadow-cardShadowLarge lg:h-[10.5rem]"
   >
     <div className="flex  items-center justify-start">
       <figure>
@@ -32,23 +32,26 @@ const WorkCard = ({
         />
         <figcaption className="sr-only">{title}</figcaption>
       </figure>
-      <h3 className="font-semibold leading-[130%] text-black-200 dark:text-white-900 md:text-[1.5rem]">
-        {title}
-      </h3>
+
+      {certificateLink ? (
+        <Link
+          target="_blank"
+          className="flex items-center justify-center rounded-lg bg-white-900 px-2 py-0.5 text-[0.875rem] font-thin leading-[2rem] text-primary-light dark:bg-black-300 dark:text-primary-dark md:text-[1.125rem]"
+          href={certificateLink}
+        >
+          <LinkIcon /> Certificate
+        </Link>
+      ) : (
+        <h3 className="font-semibold leading-[130%] text-black-200 dark:text-white-900 md:text-[1.5rem]">
+          {title}
+        </h3>
+      )}
+
       <p className="ml-4 dark:text-white-800">{subtitle}</p>
     </div>
-    <p className="ml-[1.5rem] font-normal leading-[155%] text-white-500 dark:text-white-900 md:text-[0.875rem]">
+    <p className="ml-[1.5rem] text-[0.875rem] font-normal leading-[155%] text-white-500 dark:text-white-900 md:text-[0.875rem]">
       {description}
     </p>
-    {certificateLink && (
-      <Link
-        target="_blank"
-        className="m-1 ml-[1.5rem] inline-flex items-center rounded-lg bg-white-900 px-2 py-1 text-[0.875rem] font-thin leading-[2rem] text-primary-light dark:bg-black-300 dark:text-primary-dark md:text-[1.125rem]"
-        href={certificateLink}
-      >
-        <LinkIcon /> Certificate
-      </Link>
-    )}
   </MotionWrapper>
 );
 

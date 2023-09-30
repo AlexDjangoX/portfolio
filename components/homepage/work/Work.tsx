@@ -30,7 +30,7 @@ const Work = async () => {
             </div>
           </div>
         </div>
-        <div className="ml-6  mt-4 flex w-full max-w-3xl  flex-col justify-around space-y-6 bg-white-800 dark:bg-black-200 xl:mt-0 xl:gap-7">
+        <div className="mt-4 flex w-full max-w-3xl flex-col  justify-around space-y-4 bg-white-800 pl-[1.625rem] dark:bg-black-200 xl:mt-0 xl:gap-7">
           {work.map((workItem: WorkCardType, index: number) => (
             <WorkCard
               key={workItem._id}
