@@ -6,7 +6,7 @@ const SkillsHeading = () => (
     type="spring"
     delay={0.5}
     duration={2.75}
-    className="mb-[2.5rem] text-center text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] text-black-200 dark:bg-black-200 dark:text-white-900 md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]"
+    className="mb-[3.4rem] text-center text-[2.25rem] font-bold leading-[2.6rem] tracking-[-0.36px] text-black-200 dark:bg-black-200 dark:text-white-900 md:mb-[3.6rem] md:text-[3rem] md:leading-[3.45rem] md:tracking-[-0.48px]"
     tagType="h2"
   >
     <div className="relative inline-flex items-center whitespace-nowrap">

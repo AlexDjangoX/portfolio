@@ -7,7 +7,6 @@ import { SkillsType } from '@/types';
 
 const Skills = async () => {
   const skills = await getSkills();
-
   if (!skills) notFound();
 
   return (
