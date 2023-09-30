@@ -10,15 +10,15 @@ const CaseStudiesHeading = () => (
       duration={1.75}
       className="mt-[4.4rem] w-full bg-white-800 px-[1.5rem] pt-[3rem] dark:bg-black-300"
     >
-      <h1 className="pb-[3rem] text-center text-[2.3rem] font-bold leading-[3.0rem] tracking-[-0.42px] text-black-200 dark:bg-black-300 dark:text-white-900 md:text-[4rem]   md:leading-[5.2rem] md:tracking-[-0.64px]">
+      <h1 className="pb-[3rem] text-center text-[2.625rem] font-bold leading-[3.02rem] tracking-[-0.42px] text-black-200 dark:bg-black-300 dark:text-white-900 md:text-[4rem] md:leading-[5.2rem] md:tracking-[-0.64px]">
         Recent{' '}
         <div className="relative inline-flex items-center whitespace-nowrap">
           <p className="z-20 pr-1">Case </p>
-          <div className="absolute z-10 mt-8 h-[1.02rem] w-full  rounded-sm bg-secondary-dark sm:mt-14 sm:h-[1.1rem] " />
+          <div className="absolute z-10 mt-8 h-[1.02rem] w-full rounded-l-sm bg-secondary-dark md:mt-12" />
         </div>
         <div className="relative inline-flex items-center whitespace-nowrap">
           <p className="z-20 pl-1"> Studies</p>
-          <div className="absolute z-10 mt-8 h-[1.02rem] w-full  rounded-sm bg-secondary-dark sm:mt-14 sm:h-[1.1rem] " />
+          <div className="absolute z-10 mt-8 h-[1.02rem] w-full  rounded-r-sm  bg-secondary-dark md:mt-12" />
         </div>
       </h1>
     </MotionWrapper>

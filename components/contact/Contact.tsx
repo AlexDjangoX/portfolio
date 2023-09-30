@@ -1,15 +1,13 @@
 import { ContactForm, ContactDetails, ContactHeader } from '.';
 
 const Contact = () => (
-  <section className="w-full bg-white-900 px-[1.5rem] py-[3rem] dark:bg-black-200 sm:px-[5.3rem]  2xl:px-[15rem] xlPlus:px-[25rem]">
-    <div className="mx-auto  mt-6  md:max-w-7xl">
+  <section className="flex w-full flex-col items-center justify-center bg-white-900 py-[3rem] dark:bg-black-200">
+    <div className="mt-6 w-full bg-white-900 px-[1.5rem] dark:bg-black-300 sm:px-[5.3rem]">
       <ContactHeader />
     </div>
-    <div className="flex flex-col md:flex-row-reverse md:justify-end ">
+    <div className="flex flex-col px-[1.5rem] pt-[5rem] sm:px-[5.3rem] lg:flex-row-reverse 2xl:px-[15rem] xlPlus:px-[25rem]">
       <ContactForm />
-      <div className="pl-6 md:pt-[-12rem]">
-        <ContactDetails />
-      </div>
+      <ContactDetails />
     </div>
   </section>
 );
