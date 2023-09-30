@@ -7,18 +7,18 @@ import ClipboardText from './ClipBoardText';
 import { fadeIn } from '@/utils/motion';
 
 const HeroHeadingContent = () => (
-  <header className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6">
+  <header className="mt-[9.9375rem] flex flex-1 flex-col space-y-6 pb-6 lg:mr-[4.75rem] ">
     <motion.p
       variants={fadeIn('right', 'spring', 0.5 * 1, 0.75)}
       viewport={{ once: true, amount: 0.1 }}
       initial="hidden"
       whileInView="show"
-      className="text-[0.875rem] font-semibold uppercase leading-[1.625rem] tracking-[4.2px] text-primary-light dark:text-primary-dark  lg:text-[1.25rem] lg:leading-[1.624rem] lg:tracking-[6px]"
+      className="text-[0.875rem] font-semibold uppercase leading-[1.625rem] tracking-[-0.42px] text-primary-light dark:text-primary-dark  lg:text-[1.25rem] lg:leading-[1.624rem] lg:tracking-[6px]"
     >
       HI, I AM ALEXANDER
     </motion.p>
 
-    <h1 className="mt-[15.5625rem] text-[2.3rem] font-bold leading-[3.0rem] tracking-[-0.42px] text-black-200 dark:text-white-900 sm:text-[2.625rem]  lg:text-[3.8rem] lg:leading-[5.2rem] lg:tracking-[0.64px]">
+    <h1 className="mt-[15.5625rem] text-[2.625rem] font-bold leading-[3.019rem] tracking-[-0.42px] text-black-200 dark:text-white-900 lg:text-[4rem] lg:leading-[5.2rem] lg:tracking-[-0.64px]">
       Professional{' '}
       <div className="relative inline-flex items-center whitespace-nowrap">
         <p className="z-20">Web Developer</p>

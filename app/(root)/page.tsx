@@ -1,4 +1,4 @@
-import Hero from '@/components/homepage/hero/Hero';
+import Hero from '@/components/homepage/hero/HeroImage';
 import Skills from '@/components/homepage/skills/Skills';
 import Services from '@/components/homepage/service/Services';
 import Work from '@/components/homepage/work/Work';
