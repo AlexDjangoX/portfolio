@@ -42,14 +42,14 @@ const WorkCard = ({
           <LinkIcon /> Certificate
         </Link>
       ) : (
-        <h3 className="font-semibold leading-[130%] text-black-200 dark:text-white-900 md:text-[1.5rem]">
+        <h3 className="font-semibold leading-[1.95rem] text-black-200 dark:text-white-900 md:text-[1.5rem]">
           {title}
         </h3>
       )}
 
       <p className="ml-4 dark:text-white-800">{subtitle}</p>
     </div>
-    <p className="ml-[1.5rem] text-[0.875rem] font-normal leading-[155%] text-white-500 dark:text-white-900 md:text-[0.875rem]">
+    <p className="ml-[1.5rem] text-[0.875rem] font-normal leading-[1.356rem] text-white-500 dark:text-white-900 md:text-[0.875rem]">
       {description}
     </p>
   </MotionWrapper>

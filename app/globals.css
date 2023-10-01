@@ -35,9 +35,6 @@
   @apply transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl dark:bg-black-200 dark:shadow-cardShadowSmall dark:hover:shadow-cardShadowLarge;
 }
 
-.button-hover:hover .translate-image {
-  transform: translateX(8px);
-}
 .translate-image {
   transition: transform 0.3s ease;
 }

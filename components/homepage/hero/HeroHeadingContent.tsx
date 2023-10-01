@@ -13,12 +13,12 @@ const HeroHeadingContent = () => (
       viewport={{ once: true, amount: 0.1 }}
       initial="hidden"
       whileInView="show"
-      className="text-[0.875rem] font-semibold uppercase leading-[1.625rem] tracking-[-0.42px] text-primary-light dark:text-primary-dark  lg:text-[1.25rem] lg:leading-[1.624rem] lg:tracking-[6px]"
+      className="text-[0.875rem] font-semibold uppercase leading-[1.625rem] tracking-[-0.026rem] text-primary-light dark:text-primary-dark  lg:text-[1.25rem] lg:leading-[1.624rem] lg:tracking-[6px]"
     >
       HI, I AM ALEXANDER
     </motion.p>
 
-    <h1 className="mt-[15.5625rem] text-[2.625rem] font-bold leading-[3.019rem] tracking-[-0.42px] text-black-200 dark:text-white-900 lg:text-[4rem] lg:leading-[5.2rem] lg:tracking-[-0.64px]">
+    <h1 className="mt-[15.5625rem] text-[2.625rem] font-bold leading-[3.019rem] tracking-[-0.026rem] text-black-200 dark:text-white-900 lg:text-[4rem] lg:leading-[5.2rem] lg:tracking-[-0.64px]">
       Professional{' '}
       <div className="relative inline-flex items-center whitespace-nowrap">
         <p className="z-20">Web Developer</p>

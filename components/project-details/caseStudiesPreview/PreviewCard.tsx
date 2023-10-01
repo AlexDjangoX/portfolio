@@ -22,7 +22,7 @@ const PreviewCard = ({
     <h4 className="mt-[1.25rem] font-semibold text-primary-light  dark:text-primary-dark">
       {otherCaseStudyHeading}
     </h4>
-    <p className="min-h-[9.5rem] text-[0.875rem] leading-[150%] text-white-500 dark:text-white-800 md:leading-[160%] ">
+    <p className="min-h-[9.5rem] text-[0.875rem] leading-[1.875rem] text-white-500 dark:text-white-800 md:leading-[1.8rem] ">
       {otherCaseStudyDescription}
     </p>
     <button className="mt-[1rem] w-full min-w-[8rem] rounded-full bg-primary-light p-2 px-4 text-center text-[0.875rem] font-semibold leading-[1.625rem] text-white-900 dark:bg-primary-dark md:mb-4 md:text-[1.125rem]">

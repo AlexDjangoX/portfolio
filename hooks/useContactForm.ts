@@ -57,8 +57,6 @@ export const useContactForm = () => {
       .then(
         () => {
           router.push('/success-page');
-          reset();
-          setLoading(false);
         },
         (error) => {
           setLoading(false);
@@ -70,7 +68,11 @@ export const useContactForm = () => {
             );
           }
         }
-      );
+      )
+      .then(() => {
+        reset();
+        setLoading(false);
+      });
   };
 
   return {

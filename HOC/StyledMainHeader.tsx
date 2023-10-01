@@ -26,7 +26,7 @@ const StyledMainHeader: React.FC<HighlightedHeaderProps> = ({
 
   return (
     <h1
-      className={`bg-black-300 px-[1.5rem] text-center text-[2.625rem] font-bold leading-[115%] tracking-[-0.42px] text-white-900 md:px-[5.4rem] md:text-[4rem]  md:leading-[130%] md:tracking-[0.64px] ${className}`}
+      className={`bg-black-300 px-[1.5rem] text-center text-[2.625rem] font-bold leading-[3.45rem] tracking-[-0.026rem] text-white-900 md:px-[5.4rem] md:text-[4rem]  md:leading-[1.95rem] md:tracking-[0.64px] ${className}`}
     >
       {mainTextParts}
       {highlightedComponent && (
