@@ -391,3 +391,14 @@ export type SiteGitLinksType = {
   demoSite: string;
   sourceCode: string;
 };
+
+export type TechIconsType = {
+  id: string;
+  imageUrl?: string;
+  image?: string;
+  altText?: string;
+  imageAlt?: string;
+  index: number;
+  width?: number;
+  height?: number;
+};

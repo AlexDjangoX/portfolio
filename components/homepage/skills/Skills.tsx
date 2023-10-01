@@ -2,12 +2,11 @@ import { notFound } from 'next/navigation';
 
 import { getSkills } from '@/sanity/sanity.query';
 import SkillsHeading from './SkillsHeading';
-import SkillCard from './SkillCard';
+import TechIcons from '@/components/reusable/TechIcons';
 import { SkillsType } from '@/types';
 
 const Skills = async () => {
   const skills = await getSkills();
-
   if (!skills) notFound();
 
   return (
@@ -15,10 +14,10 @@ const Skills = async () => {
       <SkillsHeading />
       <div className="flex flex-wrap justify-center gap-x-[2.5rem] gap-y-[3rem] md:gap-x-[3.8rem] md:gap-y-[5.7rem] ">
         {skills?.map((skill: SkillsType, index: number) => (
-          <SkillCard
+          <TechIcons
             index={index}
             key={skill._id}
-            _id={skill._id}
+            id={skill._id}
             image={skill.image}
             altText={skill.altText}
           />
