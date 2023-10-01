@@ -12,7 +12,7 @@ const ProjectCardContent = ({
   buttonBackground,
 }: ProjectCardContentType) => (
   <div className=" lg:ml-[5.4rem] lg:w-1/2">
-    <h2 className="mb-[1.5rem] text-[2rem] font-bold leading-[2.3rem] text-white-900  lg:text-[2.8rem] lg:leading-[3.45rem]">
+    <h2 className="mb-[1.5rem] text-[2rem] font-bold leading-[2.3rem] tracking-[-0.02rem] text-white-900  lg:text-[2.8rem] lg:leading-[3.45rem]">
       {heading}
     </h2>
     <div className=" mb-[1.5rem] flex w-fit gap-x-4 gap-y-2">
@@ -27,7 +27,7 @@ const ProjectCardContent = ({
     <div className="mb-[1.5rem] flex gap-x-4">
       <Link
         className="font-semibold text-white-900"
-        href={`/projects/${projectName} `}
+        href={`/case-studies/${projectName} `}
       >
         See Detail Project
       </Link>

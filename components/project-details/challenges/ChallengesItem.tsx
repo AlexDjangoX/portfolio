@@ -28,7 +28,7 @@ const ChallengesItem = ({
         />
         <figcaption className="sr-only">{title}</figcaption>
       </figure>
-      <span className="pb-[1.5rem] pl-3 text-[0.875rem] font-normal leading-[155%] text-white-500 dark:text-white-800 md:pb-[1.25rem] md:text-[1.125rem] md:leading-[160%]">
+      <span className="pb-[1.5rem] pl-3 text-[0.875rem] font-normal leading-[1.356rem] text-white-500 dark:text-white-800 md:pb-[1.25rem] md:text-[1.125rem] md:leading-[1.8rem]">
         {text}
       </span>
     </li>

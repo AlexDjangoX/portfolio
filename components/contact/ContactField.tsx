@@ -19,7 +19,7 @@ const ContactField = ({
     <div className="max-w-[21.6rem] s:max-w-[35rem] md:max-w-[40rem] lg:max-w-[55rem]">
       <label
         htmlFor={id}
-        className="mb-4 block text-lg font-normal leading-[160%] text-black-300 dark:text-white-900 md:text-xl"
+        className="mb-4 block text-lg font-normal leading-[1.8rem] text-black-300 dark:text-white-900 md:text-xl"
       >
         {label}
       </label>

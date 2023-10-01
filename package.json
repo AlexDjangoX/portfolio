@@ -11,12 +11,13 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.3.1",
-    "@nextui-org/react": "^2.1.10",
+    "@nextui-org/react": "^2.1.13",
     "@sanity/vision": "^3.16.4",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "canvas-confetti": "^1.6.1",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "^9.0.0",
@@ -35,6 +36,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.6.1",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "prettier": "^3.0.3",
     "react-icons": "^4.11.0"

@@ -15,7 +15,7 @@ const CaseStudies = async () => {
   if (!caseStudies) notFound();
 
   return (
-    <section className="flex w-full flex-col dark:bg-black-200">
+    <section className="flex w-full flex-col  bg-white-900 dark:bg-black-200">
       <CaseStudiesHeading />
 
       <div className="flex  flex-col bg-white-900 dark:bg-black-200">
