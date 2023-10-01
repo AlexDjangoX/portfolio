@@ -8,7 +8,7 @@ const Header = ({ headingUnderline, heading }: DetailsHeaderType) => (
       type="spring"
       delay={0.5}
       duration={2.75}
-      className="mb-[1.625rem] text-center font-semibold text-primary-light dark:text-primary-dark xl:mb-[3.25rem] xl:text-[1.25rem] xl:leading-[1.95rem] xl:tracking-[6px]"
+      className="mb-[1.626rem] text-center font-semibold text-primary-light dark:text-primary-dark xl:mb-[3.25rem] xl:text-[1.25rem] xl:leading-[1.95rem] xl:tracking-[6px]"
       tagType="h2"
     >
       WEB DEV PROJECT
