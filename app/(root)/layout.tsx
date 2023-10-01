@@ -11,11 +11,11 @@ const poppins = Poppins({ weight: ['400', '600'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-alexander.vercel.app/'),
-  title: 'Full Stack NextJs Developer',
+  title: 'ReactJS, NextJs Developer',
   description: 'Portfolio - Alexander McLachlan',
   openGraph: {
     title: 'Alexander McLachlan',
-    description: 'Full Stack ReactJS, NextJS Developer',
+    description: 'ReactJS, NextJS Developer',
     url: 'https://portfolio-alexander.vercel.app/',
     siteName: 'Full Stack NextJS Dev',
     images: [
