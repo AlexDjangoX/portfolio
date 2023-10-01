@@ -19,7 +19,7 @@ const ToastComponent = ({ message, type }: ToastInterface) => {
 
   return (
     <div
-      className={`fixed right-5 ${
+      className={`fixed right-5 z-50 ${
         bgColor === 'bg-blue-500' ? 'bottom-5' : 'top-36'
       }  rounded-md p-4 text-white ${bgColor}`}
     >

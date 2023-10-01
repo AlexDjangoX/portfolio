@@ -24,7 +24,7 @@ const ProcessCard = ({ imageUrl, imageAlt, title, index }: ProcessCardType) => (
       <figcaption className="sr-only">{imageAlt}</figcaption>
     </figure>
 
-    <p className="mt-2 text-[0.875rem]  font-medium leading-[145%] text-black-300 dark:text-white-900 md:text-[1.25rem] md:font-semibold md:leading-[130%]">
+    <p className="mt-2 text-[0.875rem]  font-medium leading-[1.269rem] text-black-300 dark:text-white-900 md:text-[1.25rem] md:font-semibold md:leading-[1.95rem]">
       {title}
     </p>
   </MotionWrapper>

@@ -20,9 +20,9 @@ const SkillsCard = ({
     translateY="1.5rem"
     duration={1.75}
     key={_id}
-    className="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 pb-3 shadow-cardShadowSmall transition duration-300 hover:translate-y-[1.2rem] hover:bg-primary-light hover:shadow-cardShadowLarge hover:shadow-black/30  dark:bg-black-200  dark:shadow-cardShadowSmall  dark:hover:bg-primary-dark hover:dark:shadow-cardShadowLarge"
+    className="group relative h-[16.5625rem] w-[18.125rem] rounded-md bg-white-900 p-4 pb-3 shadow-cardShadowSmallBlue transition duration-300 hover:translate-y-[1.1rem] hover:bg-primary-light hover:shadow-cardShadowLargeBlue dark:bg-black-300 dark:shadow-cardShadowSmall dark:hover:bg-primary-dark hover:dark:shadow-cardShadowLarge"
   >
-    <div className="absolute left-[1.5625rem] top-[1.875rem] flex h-[3.875rem] w-[3.875rem] items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-white dark:bg-primary-dark">
+    <div className="absolute left-[1.5625rem] top-[1.875rem] flex h-[3.875rem] w-[3.875rem] items-center justify-center rounded-lg bg-primary-light shadow-cardShadowSmallBlue transition-colors duration-300 group-hover:bg-white  dark:bg-primary-dark dark:shadow-cardShadowSmall">
       <Image
         src={imgSrcWhite ?? '/assets/redux.svg'}
         alt={heading}

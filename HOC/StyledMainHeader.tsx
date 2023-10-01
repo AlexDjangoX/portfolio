@@ -26,7 +26,7 @@ const StyledMainHeader: React.FC<HighlightedHeaderProps> = ({
 
   return (
     <h1
-      className={`bg-black-300 text-[1.6rem] font-bold leading-[3.0rem] tracking-[-0.42px] text-white-900 sm:text-[2.625rem] lg:text-[3.8rem] lg:leading-[5.2rem] lg:tracking-[0.64px] ${className}`}
+      className={`bg-black-300 px-[1.5rem] text-center text-[2.625rem] font-bold leading-[3.45rem] tracking-[-0.026rem] text-white-900 md:px-[5.4rem] md:text-[4rem]  md:leading-[1.95rem] md:tracking-[0.64px] ${className}`}
     >
       {mainTextParts}
       {highlightedComponent && (
@@ -34,7 +34,7 @@ const StyledMainHeader: React.FC<HighlightedHeaderProps> = ({
           className={`relative inline-flex items-center whitespace-nowrap ${highlightClassName}`}
         >
           {highlightedComponent}
-          <div className="absolute z-10 mt-8 h-[1.02rem] w-full rounded-sm bg-secondary-dark sm:h-[1.1rem] lg:mt-12 lg:h-[1.6rem]" />
+          <div className="absolute z-10 mt-8 h-[1.02rem] w-full rounded-sm bg-secondary-dark sm:h-[1.1rem] md:mt-12 md:h-[1.6rem]" />
         </div>
       )}
     </h1>

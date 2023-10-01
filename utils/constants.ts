@@ -34,7 +34,7 @@ export const contactFormFields = [
   },
   {
     id: 'message',
-    label: 'Write something',
+    label: 'Write something about your project goals and time-frame.',
     type: 'text',
     component: 'textarea',
   },

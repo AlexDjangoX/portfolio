@@ -25,7 +25,7 @@ const NavigationBar = () => {
   return (
     <>
       <motion.div
-        className="fixed inset-x-0 top-0 z-20  h-0.5 origin-top-left bg-primary-light pt-20 dark:bg-primary-dark"
+        className="fixed inset-x-0 top-[4.125rem] z-50  h-0.5 origin-top-left bg-primary-light pt-1 dark:bg-primary-dark"
         style={{ scaleX }}
       />
       <nav className="fixed z-50 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">

@@ -1,6 +1,8 @@
 'use client';
 
 import { useContext } from 'react';
+import confetti from 'canvas-confetti';
+
 import { ToastContext } from '@/components/toast/ToastContext';
 
 const useClipboardText = (text: string) => {
@@ -12,6 +14,7 @@ const useClipboardText = (text: string) => {
       .then(() => {
         if (showToast) {
           showToast('Success, email copied to clipboard!', 'success');
+          confetti();
         }
       })
       .catch((err) => {
