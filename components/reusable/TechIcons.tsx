@@ -27,6 +27,7 @@ const TechIcons = ({
       delay={0.05 * index}
       duration={1.75}
       key={id}
+      once={false}
     >
       <Tooltip
         className="m-1 rounded-md px-4 py-1 text-[0.6rem] text-white-500 shadow-md dark:text-white-800 md:mb-4 md:text-[0.75rem]"

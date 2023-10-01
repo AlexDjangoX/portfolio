@@ -16,6 +16,7 @@ const ChallengesItem = ({
     delay={0.1 * index}
     duration={1.75}
     key={index}
+    once={false}
   >
     <li className="mb-2 flex items-start">
       <figure className="min-h-[1.5rem] min-w-[1.5rem]">

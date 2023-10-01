@@ -6,12 +6,13 @@ import MotionWrapper from '@/HOC/MotionWrapper';
 const ProcessCard = ({ imageUrl, imageAlt, title, index }: ProcessCardType) => (
   <MotionWrapper
     aria-label="Skill animation card"
-    direction="up"
+    direction="left"
     type="spring"
-    delay={0.05 * index}
+    delay={0.08 * index}
     duration={1.75}
     key={index}
     className="mb-4 mr-4 flex flex-col items-center"
+    once={false}
   >
     <figure className="flex h-[4.75rem] w-[4.75rem] items-center justify-center rounded-full bg-white-800 dark:bg-black-300 md:h-[6.25rem] md:w-[6.25rem]">
       <Image
