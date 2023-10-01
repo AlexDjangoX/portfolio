@@ -21,7 +21,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   return (
     <>
       <p
-        className={`${subClasses} pb-[0.625rem] text-[0.75rem] font-semibold leading-[1.269rem] text-primary-light dark:text-primary-dark md:text-[0.875rem]`}
+        className={`${subClasses} pb-[0.625rem] text-[1.25rem] font-semibold leading-[1.269rem] text-primary-light dark:text-primary-dark md:mb-[1rem] md:text-[1.4rem]`}
       >
         {sub}
       </p>
