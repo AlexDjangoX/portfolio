@@ -12,7 +12,7 @@ const ClipboardText = ({ text }: ClipboardTextInterface) => {
   return (
     <div
       onClick={handleCopyClick}
-      className="flex w-full cursor-pointer items-center justify-center rounded-full bg-white-900  p-2 px-4 text-center text-white-500  dark:bg-black-200 dark:text-white-900"
+      className="flex cursor-pointer items-center justify-center rounded-full bg-white-900 p-2 px-4  text-center text-white-500 dark:bg-black-200 dark:text-white-900  md:w-1/2 xl:w-full"
     >
       <p className="text-[0.875rem] font-semibold leading-[1.375rem] md:text-[1.125rem]">
         {text}
