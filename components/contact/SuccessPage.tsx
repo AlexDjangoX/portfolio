@@ -26,7 +26,7 @@ const SuccessPage = () => (
         duration={1.75}
         className="flex items-center justify-center"
       >
-        <StyledMainHeader className="sm:text-[3.6]">
+        <StyledMainHeader className="text-[3.6]">
           Thank you for your <Highlight>interest</Highlight>
         </StyledMainHeader>
       </MotionWrapper>
