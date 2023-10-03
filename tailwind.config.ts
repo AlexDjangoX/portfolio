@@ -45,7 +45,7 @@ const config: Config = {
         vs: '355px',
         s: '450px',
         plusLarge: '1120px',
-        l: '1400px',
+        l: '1440px',
         xlPlus: '1800px',
       },
       backgroundImage: {

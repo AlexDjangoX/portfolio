@@ -10,7 +10,7 @@ const NavbarLinks = ({
 }: NavbarLinkType) => (
   <Link href={path}>
     <p
-      className={`mx-3.5 ${
+      className={`mx-5 ${
         showMobileNavbar ? 'mt-6' : ''
       } flex h-full items-center text-[0.875rem] ${
         isActive

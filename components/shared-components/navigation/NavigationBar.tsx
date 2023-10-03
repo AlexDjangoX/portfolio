@@ -29,10 +29,7 @@ const NavigationBar = () => {
         style={{ scaleX }}
       />
       <nav className="fixed z-40 flex h-16 w-full justify-between bg-white-800 py-[2.2rem] dark:bg-black-200">
-        <Link
-          href="/"
-          className="ml-[1.5rem] flex items-center md:ml-[5.313rem]"
-        >
+        <Link href="/" className="ml-[0.5rem] flex items-center md:ml-[4.4rem]">
           <AlexanderBrand />
         </Link>
         <DesktopNavbar

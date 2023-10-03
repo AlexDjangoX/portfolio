@@ -12,7 +12,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div
-      className="mr-[85px]  flex cursor-pointer justify-center"
+      className="mr-[5.6rem]  flex cursor-pointer justify-center"
       onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
     >
       <Image
