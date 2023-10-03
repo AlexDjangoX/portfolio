@@ -33,7 +33,7 @@ const TechIcons = ({
         className="m-1 rounded-md px-4 py-1 text-[0.6rem] text-white-500 shadow-md dark:text-white-800 md:mb-4 md:text-[0.75rem]"
         content={actualAltText}
       >
-        <figure className="flex h-[3.1rem] w-[3.1rem] items-center justify-center rounded-full bg-white-800 transition-transform duration-150 hover:scale-125 dark:bg-black-300 md:h-[6.25rem] md:w-[6.25rem]">
+        <figure className="flex h-[3.1rem] w-[3.1rem] items-center justify-around rounded-full bg-white-800 transition-transform duration-150 hover:scale-125 dark:bg-black-300 md:h-[6.25rem] md:w-[6.25rem]">
           <div
             key={actualAltText}
             className="h-[1.625rem] w-[1.625rem] cursor-pointer rounded-full md:h-[3.125rem] md:w-[3.125rem]"

@@ -29,7 +29,7 @@ const NavigationBar = () => {
         style={{ scaleX }}
       />
       <nav className="fixed z-40  w-full  bg-white-800  dark:bg-black-200">
-        <div className="flex h-16 justify-between py-[2.2rem] xl:flex-row 2xl:mx-auto 2xl:max-w-[90rem]">
+        <div className="flex h-16 justify-between py-[2.2rem] xl:flex-row l:mx-auto l:max-w-[90rem]">
           <Link
             href="/"
             className="ml-[0.5rem] flex items-center md:ml-[4.4rem]"

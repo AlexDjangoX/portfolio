@@ -14,7 +14,7 @@ const Projects = async () => {
 
   return (
     <section className="flex justify-center bg-white-900 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem] lg:flex-row">
-      <div className="flex max-w-7xl flex-col ">
+      <div className="flex max-w-[80rem] flex-col ">
         <ProjectHeading />
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-[2.5rem]">
           {projects?.map((project: ProjectCardProps, index: number) => (
