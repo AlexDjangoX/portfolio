@@ -38,10 +38,7 @@ const ProjectCard = ({
   const buttonBackground = buttonBackgrounds[projectName] || 'bg-white-900';
 
   return (
-    <motion.div
-      ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
-    >
+    <div>
       <section
         className={`w-full max-w-7xl  lg:flex lg:items-center lg:justify-center ${cardBackground} rounded-lg p-[2.5rem] px-[1.3rem] ${
           isOdd && 'flex-row-reverse'
@@ -55,7 +52,7 @@ const ProjectCard = ({
         />
         <ProjectCardImage image={image} heading={heading} />
       </section>
-    </motion.div>
+    </div>
   );
 };
 
