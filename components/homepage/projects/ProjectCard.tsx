@@ -1,8 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
-
 import ProjectCardContent from './ProjectCardContent';
 import ProjectCardImage from './ProjectCardImage';
 import { ProjectCardType } from '@/types';
@@ -14,13 +11,6 @@ const ProjectCard = ({
   technologies,
   index,
 }: ProjectCardType) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1 1'],
-  });
-
   const projectBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
