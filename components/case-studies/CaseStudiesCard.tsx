@@ -18,7 +18,7 @@ const CaseStudiesCard = ({
     portfolio: 'bg-portfolio-background',
     hipnode: 'bg-hipnode-background',
   };
-  const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
+  const cardBackground = projectBackgrounds[projectName] || '#1e252b';
 
   return (
     <MotionWrapper

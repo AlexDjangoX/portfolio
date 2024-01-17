@@ -15,14 +15,14 @@ const ProjectCard = ({
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
     portfolio: 'bg-portfolio-background',
-    Hipnode: 'bg-hipnode-background',
+    hipnode: 'bg-hipnode-background',
   };
 
   const buttonBackgrounds: Record<string, string> = {
     morrent: 'bg-morrent-button',
     jobit: 'bg-jobit-button',
     portfolio: 'bg-portfolio-button',
-    Hipnode: 'bg-hipnode-button',
+    hipnode: 'bg-hipnode-button',
   };
   const isOdd = index % 2 !== 0;
 
