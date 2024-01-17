@@ -16,6 +16,7 @@ const CaseStudiesCard = ({
     morrent: 'bg-morrent-background',
     jobit: 'bg-jobit-background',
     portfolio: 'bg-portfolio-background',
+    hipnode: 'bg-hipnode-background',
   };
   const cardBackground = projectBackgrounds[projectName] || 'bg-white-900';
 

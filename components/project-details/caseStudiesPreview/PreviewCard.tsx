@@ -12,7 +12,7 @@ const PreviewCard = ({
   <div className="cardBoxShadowHover  m-4 w-[21.5rem] gap-x-7 rounded-2xl p-4 shadow-xl md:mb-6 md:w-[429px]">
     <div className="relative  rounded-lg">
       <Image
-        src={otherCaseStudyImageUrl}
+        src={otherCaseStudyImageUrl ?? '/assets-png/error.png'}
         alt={otherCaseStudyImageAlt}
         width={345}
         height={163}
