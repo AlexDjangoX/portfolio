@@ -20,7 +20,7 @@ function Slider() {
 
   const contentMap: { [key: number]: string } = {
     0: 'Working as part of a full-time international development team, Team Algo Alliance, building world-class application from Professional Figma Designs. Leveraging the latest Technologies offered by Next JS 14 to create highly performant and scalable applications.',
-    1: 'Graduated from Boolean as a Fill StackSoftware Developer. This was a deep dive into create-react-app along with Node and Express. This was the perfect preparation for the JSMastery course - an agile development experience, building real applications.',
+    1: 'Graduated from Boolean as a Full Stack Software Developer. This was a deep dive into create-react-app along with Node and Express. This was the perfect preparation for the JSMastery course - an agile development experience, building real applications.',
     2: 'Completed a Python Specialization held by University of Michigin. This was my first experience with coding. It was completed over a three month period, and prepared me for the Boolean UK experience. After doing this I decided on the Web Development path.',
     3: 'Up-skilling and Continuos learning. Even though we have submitted our Capestone Assignment for the JS Mastery course, the original team are working on improving and adding features to Hipnode - Social Media Platform. Continuous learning and improvement.',
   };
