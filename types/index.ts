@@ -26,6 +26,7 @@ export type ResumeType = {
 
 export type MobileNavbarType = {
   toggleMobile: () => void;
+  showMobileNavbar: boolean;
   closeImgSrc: string;
   pathname: string;
 };
