@@ -14,7 +14,7 @@ const ContactForm = () => {
     errors,
     getInputStyle,
   } = useContactForm();
-  console.log(loading);
+
   return (
     <form
       onSubmit={handleSubmit(handleFormSubmit)}

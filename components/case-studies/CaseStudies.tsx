@@ -11,6 +11,7 @@ import { CaseStudiesCardType } from '@/types';
 
 const CaseStudies = async () => {
   const caseStudies = await getCaseStudies();
+  console.log(caseStudies);
 
   if (!caseStudies) notFound();
 

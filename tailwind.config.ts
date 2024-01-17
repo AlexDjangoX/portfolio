@@ -20,6 +20,8 @@ const config: Config = {
         'jobit-button': '#42bf9a',
         'portfolio-background': '#ec8d52',
         'portfolio-button': '#ffae58',
+        'hipnode-background': '#1e252b',
+        'hipnode-button': '#ff571a',
         'white-900': '#FFFFFF',
         'white-800': '#F3F8FF',
         'white-500': '#6F74A7',
