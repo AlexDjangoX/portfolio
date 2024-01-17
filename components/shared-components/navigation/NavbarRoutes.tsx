@@ -2,11 +2,7 @@ import { NavbarRoutesType } from '@/types';
 import NavbarLinks from './NavbarLinks';
 import { routes } from '@/utils/constants';
 
-const NavbarRoutes = ({
-  pathname,
-  showMobileNavbar,
-  toggleMobile,
-}: NavbarRoutesType) => {
+const NavbarRoutes = ({ pathname, toggleMobile }: NavbarRoutesType) => {
   return (
     <>
       {routes?.map((route) => (
@@ -15,7 +11,6 @@ const NavbarRoutes = ({
           path={route.path}
           label={route.label}
           isActive={pathname === route.path}
-          showMobileNavbar={showMobileNavbar}
           toggleMobile={toggleMobile}
         />
       ))}

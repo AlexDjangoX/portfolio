@@ -7,7 +7,6 @@ import { MobileNavbarType } from '@/types';
 
 const MobileNavbar = ({
   toggleMobile,
-  showMobileNavbar,
   closeImgSrc,
   pathname,
 }: MobileNavbarType) => {
@@ -22,15 +21,11 @@ const MobileNavbar = ({
         onClick={toggleMobile}
       />
       <div className="mb-20 flex w-full flex-col p-8">
-        <NavbarRoutes
-          pathname={pathname}
-          showMobileNavbar={showMobileNavbar}
-          toggleMobile={toggleMobile}
-        />
+        <NavbarRoutes pathname={pathname} toggleMobile={toggleMobile} />
         <div className="ml-2.5 mt-6">
           <DownloadResume />
         </div>
-        <div className="ml-3 mt-6 flex justify-start">
+        <div className="ml-5 mt-8 flex justify-start">
           <ThemeSwitcher />
         </div>
       </div>

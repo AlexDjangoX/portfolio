@@ -26,14 +26,12 @@ export type ResumeType = {
 
 export type MobileNavbarType = {
   toggleMobile: () => void;
-  showMobileNavbar: boolean;
   closeImgSrc: string;
   pathname: string;
 };
 
 export type NavbarRoutesType = {
   pathname: string;
-  showMobileNavbar: boolean;
   toggleMobile: () => void;
 };
 
@@ -298,7 +296,6 @@ export type NavbarLinkType = {
   path: string;
   label: string;
   isActive: boolean;
-  showMobileNavbar: boolean;
   toggleMobile: () => void;
 };
 
