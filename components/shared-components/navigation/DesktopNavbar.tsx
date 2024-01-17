@@ -13,7 +13,11 @@ const DesktopNavbar = ({
 }: DeskTopNavbarType) => (
   <nav className="flex items-center justify-around">
     <div className="hidden items-center md:flex">
-      <NavbarRoutes pathname={pathname} showMobileNavbar={showMobileNavbar} />
+      <NavbarRoutes
+        pathname={pathname}
+        showMobileNavbar={showMobileNavbar}
+        toggleMobile={toggleMobile}
+      />
     </div>
     <div className="hidden md:flex">
       <DownloadResume />

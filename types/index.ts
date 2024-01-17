@@ -34,6 +34,7 @@ export type MobileNavbarType = {
 export type NavbarRoutesType = {
   pathname: string;
   showMobileNavbar: boolean;
+  toggleMobile: () => void;
 };
 
 export type DeskTopNavbarType = Omit<MobileNavbarType, 'closeImgSrc'> & {
@@ -298,6 +299,7 @@ export type NavbarLinkType = {
   label: string;
   isActive: boolean;
   showMobileNavbar: boolean;
+  toggleMobile: () => void;
 };
 
 export type ChallengesItemType = {
