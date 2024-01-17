@@ -31,7 +31,7 @@ const WorkCard = ({
           : sliderValueGlobal === 3
           ? 'border border-primary-light dark:border-primary-dark'
           : 'border border-transparent'
-      } h-[13.125rem] min-w-[21.563rem]  overflow-hidden rounded-xl px-6 py-4 shadow-cardShadowSmallBlue hover:shadow-cardShadowLarge  dark:shadow-cardShadowSmall hover:dark:shadow-cardShadowLarge lg:h-[10.5rem]`}
+      } h-[13.125rem] min-w-[19rem]  overflow-hidden rounded-xl px-6 py-4 shadow-cardShadowSmallBlue hover:shadow-cardShadowLarge  dark:shadow-cardShadowSmall hover:dark:shadow-cardShadowLarge lg:h-[10.5rem]`}
     >
       <div className="flex items-center justify-start">
         <figure>

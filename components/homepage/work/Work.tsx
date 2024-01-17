@@ -8,7 +8,7 @@ import Slider from './Slider';
 
 const Work = async () => {
   const work = await getWork();
-
+  console.log(work);
   if (!work) notFound();
 
   return (
