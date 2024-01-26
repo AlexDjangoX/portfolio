@@ -38,3 +38,35 @@
 .translate-image {
   transition: transform 0.3s ease;
 }
+
+input[type='range'] {
+  width: 100%;
+  background: -webkit-gradient(
+    linear,
+    0 0,
+    0 bottom,
+    from(#428dff),
+    to(#0252cd)
+  );
+  -webkit-appearance: none;
+  border-radius: 25px;
+  padding: 0px;
+  transition: opacity 0.5s;
+  position: relative;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  z-index: 1;
+  width: 50px;
+  position: relative;
+  height: 50px;
+  background: url('/assets/arrow-right.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #f3f8ff;
+  background-origin: content-box;
+  padding: 10px;
+}
