@@ -26,10 +26,10 @@ const WorkCard = ({
       duration={1.75}
       translateX="1.875rem"
       className={`${
-        sliderValueGlobal === index
+        sliderValueGlobal === index + 1
           ? 'border border-primary-light dark:border-primary-dark'
-          : sliderValueGlobal === 3
-          ? 'border border-primary-light dark:border-primary-dark'
+          : sliderValueGlobal === 4
+          ? 'translate-x-[1.875rem] border border-primary-light dark:border-primary-dark '
           : 'border border-transparent'
       } h-[13.125rem] min-w-[19rem]  overflow-hidden rounded-xl px-6 py-4 shadow-cardShadowSmallBlue hover:shadow-cardShadowLarge  dark:shadow-cardShadowSmall hover:dark:shadow-cardShadowLarge lg:h-[10.5rem]`}
     >
