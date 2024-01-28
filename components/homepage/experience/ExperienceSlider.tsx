@@ -3,7 +3,7 @@
 import React, { ReactNode, useState } from 'react';
 import { useStore } from '@/app/store';
 
-function Slider() {
+function ExperienceSlider() {
   const [sliderValue, setSliderValue] = useState<number>(0);
   const [contentOpacity, setContentOpacity] = useState<number>(1);
   const { setSliderValueGlobal } = useStore();
@@ -105,4 +105,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default ExperienceSlider;

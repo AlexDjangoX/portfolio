@@ -8,7 +8,7 @@ import { WorkCardType } from '@/types';
 import MotionWrapper from '../../../HOC/MotionWrapper';
 import { LinkIcon } from '../../icons/LinkIcon';
 
-const WorkCard = ({
+const ExperienceCard = ({
   title,
   subtitle,
   description,
@@ -68,4 +68,4 @@ const WorkCard = ({
   );
 };
 
-export default WorkCard;
+export default ExperienceCard;

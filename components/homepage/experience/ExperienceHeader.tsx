@@ -4,7 +4,7 @@ import { fadeIn } from '@/utils/motion';
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const WorkHeader = () => (
+const ExperienceHeader = () => (
   <motion.h2
     variants={fadeIn('right', 'spring', 0.05 * 1, 2.75)}
     viewport={{ once: true, amount: 0.1 }}
@@ -19,4 +19,4 @@ const WorkHeader = () => (
   </motion.h2>
 );
 
-export default WorkHeader;
+export default ExperienceHeader;

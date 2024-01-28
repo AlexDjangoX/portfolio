@@ -1,15 +1,15 @@
 import { notFound } from 'next/navigation';
 
-import WorkCard from './WorkCard';
+import WorkCard from './ExperienceCard';
 import { getWork } from '@/sanity/sanity.query';
 import { WorkCardType } from '@/types';
-import WorkHeader from './WorkHeader';
-import Slider from './Slider';
+import WorkHeader from './ExperienceHeader';
+import Slider from './ExperienceSlider';
 
-const Work = async () => {
-  const work = await getWork();
+const Experience = async () => {
+  const experience = await getWork();
 
-  if (!work) notFound();
+  if (!experience) notFound();
 
   return (
     <section className="flex h-full w-full flex-col  justify-center  bg-white-800 px-[1.2rem] py-[4.5rem] dark:bg-black-200 md:px-[5.4rem] xl:flex-row">
@@ -21,7 +21,7 @@ const Work = async () => {
           </div>
         </div>
         <div className="mt-4 flex w-full max-w-3xl flex-col  justify-around space-y-4 bg-white-800 dark:bg-black-200">
-          {work.map((workItem: WorkCardType, index: number) => (
+          {experience.map((workItem: WorkCardType, index: number) => (
             <WorkCard
               key={workItem._id}
               title={workItem.title}
@@ -40,4 +40,4 @@ const Work = async () => {
   );
 };
 
-export default Work;
+export default Experience;
