@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      rotate: {
+        minus45: '-45deg',
+      },
       colors: {
         'primary-dark': '#428DFF',
         'primary-light': '#0252CD',

@@ -24,14 +24,23 @@ const ProjectCardContent = ({
         />
       ))}
     </div>
-    <div className="mb-[1.5rem] flex gap-x-4">
+    <div className="flex items-center gap-x-4">
       <Link
         className="font-semibold text-white-900"
         href={`/case-studies/${projectName} `}
       >
         See Detail Project
       </Link>
-      <Image src={arrow} alt="arrow" width={35} height={0} />
+      <Image src={arrow} alt="arrow" width={35} height={0} />{' '}
+      {projectName === 'hipnode' && (
+        <Image
+          src="/assets/featured.png"
+          alt={heading}
+          width={80}
+          height={80}
+          className="bg-transparent"
+        />
+      )}
     </div>
   </div>
 );
