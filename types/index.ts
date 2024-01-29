@@ -286,6 +286,8 @@ export type WorkCardType = {
   index: number;
   certified: boolean;
   certificateLink: string;
+  sliderValue: number;
+  setSliderValue: (value: number) => void;
 };
 
 export type SocialLinksType = {

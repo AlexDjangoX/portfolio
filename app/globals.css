@@ -39,34 +39,74 @@
   transition: transform 0.3s ease;
 }
 
+/* Base styling for the range input */
 input[type='range'] {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  appearance: none; /* Standard syntax */
   width: 100%;
-  background: -webkit-gradient(
-    linear,
-    0 0,
-    0 bottom,
-    from(#428dff),
-    to(#0252cd)
-  );
-  -webkit-appearance: none;
+  height: 15px;
+  background: linear-gradient(
+    to bottom,
+    #428dff,
+    #0252cd
+  ); /* Standard syntax */
   border-radius: 25px;
   padding: 0px;
   transition: opacity 0.5s;
   position: relative;
+  outline: none; /* Removes default focus outline */
 }
 
+/* Chrome, Safari, Edge */
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border-radius: 50%;
+  border: 10px solid #0158d3;
   z-index: 1;
   width: 50px;
-  position: relative;
   height: 50px;
-  background: url('/assets/arrow-right.svg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: #f3f8ff;
-  background-origin: content-box;
+  background: url('/assets/arrow-right.svg') center / contain no-repeat #f3f8ff;
   padding: 10px;
+}
+
+/* Firefox */
+input[type='range']::-moz-range-thumb {
+  border-radius: 50%;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border: 10px solid #0158d3;
+  background: url('/assets/arrow-right.svg') center / contain no-repeat #f3f8ff;
+}
+
+/* Firefox Track */
+input[type='range']::-moz-range-track {
+  background: linear-gradient(to bottom, #428dff, #0252cd);
+  border-radius: 25px;
+}
+
+/* IE */
+input[type='range']::-ms-thumb {
+  border-radius: 50%;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border: 10px solid #0158d3;
+  background: url('/assets/arrow-right.svg') center / contain no-repeat #f3f8ff;
+}
+
+input[type='range']::-ms-track {
+  background: transparent; /* IE requires a transparent track background */
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type='range']::-ms-fill-lower {
+  background: linear-gradient(to bottom, #428dff, #0252cd);
+  border-radius: 25px;
+}
+
+input[type='range']::-ms-fill-upper {
+  background: linear-gradient(to bottom, #428dff, #0252cd);
+  border-radius: 25px;
 }

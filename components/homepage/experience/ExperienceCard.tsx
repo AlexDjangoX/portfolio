@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useStore } from '@/app/store';
 
 import { WorkCardType } from '@/types';
 import MotionWrapper from '../../../HOC/MotionWrapper';
@@ -15,8 +14,12 @@ const ExperienceCard = ({
   imgSrc,
   index,
   certificateLink,
+  sliderValue,
+  setSliderValue,
 }: WorkCardType) => {
-  const { sliderValueGlobal } = useStore();
+  const handleMouseOver = () => {
+    setSliderValue(index + 1);
+  };
 
   return (
     <MotionWrapper
@@ -24,16 +27,20 @@ const ExperienceCard = ({
       type="spring"
       delay={0.05 * index}
       duration={1.75}
-      translateX="1.875rem"
+      translateX="0rem"
       className={`${
-        sliderValueGlobal === index + 1
+        sliderValue === index + 1
           ? 'border border-primary-light dark:border-primary-dark'
-          : sliderValueGlobal === 4
+          : sliderValue === 4
           ? 'translate-x-[1.875rem] border border-primary-light dark:border-primary-dark '
           : 'border border-transparent'
       } h-[13.125rem] min-w-[19rem]  overflow-hidden rounded-xl px-6 py-4 shadow-cardShadowSmallBlue hover:shadow-cardShadowLarge  dark:shadow-cardShadowSmall hover:dark:shadow-cardShadowLarge lg:h-[10.5rem]`}
     >
-      <div className="flex items-center justify-start">
+      <div
+        onMouseOver={handleMouseOver}
+        onClick={() => setSliderValue(index + 1)}
+        className="flex items-center justify-start"
+      >
         <figure>
           <Image
             className="m-[1.5rem] shadow-cardShadowSmallBlue dark:shadow-cardShadowSmall"
